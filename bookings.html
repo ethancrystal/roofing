@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a free inspection — Havenridge Roofing Co.</title>
+<meta name="description" content="Book a free 45-minute roof inspection in the Fraser Valley. Written report with photos, yours to keep. No sales visit and no obligation." />
+<meta name="theme-color" content="#1E4D45" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Book a free inspection — Havenridge Roofing Co." />
+<meta property="og:description" content="Book a free 45-minute roof inspection in the Fraser Valley. Written report with photos, yours to keep. No sales visit and no obligation." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 16 16 6l12 10' fill='none' stroke='%231E4D45' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 15v10h16V15' fill='none' stroke='%23C2603A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<!-- Two independent fallbacks so a decorative preloader can never trap the
+     page: this kills it outright with JS off, and styles.css fades it out on
+     a timer if main.js never loads or throws before it can dismiss it. -->
+<noscript><style>.preloader{display:none !important}</style></noscript>
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
+      <path class="pl-roof" d="M10 52 60 12l50 40" stroke="#F6F1E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-walls" d="M24 48v34h72V48" stroke="#C2603A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-door" d="M52 82V64h16v18" stroke="#E0A33F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="preloader__word">Havenridge</p>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" data-hdr>
+  <div class="hdr__in">
+    <a class="logo" href="index.html" aria-label="Havenridge Roofing Co. — home">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="logo__glow" d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Our work</a>
+      <a href="about.html">About</a>
+      <a href="bookings.html" class="is-on" aria-current="page">Bookings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="tel" href="tel:+16045550142">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 3h3l1.6 4-2 1.2a10 10 0 0 0 5.2 5.2L13 11.4 17 13v3a1 1 0 0 1-1.1 1A14 14 0 0 1 3 4.1 1 1 0 0 1 4 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span><i>Talk to a human</i><b>(604) 555-0142</b></span>
+      </a>
+      <a class="btn btn--accent btn--sm magnetic" href="bookings.html" data-magnetic>Free inspection</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu" data-burger><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" data-mnav aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Our work</a>
+  <a href="about.html">About</a>
+  <a href="bookings.html" class="is-on" aria-current="page">Bookings</a>
+  <a href="contact.html">Contact</a>
+  <a class="mnav__tel" href="tel:+16045550142">(604) 555-0142</a>
+  <a class="btn btn--accent" href="bookings.html">Book a free inspection</a>
+</nav>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Bookings</span>
+    </nav>
+    <p class="eyebrow eyebrow--light" data-rise>Book it</p>
+    <h1 class="phero__h1" data-rise data-delay="1">Let's get up there<br />and have a look.</h1>
+    <p class="phero__lead" data-rise data-delay="2">Free, forty-five minutes, and you get the photo report either way. If your roof is fine, we'll tell you that and leave you alone.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT HAPPENS ============ -->
+<section class="sec bookflow">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>What actually happens</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Three steps, and<br />none of them is a sales visit.</h2>
+    </header>
+    <ol class="bf__grid">
+      <li class="bf" data-rise>
+        <span class="bf__n">01</span>
+        <b>You pick a time</b>
+        <p>Book below or call. We'll confirm within two hours during business hours — a real person,
+          not an automated reply.</p>
+        <span class="bf__meta">Takes 2 minutes</span>
+      </li>
+      <li class="bf" data-rise data-delay="1">
+        <span class="bf__n">02</span>
+        <b>We get on the roof</b>
+        <p>Forty-five minutes, photographing everything including the parts you can't see. You don't
+          need to be home, though you're welcome to be.</p>
+        <span class="bf__meta">45 minutes · free</span>
+      </li>
+      <li class="bf" data-rise data-delay="2">
+        <span class="bf__n">03</span>
+        <b>You get the report</b>
+        <p>A written report with those photos, yours to keep whether or not you hire us. A fixed
+          quote follows within 48 hours if you want one.</p>
+        <span class="bf__meta">Within 48 hours</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- ============ ESTIMATE CALCULATOR ============ -->
+<section class="sec sec--dark calc" id="calc">
+  <div class="wrap calc__in">
+    <div class="calc__copy">
+      <p class="eyebrow eyebrow--light" data-rise>Ballpark it yourself</p>
+      <h2 class="sec__h2" data-rise data-delay="1">What does a roof<br />actually cost?</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Nobody likes "it depends." Move the sliders and you'll get the same range we'd give you on
+        the phone — built from what we actually charged on 2,400 roofs.
+      </p>
+      <p class="calc__note" data-rise data-delay="3">
+        This is a genuine ballpark, not a quote. The real number comes from measuring your roof —
+        which is free, and takes 45 minutes.
+      </p>
+    </div>
+
+    <form class="calc__card" data-calc novalidate>
+      <div class="fld">
+        <label for="c-size">Roof area <b data-out="size">2,000 sq ft</b></label>
+        <input id="c-size" type="range" min="800" max="4500" step="50" value="2000" data-c="size" />
+        <span class="fld__hint">Roughly your home's footprint, plus about 15% for pitch.</span>
+      </div>
+
+      <div class="fld">
+        <span class="fld__lbl">Material</span>
+        <div class="seg" data-c-group="material">
+          <button type="button" class="is-on" data-v="5.6">Architectural shingle</button>
+          <button type="button" data-v="8.2">Designer shingle</button>
+          <button type="button" data-v="13.5">Standing-seam metal</button>
+          <button type="button" data-v="12.4">Cedar shake</button>
+        </div>
+      </div>
+
+      <div class="calc__row">
+        <div class="fld">
+          <span class="fld__lbl">Storeys</span>
+          <div class="seg seg--sm" data-c-group="storeys">
+            <button type="button" class="is-on" data-v="1">One</button>
+            <button type="button" data-v="1.12">Two</button>
+            <button type="button" data-v="1.26">Three</button>
+          </div>
+        </div>
+        <div class="fld">
+          <span class="fld__lbl">Roof shape</span>
+          <div class="seg seg--sm" data-c-group="pitch">
+            <button type="button" class="is-on" data-v="1">Simple</button>
+            <button type="button" data-v="1.13">Some valleys</button>
+            <button type="button" data-v="1.24">Steep / complex</button>
+          </div>
+        </div>
+      </div>
+
+      <label class="chk">
+        <input type="checkbox" data-c="tearoff" checked />
+        <span class="chk__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.5 8.5 6.5 11.5 12.5 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Tear off and dispose of the existing roof</span>
+      </label>
+
+      <div class="calc__out">
+        <span class="calc__out-lbl">Typical Havenridge range</span>
+        <b class="calc__out-val" data-out="range">$13,400 – $16,300</b>
+        <span class="calc__out-sub" data-out="sub">Includes tear-off, disposal, underlayment, flashing and warranty.</span>
+      </div>
+
+      <a class="btn btn--accent btn--full magnetic" href="#estimate" data-magnetic>Get the real number — free</a>
+    </form>
+  </div>
+</section><!-- ============ ESTIMATE / CONTACT ============ -->
+<section class="sec sec--dark est" id="estimate">
+  <div class="wrap est__in">
+    <div class="est__copy">
+      <p class="eyebrow eyebrow--light" data-rise>Book it</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Let's get up there<br />and have a look.</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Free, 45 minutes, and you get the photo report either way. If your roof is fine, we'll
+        tell you that and leave you alone.
+      </p>
+
+      <ul class="est__pts" data-rise data-delay="3">
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No sales visit, no financing pitch</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Written report with photos, yours to keep</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed quote within 48 hours if you want one</li>
+      </ul>
+
+      <div class="est__call" data-rise data-delay="4">
+        <span>Rather just talk?</span>
+        <a href="tel:+16045550142">(604) 555-0142</a>
+        <i>7am – 7pm, seven days</i>
+      </div>
+    </div>
+
+    <form class="est__form" data-form novalidate>
+      <div class="est__row">
+        <div class="inp">
+          <input id="f-name" type="text" name="name" placeholder=" " required autocomplete="name" />
+          <label for="f-name">Your name</label>
+          <em data-err></em>
+        </div>
+        <div class="inp">
+          <input id="f-phone" type="tel" name="phone" placeholder=" " required autocomplete="tel" />
+          <label for="f-phone">Phone</label>
+          <em data-err></em>
+        </div>
+      </div>
+
+      <div class="inp">
+        <input id="f-email" type="email" name="email" placeholder=" " required autocomplete="email" />
+        <label for="f-email">Email</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp">
+        <input id="f-addr" type="text" name="address" placeholder=" " required autocomplete="street-address" />
+        <label for="f-addr">Property address</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp inp--sel">
+        <select id="f-need" name="need" required>
+          <option value="" selected disabled>What do you need?</option>
+          <option>I think I have a leak</option>
+          <option>My roof is old and I want it assessed</option>
+          <option>I want a quote for a full replacement</option>
+          <option>Storm or hail damage</option>
+          <option>Gutters or drainage</option>
+          <option>Something else</option>
+        </select>
+        <label for="f-need">What do you need?</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp">
+        <textarea id="f-msg" name="message" rows="3" placeholder=" "></textarea>
+        <label for="f-msg">Anything we should know? <i>(optional)</i></label>
+      </div>
+
+      <button class="btn btn--accent btn--full btn--lg magnetic" type="submit" data-magnetic>
+        <span data-submit-txt>Book my free inspection</span>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="est__fine">We'll call within 2 hours during business hours. We never share your details,
+        and we won't put you on a mailing list.</p>
+
+      <div class="est__done" data-done hidden>
+        <div class="est__done-ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.4"/><path d="m15 24.5 6.4 6.4L33 18" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Got it — you're booked in.</b>
+        <p>A real person will call you within two hours. In the meantime, if it's urgent, ring
+          <a href="tel:+16045550142">(604) 555-0142</a>.</p>
+        <span class="est__demo">Demo only — this form isn't connected to anything yet.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <a class="logo logo--lg" href="index.html" aria-label="Havenridge Roofing Co. — home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+        </a>
+        <p class="ftr__tag">Sleep soundly under it.</p>
+        <p class="ftr__blurb">Family-run roofing across the Fraser Valley since 2009. Same owners,
+          same phone number, same crew.</p>
+      </div>
+
+      <nav class="ftr__nav" aria-label="Footer">
+        <div>
+          <h4>Services</h4>
+          <a href="services.html">Roof replacement</a>
+          <a href="services.html">Leak repair</a>
+          <a href="services.html">Metal roofing</a>
+          <a href="services.html">Gutters</a>
+          <a href="services.html">Storm &amp; insurance</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">Why us</a>
+          <a href="gallery.html">Our work</a>
+          <a href="services.html#process">Process</a>
+          <a href="about.html#reviews">Reviews</a>
+          <a href="about.html#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="tel:+16045550142">(604) 555-0142</a>
+          <a href="mailto:hello@havenridgeroofing.ca">hello@havenridgeroofing.ca</a>
+          <span>112 – 20434 Fraser Hwy<br />Langley, BC V3A 4G2</span>
+          <span>Mon – Sun · 7am – 7pm</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="ftr__bar">
+      <p>© 2026 Havenridge Roofing Co. · Licensed &amp; insured · BC Lic. #000000</p>
+      <p class="ftr__demo">Design concept — placeholder brand, copy and photography.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

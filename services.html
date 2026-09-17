@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Services — Havenridge Roofing Co.</title>
+<meta name="description" content="Roof replacement, leak diagnosis, standing-seam metal, gutters and storm work across the Fraser Valley. One crew, one invoice, one 25-year warranty." />
+<meta name="theme-color" content="#1E4D45" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Services — Havenridge Roofing Co." />
+<meta property="og:description" content="Roof replacement, leak diagnosis, standing-seam metal, gutters and storm work across the Fraser Valley. One crew, one invoice, one 25-year warranty." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 16 16 6l12 10' fill='none' stroke='%231E4D45' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 15v10h16V15' fill='none' stroke='%23C2603A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<!-- Two independent fallbacks so a decorative preloader can never trap the
+     page: this kills it outright with JS off, and styles.css fades it out on
+     a timer if main.js never loads or throws before it can dismiss it. -->
+<noscript><style>.preloader{display:none !important}</style></noscript>
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
+      <path class="pl-roof" d="M10 52 60 12l50 40" stroke="#F6F1E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-walls" d="M24 48v34h72V48" stroke="#C2603A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-door" d="M52 82V64h16v18" stroke="#E0A33F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="preloader__word">Havenridge</p>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" data-hdr>
+  <div class="hdr__in">
+    <a class="logo" href="index.html" aria-label="Havenridge Roofing Co. — home">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="logo__glow" d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="is-on" aria-current="page">Services</a>
+      <a href="gallery.html">Our work</a>
+      <a href="about.html">About</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="tel" href="tel:+16045550142">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 3h3l1.6 4-2 1.2a10 10 0 0 0 5.2 5.2L13 11.4 17 13v3a1 1 0 0 1-1.1 1A14 14 0 0 1 3 4.1 1 1 0 0 1 4 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span><i>Talk to a human</i><b>(604) 555-0142</b></span>
+      </a>
+      <a class="btn btn--accent btn--sm magnetic" href="bookings.html" data-magnetic>Free inspection</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu" data-burger><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" data-mnav aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html" class="is-on" aria-current="page">Services</a>
+  <a href="gallery.html">Our work</a>
+  <a href="about.html">About</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="contact.html">Contact</a>
+  <a class="mnav__tel" href="tel:+16045550142">(604) 555-0142</a>
+  <a class="btn btn--accent" href="bookings.html">Book a free inspection</a>
+</nav>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Services</span>
+    </nav>
+    <p class="eyebrow eyebrow--light" data-rise>What we do</p>
+    <h1 class="phero__h1" data-rise data-delay="1">Everything above your ceiling.</h1>
+    <p class="phero__lead" data-rise data-delay="2">Five things we do properly, rather than twenty we do adequately. Every one of them carries the same fixed price in writing and the same 25-year workmanship warranty.</p>
+  </div>
+</section>
+<!-- ============ SERVICES ============ -->
+<section class="sec sec--dark services" id="services">
+  <div class="wrap">
+    <header class="sec__head sec__head--split">
+      <div>
+        <p class="eyebrow eyebrow--light" data-rise>What we do</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Everything above your ceiling.</h2>
+      </div>
+      <p class="sec__lead" data-rise data-delay="2">
+        Roofing, and the things that fail alongside it. One crew, one invoice, one warranty —
+        instead of chasing three trades who each blame the other.
+      </p>
+    </header>
+
+    <div class="svc">
+      <div class="svc__list" role="tablist" aria-label="Services" aria-orientation="vertical">
+        <button class="svc__tab is-on" role="tab" aria-selected="true" aria-controls="svc-p1" id="svc-t1" data-svc="0">
+          <span class="svc__tab-n">01</span>
+          <span class="svc__tab-t">Full roof replacement</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p2" id="svc-t2" tabindex="-1" data-svc="1">
+          <span class="svc__tab-n">02</span>
+          <span class="svc__tab-t">Leak repair &amp; diagnosis</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p3" id="svc-t3" tabindex="-1" data-svc="2">
+          <span class="svc__tab-n">03</span>
+          <span class="svc__tab-t">Standing-seam metal</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p4" id="svc-t4" tabindex="-1" data-svc="3">
+          <span class="svc__tab-n">04</span>
+          <span class="svc__tab-t">Gutters &amp; drainage</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p5" id="svc-t5" tabindex="-1" data-svc="4">
+          <span class="svc__tab-n">05</span>
+          <span class="svc__tab-t">Storm &amp; insurance work</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="svc__stage">
+        <div class="svc__imgs" data-svc-imgs>
+          <img class="is-on" src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1200&q=80" alt="A finished shingle roof on a row of homes" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1200&q=80" alt="A roofer stripping old shingles to find a leak" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1200&q=80" alt="A clean metal roof against a blue sky" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1200&q=80" alt="Roof edge detail with clean lines and shadow" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80" alt="A roofer assessing storm damage on a roof" loading="lazy" />
+        </div>
+
+        <div class="svc__panels">
+          <div class="svc__panel is-on" role="tabpanel" id="svc-p1" aria-labelledby="svc-t1">
+            <h3>Full roof replacement</h3>
+            <p>Complete tear-off down to the deck, rotten sheathing replaced at cost, new ice-and-water
+               membrane, synthetic underlayment and your choice of architectural or designer shingle.
+               Most homes are finished in two days.</p>
+            <ul><li>Deck inspected and photographed before anything goes back on</li><li>50-year manufacturer product warranty</li><li>25-year Havenridge workmanship warranty</li><li>Magnet sweep of your entire property, twice</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p2" aria-labelledby="svc-t2" hidden>
+            <h3>Leak repair &amp; diagnosis</h3>
+            <p>Water rarely enters where it shows up inside. We trace it properly — hose testing,
+               moisture meter, attic inspection — so you're paying to fix the cause, not to patch
+               a stain and hope.</p>
+            <ul><li>Same-week appointments, emergency tarping within 24 hours</li><li>Written diagnosis with photos of the actual entry point</li><li>Flat $189 diagnostic, credited against the repair</li><li>Two-year warranty on every repair</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p3" aria-labelledby="svc-t3" hidden>
+            <h3>Standing-seam metal</h3>
+            <p>Concealed-fastener metal roofing that will very likely outlive your mortgage.
+               Roll-formed on site to the exact length of your roof, so there are no horizontal
+               seams for water to find.</p>
+            <ul><li>40–70 year realistic service life</li><li>Class 4 impact and Class A fire rated</li><li>Cuts summer attic temperatures noticeably</li><li>24 standard colours, matched to your trim</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p4" aria-labelledby="svc-t4" hidden>
+            <h3>Gutters &amp; drainage</h3>
+            <p>A perfect roof still fails if the water has nowhere to go. Seamless aluminium formed
+               on your driveway, hidden hangers every 24 inches, and downspouts routed properly
+               away from your foundation.</p>
+            <ul><li>Seamless 5" and 6" K-style, 20 colours</li><li>Leaf guards that we'd actually put on our own homes</li><li>Fascia and soffit repair in the same visit</li><li>Annual clean-out plan available</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p5" aria-labelledby="svc-t5" hidden>
+            <h3>Storm &amp; insurance work</h3>
+            <p>We document the damage the way adjusters need it documented, meet them on site,
+               and handle the back-and-forth. You shouldn't have to become an expert in your own
+               policy during a bad week.</p>
+            <ul><li>Free storm assessment with a full photo report</li><li>We meet your adjuster on the roof, in person</li><li>Emergency tarping to stop further damage</li><li>Direct insurance billing where your policy allows</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ SERVICE DETAIL ============ -->
+<section class="sec sdetail">
+  <div class="wrap">
+
+    <article class="sd" id="replacement" data-rise>
+      <div class="sd__media"><img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1100&q=80" alt="A finished architectural shingle roof" loading="lazy" /></div>
+      <div class="sd__copy">
+        <p class="eyebrow">01 — Full roof replacement</p>
+        <h2>When patching stops being worth it</h2>
+        <p>Complete tear-off down to the deck, rotten sheathing replaced at our cost, new ice-and-water
+          membrane at the eaves and valleys, synthetic underlayment, and your choice of architectural or
+          designer shingle. Most homes are finished in two days and your roof is never left open overnight.</p>
+        <ul class="sd__list">
+          <li><b>Typical range</b><span>$12,000 – $19,000 on a 2,000 sq ft home</span></li>
+          <li><b>Time on site</b><span>2 days, 3–4 for complex roofs</span></li>
+          <li><b>Warranty</b><span>50-year product · 25-year Havenridge workmanship</span></li>
+        </ul>
+        <a class="lnk" href="bookings.html">Get a fixed price <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <article class="sd sd--flip" id="leaks" data-rise>
+      <div class="sd__media"><img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1100&q=80" alt="A roofer tracing a leak back to its source" loading="lazy" /></div>
+      <div class="sd__copy">
+        <p class="eyebrow">02 — Leak repair &amp; diagnosis</p>
+        <h2>Water rarely enters where it shows up</h2>
+        <p>A stain on your bedroom ceiling is often two metres downhill from the actual failure. We trace
+          it properly — hose testing, moisture meter, attic inspection — so you're paying to fix a cause
+          rather than to paint over a symptom and hope it holds until spring.</p>
+        <ul class="sd__list">
+          <li><b>Diagnostic</b><span>Flat $189, credited against the repair</span></li>
+          <li><b>Response</b><span>Same-week appointments · emergency tarping within 24 hours</span></li>
+          <li><b>Warranty</b><span>Two years on every repair</span></li>
+        </ul>
+        <a class="lnk" href="bookings.html">Book a leak diagnosis <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <article class="sd" id="metal" data-rise>
+      <div class="sd__media"><img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1100&q=80" alt="A standing-seam metal roof against a blue sky" loading="lazy" /></div>
+      <div class="sd__copy">
+        <p class="eyebrow">03 — Standing-seam metal</p>
+        <h2>The last roof most houses need</h2>
+        <p>Concealed-fastener metal roofing, roll-formed on your driveway to the exact length of each run
+          so there are no horizontal seams for water to find. It costs roughly twice a shingle roof and
+          lasts roughly three times as long, which is the whole argument.</p>
+        <ul class="sd__list">
+          <li><b>Service life</b><span>40–70 years, realistically</span></li>
+          <li><b>Rating</b><span>Class 4 impact · Class A fire</span></li>
+          <li><b>Finish</b><span>24 standard colours, matched to your trim</span></li>
+        </ul>
+        <a class="lnk" href="bookings.html">Price a metal roof <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <article class="sd sd--flip" id="gutters" data-rise>
+      <div class="sd__media"><img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1100&q=80" alt="Clean roof edge and gutter line" loading="lazy" /></div>
+      <div class="sd__copy">
+        <p class="eyebrow">04 — Gutters &amp; drainage</p>
+        <h2>Where most "roof" problems actually start</h2>
+        <p>Seamless aluminium formed on site, hidden hangers every 24 inches, and downspouts routed
+          properly away from your foundation. We'll also fix the fascia and soffit while we're up there,
+          in the same visit, rather than sending someone back next month.</p>
+        <ul class="sd__list">
+          <li><b>Profiles</b><span>Seamless 5" and 6" K-style, 20 colours</span></li>
+          <li><b>Leaf guards</b><span>Only the ones we'd put on our own homes</span></li>
+          <li><b>Upkeep</b><span>Annual clean-out plan available</span></li>
+        </ul>
+        <a class="lnk" href="bookings.html">Sort out the drainage <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <article class="sd" id="storm" data-rise>
+      <div class="sd__media"><img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1100&q=80" alt="Assessing storm damage on a roof" loading="lazy" /></div>
+      <div class="sd__copy">
+        <p class="eyebrow">05 — Storm &amp; insurance work</p>
+        <h2>You shouldn't have to become a policy expert</h2>
+        <p>We document damage the way adjusters need it documented, meet them on the roof in person, and
+          handle the back-and-forth. If the claim isn't worth making — because it lands under your
+          deductible — we'll say so rather than talk you into one.</p>
+        <ul class="sd__list">
+          <li><b>Assessment</b><span>Free, with a full photo report</span></li>
+          <li><b>Emergency</b><span>Tarping to stop further damage</span></li>
+          <li><b>Billing</b><span>Direct to insurer where your policy allows</span></li>
+        </ul>
+        <a class="lnk" href="bookings.html">Get a storm assessment <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+<!-- ============ PROCESS ============ -->
+<section class="sec process" id="process">
+  <div class="wrap">
+    <header class="sec__head sec__head--split">
+      <div>
+        <p class="eyebrow" data-rise>How it goes</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Five steps.<br />No surprises in any of them.</h2>
+      </div>
+      <p class="sec__lead" data-rise data-delay="2">You'll always know what's happening next, who's coming,
+        and what it costs. Here's the whole thing, start to finish.</p>
+    </header>
+
+    <div class="proc">
+      <div class="proc__sticky">
+        <div class="proc__visual">
+          <div class="proc__imgs" data-proc-imgs>
+            <img class="is-on" src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?auto=format&fit=crop&w=1100&q=80" alt="A roofer inspecting a roof" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1100&q=80" alt="Roof detail and measurements" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1100&q=80" alt="Old roofing being stripped away" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?auto=format&fit=crop&w=1100&q=80" alt="Two roofers installing a new roof" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1100&q=80" alt="A completed roof" loading="lazy" />
+          </div>
+          <div class="proc__badge" data-proc-badge><b>01</b><span>Free inspection</span></div>
+        </div>
+      </div>
+
+      <ol class="proc__steps" data-proc-steps>
+        <li class="proc__step is-on" data-step="0">
+          <span class="proc__n">01</span>
+          <h3>The free inspection</h3>
+          <p>We come out, get on the roof, and photograph everything — including the parts you can't
+             see. You get a written report with those photos whether or not you ever hire us. Takes
+             about 45 minutes.</p>
+          <span class="proc__meta">45 minutes · No obligation</span>
+        </li>
+        <li class="proc__step" data-step="1">
+          <span class="proc__n">02</span>
+          <h3>A fixed price, in writing</h3>
+          <p>One number, broken down line by line, valid for 60 days. We'll walk you through what's
+             urgent, what can wait a season, and what doesn't need doing at all — including when the
+             honest answer is "your roof is fine."</p>
+          <span class="proc__meta">Within 48 hours · Valid 60 days</span>
+        </li>
+        <li class="proc__step" data-step="2">
+          <span class="proc__n">03</span>
+          <h3>We protect the house first</h3>
+          <p>Before a single shingle comes off: tarps over your landscaping, plywood against the
+             siding, and your driveway kept clear. Tear-off happens in sections so your home is never
+             left open overnight.</p>
+          <span class="proc__meta">Day one, before 8am</span>
+        </li>
+        <li class="proc__step" data-step="3">
+          <span class="proc__n">04</span>
+          <h3>The build</h3>
+          <p>The same four-person crew, every day, until it's done. Rotten decking gets replaced at
+             cost — photographed and shown to you before it's covered. Most homes take two days.</p>
+          <span class="proc__meta">Typically 2 days</span>
+        </li>
+        <li class="proc__step" data-step="4">
+          <span class="proc__n">05</span>
+          <h3>We leave it cleaner than we found it</h3>
+          <p>Magnetic sweep of the lawn, driveway and flower beds — twice. Then a final walkaround
+             with you, the photo record of the finished work, and your warranty paperwork in hand.</p>
+          <span class="proc__meta">Same day · 25-year warranty</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- ============ CTA BAND ============ -->
+<section class="ctaband">
+  <div class="wrap ctaband__in">
+    <div>
+      <h2 data-rise>Still deciding? Get the free inspection anyway.</h2>
+      <p data-rise data-delay="1">Forty-five minutes, a written report with photos, and no one will
+        chase you afterwards. If your roof is fine, we'll tell you that.</p>
+    </div>
+    <div class="ctaband__act" data-rise data-delay="2">
+      <a class="btn btn--accent btn--lg magnetic" href="bookings.html" data-magnetic>Book a free inspection</a>
+      <a class="tel tel--band" href="tel:+16045550142"><span><i>Or call</i><b>(604) 555-0142</b></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <a class="logo logo--lg" href="index.html" aria-label="Havenridge Roofing Co. — home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+        </a>
+        <p class="ftr__tag">Sleep soundly under it.</p>
+        <p class="ftr__blurb">Family-run roofing across the Fraser Valley since 2009. Same owners,
+          same phone number, same crew.</p>
+      </div>
+
+      <nav class="ftr__nav" aria-label="Footer">
+        <div>
+          <h4>Services</h4>
+          <a href="services.html">Roof replacement</a>
+          <a href="services.html">Leak repair</a>
+          <a href="services.html">Metal roofing</a>
+          <a href="services.html">Gutters</a>
+          <a href="services.html">Storm &amp; insurance</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">Why us</a>
+          <a href="gallery.html">Our work</a>
+          <a href="services.html#process">Process</a>
+          <a href="about.html#reviews">Reviews</a>
+          <a href="about.html#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="tel:+16045550142">(604) 555-0142</a>
+          <a href="mailto:hello@havenridgeroofing.ca">hello@havenridgeroofing.ca</a>
+          <span>112 – 20434 Fraser Hwy<br />Langley, BC V3A 4G2</span>
+          <span>Mon – Sun · 7am – 7pm</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="ftr__bar">
+      <p>© 2026 Havenridge Roofing Co. · Licensed &amp; insured · BC Lic. #000000</p>
+      <p class="ftr__demo">Design concept — placeholder brand, copy and photography.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

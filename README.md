@@ -1,6 +1,6 @@
 # Havenridge Roofing Co. — frontend concept
 
-A single-page, zero-dependency website concept for a residential roofing company, built to be
+A six-page, zero-dependency website concept for a residential roofing company, built to be
 shown to a client. No build step, no framework, no npm install — open `index.html` and it runs.
 
 **The brief was one line: _"makes you feel safe."_** Every decision below traces back to it.
@@ -52,43 +52,50 @@ one-line change in `styles.css`:
 
 ## The hero animation
 
-A roof draws itself, a bird flies in along an arc, lands softly on the ridge, and sings.
-Hand-authored inline SVG + SMIL — no JavaScript, no library, no GIF.
+A single roofline spans the full width of the hero and draws itself in from both eaves; a bird
+arcs down out of the sky, lands on the ridge, and sings. Hand-authored inline SVG + SMIL — no
+JavaScript, no library, no GIF.
 
 It's built in layers rather than as one tween:
 
-- **Primary** — the bird's arc in, decelerating onto the ridge.
+- **Primary** — the bird's arc down, decelerating onto the ridge.
 - **Secondary** — wings flapping through the flight then folding; the body squashing on
-  touchdown; the roof strokes drawing on ahead of it.
-- **Ambient** — a slow breathing cycle, an occasional tail flick, warm light pulsing behind
-  the house.
+  touchdown; the ridge and its fascia line drawing on ahead of it.
+- **Ambient** — a slow breathing cycle, an occasional tail flick, warm light pooling at the peak.
 
 The flight plays once on load; only the quiet idle and the song loop, so it never nags. Every
 spatial move is on a spline curve — nothing is linearly eased — and each rotation has its pivot
 set before it turns.
 
+It deliberately bleeds off both edges and sits *above* the headline, so the copy reads as
+sheltered under it. An earlier version drew a complete little house (walls, chimney) boxed on
+the right-hand side; over a photograph of an actual house that read as a second building
+floating in the sky, and the clipped edge looked accidental. The walls and chimney are gone for
+the same reason — one line belongs to the composition, a whole house competes with it.
+
+The ridge is measured against the copy at seven widths in the test pass, so it can never cross
+the headline or eyebrow, and the bird can never tuck behind the header.
+
 Under `prefers-reduced-motion`, `main.js` jumps the SVG clock to 6.2s and pauses it, so those
 users see the bird already perched rather than nothing at all.
-
----
 
 ## What's interactive
 
 | | Where |
 |---|---|
-| Roof + bird SMIL animation | Hero |
-| Line-by-line masked headline reveal | Hero |
-| Parallax on hero and stats imagery | Hero, stats band |
+| Roof + bird SMIL animation | Home hero |
+| Line-by-line masked headline reveal | Home hero |
+| Parallax on hero and stats imagery | Home |
 | Custom cursor + magnetic buttons | Desktop, fine pointers only |
-| Scroll progress bar, sticky auto-hiding header, scrollspy | Global |
-| Service tabs with crossfading imagery | Services — full arrow-key support |
-| **Before/after drag comparison** | Mid-page — mouse, touch, hover-scrub and keyboard |
-| Sticky scroll process timeline | Process — image and badge track the active step |
-| Animated counters | Stats band — ease-out, never linear |
-| Filterable project grid + lightbox | Our work |
-| **Live estimate calculator** | Pricing — sliders and segmented controls |
-| Testimonial carousel | Reviews — autoplay, pauses on hover and focus |
-| FAQ accordion | FAQ |
+| Scroll progress bar, sticky auto-hiding header, active nav state | Global |
+| Service tabs with crossfading imagery | Services — full arrow-key support, vertical tablist |
+| **Before/after drag comparison** | Home + Gallery — mouse, touch, hover-scrub, keyboard |
+| Sticky scroll process timeline | Services — image and badge track the active step |
+| Animated counters | Home stats band — ease-out, never linear |
+| Filterable project grid + lightbox | Gallery |
+| **Live estimate calculator** | Bookings — sliders and segmented controls |
+| Testimonial carousel | About — autoplay, pauses on hover and focus |
+| FAQ accordion | About |
 | Inline-validating booking form | Book — real messages, success state |
 
 ### Accessibility
@@ -138,7 +145,22 @@ a finished site rather than a wireframe. All of it needs replacing:
 ## Files
 
 ```
-index.html   semantic markup, inline SVG, the hero animation
-styles.css   design tokens, layout, responsive, reduced-motion, print
-main.js      every interaction; each module no-ops if its markup is absent
+index.html      Home — hero + bird, guarantees, promises, services teaser,
+                before/after, stats, a review, CTA
+services.html   The five services in detail, plus the process timeline
+gallery.html    Filterable project grid, lightbox, before/after slider
+about.html      Story, team, warranty, reviews carousel, service areas, FAQ
+bookings.html   What to expect, the estimate calculator, booking form
+contact.html    Contact cards, message form, service areas
+
+styles.css      Design tokens, layout, responsive, reduced-motion, print
+main.js         Every interaction; each module no-ops if its markup is absent
 ```
+
+The header and footer are repeated in each page rather than injected by JavaScript, so the site
+still works with JS disabled and reads correctly to crawlers. If you change the nav, change it
+in all six files.
+
+Verified in headless Chromium across all six pages at 1440 / 768 / 390px: no console errors, no
+unintended horizontal overflow, the mobile menu is reachable and opens, and every internal link
+resolves.

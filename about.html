@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About — Havenridge Roofing Co.</title>
+<meta name="description" content="Family-run roofing across the Fraser Valley since 2009. Same owners, same crew, a 25-year workmanship warranty and a fixed price in writing." />
+<meta name="theme-color" content="#1E4D45" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="About — Havenridge Roofing Co." />
+<meta property="og:description" content="Family-run roofing across the Fraser Valley since 2009. Same owners, same crew, a 25-year workmanship warranty and a fixed price in writing." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 16 16 6l12 10' fill='none' stroke='%231E4D45' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 15v10h16V15' fill='none' stroke='%23C2603A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<!-- Two independent fallbacks so a decorative preloader can never trap the
+     page: this kills it outright with JS off, and styles.css fades it out on
+     a timer if main.js never loads or throws before it can dismiss it. -->
+<noscript><style>.preloader{display:none !important}</style></noscript>
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
+      <path class="pl-roof" d="M10 52 60 12l50 40" stroke="#F6F1E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-walls" d="M24 48v34h72V48" stroke="#C2603A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-door" d="M52 82V64h16v18" stroke="#E0A33F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="preloader__word">Havenridge</p>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" data-hdr>
+  <div class="hdr__in">
+    <a class="logo" href="index.html" aria-label="Havenridge Roofing Co. — home">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="logo__glow" d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Our work</a>
+      <a href="about.html" class="is-on" aria-current="page">About</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="tel" href="tel:+16045550142">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 3h3l1.6 4-2 1.2a10 10 0 0 0 5.2 5.2L13 11.4 17 13v3a1 1 0 0 1-1.1 1A14 14 0 0 1 3 4.1 1 1 0 0 1 4 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span><i>Talk to a human</i><b>(604) 555-0142</b></span>
+      </a>
+      <a class="btn btn--accent btn--sm magnetic" href="bookings.html" data-magnetic>Free inspection</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu" data-burger><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" data-mnav aria-label="Mobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Our work</a>
+  <a href="about.html" class="is-on" aria-current="page">About</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="contact.html">Contact</a>
+  <a class="mnav__tel" href="tel:+16045550142">(604) 555-0142</a>
+  <a class="btn btn--accent" href="bookings.html">Book a free inspection</a>
+</nav>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">About</span>
+    </nav>
+    <p class="eyebrow eyebrow--light" data-rise>Who we are</p>
+    <h1 class="phero__h1" data-rise data-delay="1">Family-run since 2009.<br />Same phone number.</h1>
+    <p class="phero__lead" data-rise data-delay="2">Eleven people, one van fleet, and a deliberately small patch of the Fraser Valley. Here's how we work and why we've grown slowly on purpose.</p>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="sec story">
+  <div class="wrap story__in">
+    <div class="story__media" data-rise>
+      <img src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?auto=format&fit=crop&w=1100&q=80" alt="Two Havenridge roofers working on a roof" loading="lazy" />
+      <div class="story__badge"><b>2009</b><span>Same owners ever since</span></div>
+    </div>
+    <div class="story__copy">
+      <p class="eyebrow" data-rise>Our story</p>
+      <h2 class="sec__h2" data-rise data-delay="1">We started because<br />of a bad roof.</h2>
+      <p class="sec__lead" data-rise data-delay="2">Ray Okonjo spent eleven years working for other
+        roofing companies and watched the same thing happen over and over: a homeowner is quoted one
+        number, the crew finds something underneath, and the number changes. Nobody was lying, exactly.
+        The estimate was just never meant to be a promise.</p>
+      <p data-rise data-delay="3">So in 2009 he started Havenridge with one rule — the number we quote is
+        the number you pay, and anything we find underneath comes out of our margin unless we've shown
+        it to you first. That rule is why we've stayed small. It's also why we're still here.</p>
+      <p data-rise data-delay="4">Sixteen years later there are eleven of us. We turn down work outside a
+        45-minute radius, because a 25-year warranty is only worth something if we can actually get to
+        your door.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="sec team">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>The people</p>
+      <h2 class="sec__h2" data-rise data-delay="1">You'll know their names.</h2>
+      <p class="sec__lead" data-rise data-delay="2">No subcontractors and no rotating crews. The same four
+        people who start your roof are the ones who finish it.</p>
+    </header>
+    <div class="team__grid">
+      <figure class="tm" data-rise>
+        <img src="https://images.unsplash.com/photo-1625241152315-4a698f74ceb7?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" />
+        <figcaption><b>Ray Okonjo</b><span>Founder · on every inspection</span></figcaption>
+      </figure>
+      <figure class="tm" data-rise data-delay="1">
+        <img src="https://images.unsplash.com/photo-1615751596346-9df8006e5381?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" />
+        <figcaption><b>Hannah Beaulieu</b><span>Operations · the voice on the phone</span></figcaption>
+      </figure>
+      <figure class="tm" data-rise data-delay="2">
+        <img src="https://images.unsplash.com/photo-1777827839146-d634aee2c991?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" />
+        <figcaption><b>Tomas Herrera</b><span>Lead foreman · 14 years on roofs</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- ============ WARRANTY ============ -->
+<section class="sec warranty">
+  <div class="wrap warranty__in">
+    <div class="warranty__seal" data-rise aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="1.5" opacity=".28"/>
+        <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+        <path d="M100 42 62 56v34c0 20.6 15.2 36.4 38 40 22.8-3.6 38-19.4 38-40V56l-38-14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="m85 92 11 11 22-24" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="warranty__ring" x="100" y="176" text-anchor="middle">25 YEARS · IN WRITING · TRANSFERABLE</text>
+      </svg>
+    </div>
+    <div class="warranty__copy">
+      <p class="eyebrow" data-rise>The guarantee</p>
+      <h2 class="sec__h2" data-rise data-delay="1">If it leaks, we fix it.<br />That's the whole policy.</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Twenty-five years of workmanship cover on every roof we install — our labour, not just the
+        shingle manufacturer's product warranty. No deductible, no call-out fee, no argument about
+        whose fault it is.
+      </p>
+      <ul class="warranty__list" data-rise data-delay="3">
+        <li><b>Transferable once</b> — it follows the house if you sell, which appraisers notice.</li>
+        <li><b>No fine print about "acts of God"</b> — storm damage is what a roof is for.</li>
+        <li><b>48-hour response</b> on any warranty call, year-round.</li>
+      </ul>
+    </div>
+  </div>
+</section><!-- ============ REVIEWS ============ -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>In their words</p>
+      <h2 class="sec__h2" data-rise data-delay="1">4.9 across 612 reviews.</h2>
+    </header>
+
+    <div class="rev" data-rev>
+      <div class="rev__track" data-rev-track>
+        <article class="rev__i is-on">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>They found the actual leak in twenty minutes after two other companies had
+            guessed wrong and charged me for it. What stuck with me was that they showed me the
+            photo of the flashing and explained exactly why it failed. I never felt sold to.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1615751596346-9df8006e5381?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Dana Whitfield</b><i>Leak diagnosis · Surrey</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>Full tear-off and replacement in two days, and the quote never moved — even
+            when they found rot under the old decking. They photographed it, called me at work,
+            and charged me their cost for the plywood. That's who they are.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1625241152315-4a698f74ceb7?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Marcus Bailey</b><i>Full replacement · Langley</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>My mum is 82 and lives alone, and I live four hours away. They sent me the
+            photos, called me after every day on site, and one of them fixed her gate latch on
+            the way out. I can't tell you what that was worth to me.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1777827839146-d634aee2c991?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Priya Raman</b><i>Re-roof &amp; gutters · Abbotsford</i></span>
+          </footer>
+        </article>
+      </div>
+
+      <div class="rev__ctl">
+        <button type="button" data-rev-prev aria-label="Previous review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M12 5 7 10l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="rev__dots" data-rev-dots>
+          <button type="button" class="is-on" aria-label="Review 1"></button>
+          <button type="button" aria-label="Review 2"></button>
+          <button type="button" aria-label="Review 3"></button>
+        </div>
+        <button type="button" data-rev-next aria-label="Next review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section><!-- ============ AREAS ============ -->
+<section class="sec areas" id="areas">
+  <div class="wrap areas__in">
+    <div class="areas__copy">
+      <p class="eyebrow" data-rise>Where we work</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Close enough to<br />come back.</h2>
+      <p class="sec__lead" data-rise data-delay="2">We deliberately stay inside a 45-minute radius. A
+        warranty is only real if we can be at your door the same week — so we don't take work we
+        can't service properly for the next 25 years.</p>
+    </div>
+    <ul class="areas__list" data-rise data-delay="1">
+      <li><b>Langley</b><span>Head office · 10 min</span></li>
+      <li><b>Surrey</b><span>20 min</span></li>
+      <li><b>Abbotsford</b><span>25 min</span></li>
+      <li><b>Maple Ridge</b><span>30 min</span></li>
+      <li><b>Coquitlam</b><span>35 min</span></li>
+      <li><b>Chilliwack</b><span>40 min</span></li>
+      <li><b>Mission</b><span>40 min</span></li>
+      <li><b>White Rock</b><span>30 min</span></li>
+    </ul>
+  </div>
+</section><!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap faq__in">
+    <header class="faq__head">
+      <p class="eyebrow" data-rise>Questions</p>
+      <h2 class="sec__h2" data-rise data-delay="1">The things people<br />actually ask us.</h2>
+      <p class="sec__lead" data-rise data-delay="2">Can't see yours? Call us — it's a real person,
+        7am to 7pm, and we don't mind questions from people who aren't ready to buy.</p>
+    </header>
+
+    <div class="faq__list" data-faq>
+      <details class="qa" open>
+        <summary><span>How long does a roof replacement actually take?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Two days for most homes under 3,000 square feet. Complex roofs with
+          multiple valleys, dormers or steep pitches run three to four. We'll tell you which yours is
+          at the inspection, and we don't start a job we can't finish — your home is never left open
+          overnight.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>What happens if you find rot under the old roof?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>We stop, photograph it, and call you before anything is covered back
+          up. Replacement sheathing is charged at our cost — we don't mark up a problem you didn't
+          know you had. On a typical home it's one or two sheets; the quote tells you what each one
+          costs before we start.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Do I need to be home while you work?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>No. Plenty of our customers are at work the whole time. You'll get
+          photos at the end of each day, and the foreman's direct mobile number so you can reach a
+          person rather than an office. We only need access to power and, ideally, a driveway.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Will my garden and driveway survive it?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>This is the thing people worry about most, and fairly. Tarps go over
+          beds and shrubs, plywood leans against the siding, and the dumpster sits on boards. We run
+          a magnetic sweep of the lawn and driveway twice — once at the end of tear-off and again
+          before we leave. If we miss a nail, we come back and find it.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Is it worth claiming on insurance?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Sometimes, and sometimes honestly not — a claim for less than your
+          deductible isn't worth the premium increase. We'll photograph the damage properly, tell you
+          what we think the claim is worth, and meet your adjuster on the roof. If it's not worth
+          claiming, we'll say so.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Can you just repair it instead of replacing it?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Often, yes — and we'll tell you when that's the better call. A roof
+          with eight good years left doesn't need replacing because someone knocked on your door and
+          said so. Roughly a third of our inspections end with us telling someone their roof is fine.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- ============ CTA BAND ============ -->
+<section class="ctaband">
+  <div class="wrap ctaband__in">
+    <div>
+      <h2 data-rise>Still deciding? Get the free inspection anyway.</h2>
+      <p data-rise data-delay="1">Forty-five minutes, a written report with photos, and no one will
+        chase you afterwards. If your roof is fine, we'll tell you that.</p>
+    </div>
+    <div class="ctaband__act" data-rise data-delay="2">
+      <a class="btn btn--accent btn--lg magnetic" href="bookings.html" data-magnetic>Book a free inspection</a>
+      <a class="tel tel--band" href="tel:+16045550142"><span><i>Or call</i><b>(604) 555-0142</b></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <a class="logo logo--lg" href="index.html" aria-label="Havenridge Roofing Co. — home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+        </a>
+        <p class="ftr__tag">Sleep soundly under it.</p>
+        <p class="ftr__blurb">Family-run roofing across the Fraser Valley since 2009. Same owners,
+          same phone number, same crew.</p>
+      </div>
+
+      <nav class="ftr__nav" aria-label="Footer">
+        <div>
+          <h4>Services</h4>
+          <a href="services.html">Roof replacement</a>
+          <a href="services.html">Leak repair</a>
+          <a href="services.html">Metal roofing</a>
+          <a href="services.html">Gutters</a>
+          <a href="services.html">Storm &amp; insurance</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">Why us</a>
+          <a href="gallery.html">Our work</a>
+          <a href="services.html#process">Process</a>
+          <a href="about.html#reviews">Reviews</a>
+          <a href="about.html#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="tel:+16045550142">(604) 555-0142</a>
+          <a href="mailto:hello@havenridgeroofing.ca">hello@havenridgeroofing.ca</a>
+          <span>112 – 20434 Fraser Hwy<br />Langley, BC V3A 4G2</span>
+          <span>Mon – Sun · 7am – 7pm</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="ftr__bar">
+      <p>© 2026 Havenridge Roofing Co. · Licensed &amp; insured · BC Lic. #000000</p>
+      <p class="ftr__demo">Design concept — placeholder brand, copy and photography.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

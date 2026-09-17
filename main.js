@@ -84,7 +84,9 @@
   }
 
   /* ---------- scrollspy ------------------------------------------------- */
-  const navLinks = $$('.nav a');
+  // Only same-page anchors take part; on a multi-page nav the hrefs are page
+  // URLs, which are valid CSS selectors and would silently match nothing.
+  const navLinks = $$('.nav a').filter(a => (a.getAttribute('href') || '').startsWith('#'));
   if (navLinks.length && 'IntersectionObserver' in window) {
     const targets = navLinks
       .map(a => ({ a, sec: $(a.getAttribute('href')) }))
