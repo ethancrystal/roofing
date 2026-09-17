@@ -1,5 +1,5 @@
 /* =========================================================================
-   HAVENRIDGE ROOFING CO. — design system
+   NEXTGEN EXTERIORS — design system
    Brief: "makes you feel safe". Warm paper, deep evergreen shelter,
    terracotta warmth. Soft radii, calm motion, generous air.
    ========================================================================= */
@@ -177,16 +177,9 @@ ul,ol{padding:0; list-style:none}
 }
 @keyframes plBail{to{opacity:0; visibility:hidden}}
 .preloader.is-gone{opacity:0; visibility:hidden}
-.preloader__mark svg{width:96px; height:78px}
-.preloader__mark path{stroke-dasharray:180; stroke-dashoffset:180; animation:plDraw 1.1s var(--e-out) forwards}
-.pl-walls{animation-delay:.32s !important}
-.pl-door{animation-delay:.58s !important}
-@keyframes plDraw{to{stroke-dashoffset:0}}
-.preloader__word{
-  font-family:var(--display); font-size:1.5rem; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--on-dark); opacity:0; animation:plWord .8s var(--e-out) .7s forwards;
-}
-@keyframes plWord{from{opacity:0; transform:translateY(10px)} to{opacity:.85; transform:none}}
+.preloader__mark{opacity:0; animation:plWord .8s var(--e-out) .3s forwards}
+.preloader__logo{display:block; width:min(58vw,260px); height:auto; margin-inline:auto}
+@keyframes plWord{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
 
 /* ---------- header ---------- */
 .hdr{
@@ -207,16 +200,19 @@ ul,ol{padding:0; list-style:none}
   padding-inline:var(--gut); display:flex; align-items:center; gap:28px;
 }
 
-.logo{display:flex; align-items:center; gap:12px; color:#fff; transition:color .45s var(--e-soft)}
-.hdr.is-stuck .logo{color:var(--brand)}
-.logo__mark svg{width:38px; height:38px}
-.logo__mark{transition:transform .55s var(--e-settle)}
-.logo:hover .logo__mark{transform:translateY(-3px) rotate(-3deg)}
-.logo__glow{transition:opacity .4s var(--e-soft)}
-.logo:hover .logo__glow{opacity:.5}
-.logo__txt{display:flex; flex-direction:column; line-height:1.05}
-.logo__txt b{font-family:var(--display); font-size:1.17rem; font-weight:600; letter-spacing:-.01em}
-.logo__txt i{font-style:normal; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; opacity:.72}
+.logo{display:flex; align-items:center; gap:12px}
+.logo__lockup{
+  position:relative; display:block; height:34px; aspect-ratio:710/255;
+  transition:transform .55s var(--e-settle);
+}
+.logo:hover .logo__lockup{transform:translateY(-3px)}
+.logo__img{
+  position:absolute; inset:0; height:100%; width:auto; display:block; opacity:1;
+  transition:opacity .45s var(--e-soft);
+}
+.logo__img--for-light{opacity:0}
+.hdr.is-stuck .logo__img--for-dark{opacity:0}
+.hdr.is-stuck .logo__img--for-light{opacity:1}
 
 .nav{display:flex; gap:4px; margin-left:auto}
 .nav a{
@@ -753,8 +749,7 @@ input[type=range]::-moz-range-thumb{
 /* ---------- footer ---------- */
 .ftr{background:var(--brand-700); color:var(--on-dark); padding:clamp(58px,7vw,96px) 0 28px}
 .ftr__top{display:grid; grid-template-columns:1fr 1.35fr; gap:clamp(34px,5vw,72px); padding-bottom:52px}
-.ftr__brand .logo{color:var(--on-dark)}
-.logo--lg .logo__txt b{font-size:1.4rem}
+.logo--lg .logo__lockup{height:46px}
 .ftr__tag{font-family:var(--display); font-size:1.24rem; color:var(--gold); margin:20px 0 12px; letter-spacing:-.012em}
 .ftr__blurb{font-size:.92rem; color:rgba(242,237,228,.6); max-width:38ch; line-height:1.68}
 .ftr__nav{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,40px)}
