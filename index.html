@@ -1,557 +1,1020 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Northline Roofing Co. — a premium roofing website concept built around clarity, trust, and an easy estimate request."
-    />
-    <meta name="theme-color" content="#11201f" />
-    <title>Northline Roofing Co. | Roofing, Done With Purpose.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Havenridge Roofing Co. — Sleep soundly under it.</title>
+<meta name="description" content="Havenridge Roofing Co. installs and repairs roofs across the Fraser Valley. Licensed, insured, fixed price in writing, and a 25-year workmanship warranty. Free inspection, no pressure." />
+<meta name="theme-color" content="#1E4D45" />
 
-    <header class="site-header" data-header>
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Northline Roofing Co. home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 40 40" role="img">
-              <path d="M5 26.5 20 10l15 16.5M11.5 25.5V34h17v-8.5" />
-              <path d="M15 29h10" />
-            </svg>
-          </span>
-          <span class="brand-copy">
-            <strong>NORTHLINE</strong>
-            <span>ROOFING CO.</span>
-          </span>
-        </a>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Havenridge Roofing Co. — Sleep soundly under it." />
+<meta property="og:description" content="A roof you never have to think about again. Licensed, insured, fixed price in writing, 25-year workmanship warranty." />
 
-        <nav class="desktop-nav" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#process">Our Process</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#areas">Service Areas</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 16 16 6l12 10' fill='none' stroke='%231E4D45' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 15v10h16V15' fill='none' stroke='%23C2603A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="main.js" defer></script>
+</head>
+<body>
 
-        <div class="header-actions">
-          <a class="phone-link" href="tel:0000000000">
-            <span>Call us</span>
-            [PHONE NUMBER]
-          </a>
-          <a class="button button-accent header-cta" href="#estimate">Get a Free Estimate</a>
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            aria-label="Open navigation menu"
-            data-menu-toggle
-          >
-            <span></span><span></span>
-          </button>
-        </div>
-      </div>
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" data-preloader aria-hidden="true">
+  <div class="preloader__mark">
+    <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
+      <path class="pl-roof" d="M10 52 60 12l50 40" stroke="#F6F1E9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-walls" d="M24 48v34h72V48" stroke="#C2603A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path class="pl-door" d="M52 82V64h16v18" stroke="#E0A33F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="preloader__word">Havenridge</p>
+</div>
 
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" data-mobile-menu>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#process">Our Process</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#areas">Service Areas</a>
-        <a href="#contact">Contact</a>
-        <a class="mobile-phone" href="tel:0000000000">Call [PHONE NUMBER]</a>
-      </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+<div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" data-hdr>
+  <div class="hdr__in">
+    <a class="logo" href="#top" aria-label="Havenridge Roofing Co. — home">
+      <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="logo__glow" d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#promise">Why us</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our work</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="hdr__act">
+      <a class="tel" href="tel:+16045550142">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 3h3l1.6 4-2 1.2a10 10 0 0 0 5.2 5.2L13 11.4 17 13v3a1 1 0 0 1-1.1 1A14 14 0 0 1 3 4.1 1 1 0 0 1 4 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span><i>Talk to a human</i><b>(604) 555-0142</b></span>
+      </a>
+      <a class="btn btn--accent btn--sm magnetic" href="#estimate" data-magnetic>Free inspection</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu" data-burger><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mnav" id="mnav" data-mnav aria-label="Mobile">
+  <a href="#promise">Why us</a>
+  <a href="#services">Services</a>
+  <a href="#work">Our work</a>
+  <a href="#process">Process</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#faq">FAQ</a>
+  <a class="mnav__tel" href="tel:+16045550142">(604) 555-0142</a>
+  <a class="btn btn--accent" href="#estimate">Book a free inspection</a>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__media" data-parallax="0.18">
+    <img src="https://images.unsplash.com/photo-1721149122657-7b5440f39160?auto=format&fit=crop&w=2000&q=80"
+         srcset="https://images.unsplash.com/photo-1721149122657-7b5440f39160?auto=format&fit=crop&w=900&q=75 900w,
+                 https://images.unsplash.com/photo-1721149122657-7b5440f39160?auto=format&fit=crop&w=1600&q=80 1600w,
+                 https://images.unsplash.com/photo-1721149122657-7b5440f39160?auto=format&fit=crop&w=2400&q=80 2400w"
+         sizes="100vw" alt="A family home at dusk with warm light glowing in the windows" fetchpriority="high" />
+  </div>
+  <div class="hero__scrim"></div>
+
+  <!-- ===== HERO ART: roof draws itself, a bird flies in, lands softly, and sings ===== -->
+  <div class="hero__art" data-heroart aria-hidden="true">
+    <svg viewBox="0 0 560 320" fill="none" data-birdsvg>
+      <defs>
+        <radialGradient id="hgGlow" cx="50%" cy="55%" r="55%">
+          <stop offset="0%" stop-color="#E0A33F" stop-opacity=".30"/>
+          <stop offset="100%" stop-color="#E0A33F" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- ambient layer: warm light behind the house -->
+      <ellipse cx="270" cy="190" rx="215" ry="130" fill="url(#hgGlow)">
+        <animate attributeName="ry" values="130;138;130" dur="7s" repeatCount="indefinite"
+                 calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+      </ellipse>
+
+      <!-- the shelter, drawing itself on -->
+      <g stroke="#F6F1E9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
+        <path d="M70 226 L270 104 L470 226" stroke-dasharray="470" stroke-dashoffset="470">
+          <animate attributeName="stroke-dashoffset" values="470;0" dur="1.25s" begin="0.25s"
+                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.35 0 0.15 1"/>
+        </path>
+        <path d="M56 226 H484" stroke-dasharray="430" stroke-dashoffset="430">
+          <animate attributeName="stroke-dashoffset" values="430;0" dur="0.8s" begin="1.25s"
+                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
+        </path>
+        <path d="M92 226 V304 M448 226 V304" stroke-dasharray="160" stroke-dashoffset="160" opacity=".55">
+          <animate attributeName="stroke-dashoffset" values="160;0" dur="0.9s" begin="1.65s"
+                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
+        </path>
+      </g>
+
+      <!-- chimney, in the accent -->
+      <path d="M358 158 V118 H392 V178" stroke="#C2603A" stroke-width="3" stroke-linecap="round"
+            stroke-linejoin="round" stroke-dasharray="136" stroke-dashoffset="136">
+        <animate attributeName="stroke-dashoffset" values="136;0" dur="0.7s" begin="1.5s"
+                 fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
+      </path>
+
+      <!-- ===== the bird ===== -->
+      <g id="birdFly" opacity="0">
+        <animate attributeName="opacity" values="0;1" dur="0.25s" begin="1.05s" fill="freeze"/>
+        <!-- primary move: the arc in, decelerating onto the ridge -->
+        <animateMotion dur="2.6s" begin="1.1s" fill="freeze" calcMode="spline"
+          path="M 640,-30 C 560,30 530,-10 476,48 C 422,106 358,150 306,132 C 288,126 276,116 270,104"
+          keyPoints="0;0.45;0.82;1" keyTimes="0;0.4;0.76;1"
+          keySplines="0.3 0 0.5 1;0.4 0 0.4 1;0.25 0 0 1"/>
+
+        <!-- secondary: banking through the turn, flaring level for touchdown -->
+        <g id="birdBank">
+          <animateTransform attributeName="transform" type="rotate" begin="1.1s" dur="2.6s"
+            values="20;12;-8;-15;0" keyTimes="0;0.35;0.7;0.88;1" fill="freeze" calcMode="spline"
+            keySplines="0.4 0 0.3 1;0.4 0 0.3 1;0.3 0 0.3 1;0.2 0 0 1"/>
+
+          <!-- landing squash, pivoting on the feet -->
+          <g id="birdSquash">
+            <animateTransform attributeName="transform" type="scale" begin="3.7s" dur="0.55s"
+              values="1 1;1.07 0.89;0.98 1.05;1 1" keyTimes="0;0.22;0.6;1" fill="freeze"
+              calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.3 1;0.4 0 0.2 1"/>
+
+            <!-- ambient: breathing, once settled -->
+            <g id="birdBreath">
+              <animateTransform attributeName="transform" type="translate" begin="4.3s" dur="3.4s"
+                values="0 0;0 -1.4;0 0" keyTimes="0;0.5;1" repeatCount="indefinite"
+                calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+
+              <!-- legs appear as it touches down -->
+              <g stroke="#E0A33F" stroke-width="1.8" stroke-linecap="round" opacity="0">
+                <animate attributeName="opacity" values="0;1" dur="0.25s" begin="3.6s" fill="freeze"/>
+                <path d="M-4,0 V-8"/><path d="M3,0 V-8"/>
+              </g>
+
+              <path d="M-12,-16 L-31,-8 L-28,-18 L-13,-21 Z" fill="#C2603A">
+                <animateTransform attributeName="transform" type="rotate" begin="5.2s" dur="6s"
+                  values="0 -12 -17;0 -12 -17;7 -12 -17;-2 -12 -17;0 -12 -17;0 -12 -17"
+                  keyTimes="0;0.55;0.62;0.68;0.74;1" repeatCount="indefinite"
+                  calcMode="spline" keySplines="0.4 0 0.2 1;0.3 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+              </path>
+
+              <ellipse cx="-1" cy="-19" rx="13.5" ry="10.5" fill="#F6F1E9" transform="rotate(-10 -1 -19)"/>
+
+              <!-- head group: bobs on each note -->
+              <g id="birdHead">
+                <animateTransform attributeName="transform" type="rotate" begin="4.6s" dur="7s"
+                  values="0 4 -24;0 4 -24;-9 4 -24;0 4 -24;0 4 -24;-7 4 -24;0 4 -24;0 4 -24"
+                  keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
+                  calcMode="spline"
+                  keySplines="0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                <circle cx="11" cy="-30" r="7.6" fill="#F6F1E9"/>
+                <circle cx="13.6" cy="-31.6" r="1.75" fill="#16211F"/>
+                <path d="M18,-30.5 L27.5,-28.4 L18,-26.3 Z" fill="#E0A33F">
+                  <animateTransform attributeName="transform" type="rotate" begin="4.6s" dur="7s"
+                    values="0 18 -28.4;0 18 -28.4;-15 18 -28.4;0 18 -28.4;0 18 -28.4;-13 18 -28.4;0 18 -28.4;0 18 -28.4"
+                    keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
+                    calcMode="spline"
+                    keySplines="0.3 0 0 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                </path>
+              </g>
+
+              <!-- wing: fast flap in flight, then folds -->
+              <g id="birdWing">
+                <animateTransform attributeName="transform" type="rotate" begin="1.1s" dur="0.26s"
+                  values="-54;30;-54" keyTimes="0;0.5;1" repeatCount="10"
+                  calcMode="spline" keySplines="0.35 0 0.2 1;0.35 0 0.2 1"/>
+                <animateTransform attributeName="transform" type="rotate" begin="3.7s" dur="0.6s"
+                  values="30;-8;3;0" keyTimes="0;0.4;0.75;1" fill="freeze"
+                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                <ellipse cx="-3" cy="-19" rx="9" ry="5.6" fill="#C2603A" transform="rotate(-18 -3 -19)"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- the song: notes drifting up, and two soft ripples off the beak -->
+          <g stroke="#F6F1E9" fill="#F6F1E9" stroke-linecap="round">
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;.95;.75;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                       dur="7s" begin="4.65s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="translate"
+                values="30 -40;33 -50;38 -66;43 -82;43 -82" keyTimes="0;0.03;0.10;0.19;1"
+                dur="7s" begin="4.65s" repeatCount="indefinite"
+                calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
+              <circle cx="0" cy="0" r="2.5"/>
+              <path d="M2.2,-0.6 V-9.6" stroke-width="1.4" fill="none"/>
+              <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.4" fill="none"/>
+            </g>
+            <g opacity="0">
+              <animate attributeName="opacity" values="0;.9;.7;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                       dur="7s" begin="5.5s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="translate"
+                values="28 -44;32 -56;39 -72;45 -88;45 -88" keyTimes="0;0.03;0.10;0.19;1"
+                dur="7s" begin="5.5s" repeatCount="indefinite"
+                calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
+              <g transform="scale(.8)">
+                <circle cx="0" cy="0" r="2.5"/>
+                <path d="M2.2,-0.6 V-9.6" stroke-width="1.6" fill="none"/>
+                <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.6" fill="none"/>
+              </g>
+            </g>
+            <!-- song ripples -->
+            <g fill="none" stroke-width="1.6" opacity="0">
+              <animate attributeName="opacity" values="0;.7;0;0" keyTimes="0;0.03;0.11;1"
+                       dur="7s" begin="4.62s" repeatCount="indefinite"/>
+              <animateTransform attributeName="transform" type="scale" values="0.7;1.35;1.35"
+                keyTimes="0;0.11;1" dur="7s" begin="4.62s" repeatCount="indefinite"
+                calcMode="spline" keySplines="0.2 0 0.2 1;0 0 1 1"/>
+              <path d="M31,-33 a9 9 0 0 1 0 10"/>
+              <path d="M36,-36 a15 15 0 0 1 0 16" opacity=".6"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+
+  <div class="wrap hero__in">
+    <p class="eyebrow eyebrow--light" data-rise>Fraser Valley · Since 2009</p>
+
+    <h1 class="hero__h1">
+      <span class="ln"><span>A roof you never have</span></span>
+      <span class="ln"><span>to think about again.</span></span>
+    </h1>
+
+    <p class="hero__sub" data-rise data-delay="1">
+      Most people only call a roofer when something has already gone wrong. We'd rather you
+      never get to that point — so we inspect for free, price it in writing, and stand behind
+      the work for 25 years.
+    </p>
+
+    <div class="hero__cta" data-rise data-delay="2">
+      <a class="btn btn--accent btn--lg magnetic" href="#estimate" data-magnetic>
+        Book a free inspection
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="#work">See our work</a>
+    </div>
+
+    <ul class="hero__trust" data-rise data-delay="3">
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Licensed &amp; fully insured</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>25-year workmanship warranty</li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed price, in writing</li>
+    </ul>
+  </div>
+
+  <aside class="hero__card" data-rise data-delay="4">
+    <div class="hero__card-top">
+      <span class="pulse" aria-hidden="true"></span>
+      <b>Booking this week</b>
+    </div>
+    <p>Free roof inspection with a written report and photos — whether or not you hire us.</p>
+    <div class="hero__card-row">
+      <span>No pressure</span><span>No obligation</span><span>45 min</span>
+    </div>
+  </aside>
+
+  <a class="hero__scroll" href="#promise" aria-label="Scroll to content">
+    <span class="hero__scroll-line" aria-hidden="true"></span>
+    Scroll
+  </a>
+</section>
+
+<!-- ============ ASSURANCE BAR ============ -->
+<section class="assure" aria-label="Our guarantees">
+  <div class="wrap assure__grid">
+    <div class="assure__i" data-rise>
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4 5 8v8c0 6.2 4.6 10.9 11 12 6.4-1.1 11-5.8 11-12V8L16 4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m11.5 16.5 3.2 3.2 6-6.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <b>Licensed &amp; insured</b><span>$5M liability + WorkSafe coverage on every job.</span>
+    </div>
+    <div class="assure__i" data-rise data-delay="1">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M8 5h16v22l-8-4-8 4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 12h8M12 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <b>25-year workmanship</b><span>Our labour warranty, not just the manufacturer's.</span>
+    </div>
+    <div class="assure__i" data-rise data-delay="2">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 7h20v18H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 13h20M11 19h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <b>Fixed price in writing</b><span>The number we quote is the number you pay.</span>
+    </div>
+    <div class="assure__i" data-rise data-delay="3">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.8"/><path d="M16 9.5V16l4.5 2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <b>Answered in 2 hours</b><span>A real person, 7am–7pm, every day of the week.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMISE ============ -->
+<section class="sec promise" id="promise">
+  <div class="wrap">
+    <header class="sec__head">
+      <p class="eyebrow" data-rise>Why people feel safe with us</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Hiring a roofer shouldn't<br />feel like a gamble.</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        You're trusting a stranger with the one thing standing between your family and the
+        weather. We've built the whole company around removing the three things that make
+        that decision stressful.
+      </p>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top" aria-labelledby="hero-title">
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=2200&q=88"
-          alt="Roofing professional working on a residential roof"
-          fetchpriority="high"
-        />
-        <div class="hero-scrim"></div>
-        <div class="hero-rule" aria-hidden="true"></div>
-        <div class="hero-content container">
-          <p class="eyebrow eyebrow-light">Professional roofing · [Service Area]</p>
-          <h1 id="hero-title">Roofing, done<br />with <em>purpose.</em></h1>
-          <p class="hero-lede">
-            Reliable workmanship, considered materials, and professional service for homeowners
-            and businesses throughout [SERVICE AREA].
-          </p>
-          <div class="hero-actions">
-            <a class="button button-accent" href="#estimate">
-              Get a Free Estimate
-              <svg viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M4 10h12M11 5l5 5-5 5" />
-              </svg>
-            </a>
-            <a class="text-link text-link-light" href="#services">
-              Explore Our Services
-              <span aria-hidden="true">↘</span>
-            </a>
-          </div>
-          <ul class="hero-trust" aria-label="Company trust indicators">
-            <li><span>01</span> [LICENSE STATUS]</li>
-            <li><span>02</span> Professional Team</li>
-            <li><span>03</span> Quality-Focused Work</li>
-            <li><span>04</span> Free Estimates</li>
-          </ul>
+    <div class="promise__grid">
+      <article class="pcard" data-rise data-tilt>
+        <span class="pcard__n">01</span>
+        <div class="pcard__ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M8 26 24 12l16 14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 24v14h22V24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 38v-8h6v8" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="hero-scroll" aria-hidden="true">
-          <span></span>
-          SCROLL TO DISCOVER
-        </div>
-      </section>
+        <h3>You'll never get a surprise invoice</h3>
+        <p>We measure the roof, photograph every problem, and hand you one fixed number with a
+           line-by-line breakdown. If we find something underneath, we stop and show you before
+           anyone touches it.</p>
+      </article>
 
-      <section class="trust-bar" aria-label="Company credentials">
-        <div class="trust-bar-inner container">
-          <p>Built on the details that matter.</p>
-          <div class="trust-items">
-            <span><i></i>[LICENSE &amp; INSURANCE DETAILS]</span>
-            <span><i></i>[WARRANTY DETAILS]</span>
-            <span><i></i>[LOCAL OWNERSHIP DETAILS]</span>
-          </div>
+      <article class="pcard" data-rise data-delay="1" data-tilt>
+        <span class="pcard__n">02</span>
+        <div class="pcard__ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 6 10 11v11c0 9 6 15.6 14 17 8-1.4 14-8 14-17V11L24 6Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="m17.5 23.5 4.6 4.6L31 19" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      </section>
+        <h3>The same four people, start to finish</h3>
+        <p>No subcontractors, no rotating crews, no one you've never met on your property.
+           You'll know the names of everyone who works on your home, and the foreman's mobile
+           number is on your paperwork.</p>
+      </article>
 
-      <section class="section services" id="services" aria-labelledby="services-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <div>
-              <p class="eyebrow">Our services</p>
-              <h2 id="services-title">Complete roofing<br />services, thoughtfully delivered.</h2>
-            </div>
-            <p>
-              Every property deserves a solution shaped around its condition, architecture, and
-              long-term needs. Confirm the client’s service list before publishing.
-            </p>
-          </div>
-
-          <div class="service-grid">
-            <article class="service-card service-card-large reveal">
-              <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=85"
-                alt="Construction professional working on a residential project"
-                loading="lazy"
-              />
-              <div class="card-scrim"></div>
-              <div class="service-card-content">
-                <span>01</span>
-                <div>
-                  <h3>[PRIMARY ROOFING SERVICE]</h3>
-                  <p>Add the client-approved service description here.</p>
-                </div>
-                <a href="#estimate" aria-label="Learn more about primary roofing service">↗</a>
-              </div>
-            </article>
-
-            <article class="service-card reveal">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85"
-                alt="Detailed roofline of a well-maintained home"
-                loading="lazy"
-              />
-              <div class="card-scrim"></div>
-              <div class="service-card-content">
-                <span>02</span>
-                <div>
-                  <h3>[SECONDARY SERVICE]</h3>
-                  <p>Add the client-approved service description here.</p>
-                </div>
-                <a href="#estimate" aria-label="Learn more about secondary roofing service">↗</a>
-              </div>
-            </article>
-
-            <article class="service-card reveal">
-              <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-                alt="Contemporary home exterior with a clean roofline"
-                loading="lazy"
-              />
-              <div class="card-scrim"></div>
-              <div class="service-card-content">
-                <span>03</span>
-                <div>
-                  <h3>[ADDITIONAL SERVICE]</h3>
-                  <p>Add the client-approved service description here.</p>
-                </div>
-                <a href="#estimate" aria-label="Learn more about additional roofing service">↗</a>
-              </div>
-            </article>
-          </div>
+      <article class="pcard" data-rise data-delay="2" data-tilt>
+        <span class="pcard__n">03</span>
+        <div class="pcard__ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 42s14-8.4 14-19a14 14 0 1 0-28 0c0 10.6 14 19 14 19Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <circle cx="24" cy="22" r="5" stroke="var(--accent)" stroke-width="2.4"/>
+          </svg>
         </div>
-      </section>
+        <h3>We're still here in fifteen years</h3>
+        <p>Family-run since 2009, same owners, same phone number. Our 25-year workmanship
+           warranty is only worth something if we're still around to honour it — so we've
+           grown slowly on purpose.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <section class="section expertise" id="about" aria-labelledby="expertise-title">
-        <div class="expertise-image-wrap reveal">
-          <img
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=88"
-            alt="Construction professional reviewing plans on site"
-            loading="lazy"
-          />
-          <div class="image-note">
-            <span>YOUR PROPERTY</span>
-            <strong>Protected with intention.</strong>
-          </div>
-        </div>
-        <div class="expertise-copy reveal">
-          <p class="eyebrow eyebrow-accent">Our expertise</p>
-          <h2 id="expertise-title">A roof is more than a surface. It’s peace of mind.</h2>
-          <p class="large-copy">
-            [FEATURED SERVICE EXPLANATION — describe the client’s approach, recommended materials,
-            and the property types they serve.]
-          </p>
-          <ul class="check-list">
-            <li><span>01</span>[CLIENT-APPROVED BENEFIT]</li>
-            <li><span>02</span>[CLIENT-APPROVED BENEFIT]</li>
-            <li><span>03</span>[CLIENT-APPROVED BENEFIT]</li>
-          </ul>
-          <a class="button button-light" href="#estimate">Request an Estimate</a>
-        </div>
-      </section>
+<!-- ============ SERVICES ============ -->
+<section class="sec sec--dark services" id="services">
+  <div class="wrap">
+    <header class="sec__head sec__head--split">
+      <div>
+        <p class="eyebrow eyebrow--light" data-rise>What we do</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Everything above your ceiling.</h2>
+      </div>
+      <p class="sec__lead" data-rise data-delay="2">
+        Roofing, and the things that fail alongside it. One crew, one invoice, one warranty —
+        instead of chasing three trades who each blame the other.
+      </p>
+    </header>
 
-      <section class="section why-us" aria-labelledby="why-title">
-        <div class="container">
-          <div class="why-intro reveal">
-            <p class="eyebrow">The Northline standard</p>
-            <h2 id="why-title">Why homeowners choose a more considered approach.</h2>
-          </div>
-          <div class="why-layout">
-            <div class="why-image reveal">
-              <img
-                src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1300&q=85"
-                alt="Close-up of professional construction craftsmanship"
-                loading="lazy"
-              />
-              <p>Good work starts with clear expectations.</p>
-            </div>
-            <div class="why-list">
-              <article class="why-item reveal">
-                <span>01</span>
-                <div>
-                  <h3>[DIFFERENTIATOR]</h3>
-                  <p>Add a factual explanation supported by the client’s process.</p>
-                </div>
-              </article>
-              <article class="why-item reveal">
-                <span>02</span>
-                <div>
-                  <h3>[DIFFERENTIATOR]</h3>
-                  <p>Add a factual explanation supported by the client’s process.</p>
-                </div>
-              </article>
-              <article class="why-item reveal">
-                <span>03</span>
-                <div>
-                  <h3>[DIFFERENTIATOR]</h3>
-                  <p>Add a factual explanation supported by the client’s process.</p>
-                </div>
-              </article>
-              <article class="why-item reveal">
-                <span>04</span>
-                <div>
-                  <h3>[DIFFERENTIATOR]</h3>
-                  <p>Add a factual explanation supported by the client’s process.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="svc">
+      <div class="svc__list" role="tablist" aria-label="Services">
+        <button class="svc__tab is-on" role="tab" aria-selected="true" aria-controls="svc-p1" id="svc-t1" data-svc="0">
+          <span class="svc__tab-n">01</span>
+          <span class="svc__tab-t">Full roof replacement</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p2" id="svc-t2" tabindex="-1" data-svc="1">
+          <span class="svc__tab-n">02</span>
+          <span class="svc__tab-t">Leak repair &amp; diagnosis</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p3" id="svc-t3" tabindex="-1" data-svc="2">
+          <span class="svc__tab-n">03</span>
+          <span class="svc__tab-t">Standing-seam metal</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p4" id="svc-t4" tabindex="-1" data-svc="3">
+          <span class="svc__tab-n">04</span>
+          <span class="svc__tab-t">Gutters &amp; drainage</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p5" id="svc-t5" tabindex="-1" data-svc="4">
+          <span class="svc__tab-n">05</span>
+          <span class="svc__tab-t">Storm &amp; insurance work</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
 
-      <section class="section projects" id="work" aria-labelledby="projects-title">
-        <div class="container">
-          <div class="section-heading project-heading reveal">
-            <div>
-              <p class="eyebrow eyebrow-light">Selected work</p>
-              <h2 id="projects-title">Built to protect.<br /><em>Finished to belong.</em></h2>
-            </div>
-            <a class="text-link text-link-light" href="#estimate">View Our Work <span>↗</span></a>
-          </div>
-          <div class="project-grid">
-            <figure class="project project-tall reveal">
-              <img
-                src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=88"
-                alt="Completed residential roofing project"
-                loading="lazy"
-              />
-              <figcaption><span>[PROJECT TYPE]</span><strong>[PROJECT LOCATION]</strong></figcaption>
-            </figure>
-            <figure class="project reveal">
-              <img
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=88"
-                alt="Home with a professionally finished roof"
-                loading="lazy"
-              />
-              <figcaption><span>[PROJECT TYPE]</span><strong>[PROJECT LOCATION]</strong></figcaption>
-            </figure>
-            <figure class="project reveal">
-              <img
-                src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=88"
-                alt="Architectural detail of a modern house exterior"
-                loading="lazy"
-              />
-              <figcaption><span>[PROJECT TYPE]</span><strong>[PROJECT LOCATION]</strong></figcaption>
-            </figure>
-          </div>
+      <div class="svc__stage">
+        <div class="svc__imgs" data-svc-imgs>
+          <img class="is-on" src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1200&q=80" alt="A finished shingle roof on a row of homes" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1200&q=80" alt="A roofer stripping old shingles to find a leak" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1200&q=80" alt="A clean metal roof against a blue sky" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1200&q=80" alt="Roof edge detail with clean lines and shadow" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80" alt="A roofer assessing storm damage on a roof" loading="lazy" />
         </div>
-      </section>
 
-      <section class="section process" id="process" aria-labelledby="process-title">
-        <div class="container">
-          <div class="process-intro reveal">
-            <p class="eyebrow">A clear path forward</p>
-            <h2 id="process-title">From first conversation<br />to final walkthrough.</h2>
-            <p>
-              This sample process should be updated to match the client’s actual workflow before
-              launch.
-            </p>
+        <div class="svc__panels">
+          <div class="svc__panel is-on" role="tabpanel" id="svc-p1" aria-labelledby="svc-t1">
+            <h3>Full roof replacement</h3>
+            <p>Complete tear-off down to the deck, rotten sheathing replaced at cost, new ice-and-water
+               membrane, synthetic underlayment and your choice of architectural or designer shingle.
+               Most homes are finished in two days.</p>
+            <ul><li>Deck inspected and photographed before anything goes back on</li><li>50-year manufacturer product warranty</li><li>25-year Havenridge workmanship warranty</li><li>Magnet sweep of your entire property, twice</li></ul>
           </div>
-          <ol class="process-steps">
-            <li class="reveal">
-              <span>01</span>
-              <div><h3>Schedule a consultation</h3><p>Tell us about your property and project.</p></div>
-            </li>
-            <li class="reveal">
-              <span>02</span>
-              <div><h3>Receive your assessment</h3><p>Review the condition, needs, and options.</p></div>
-            </li>
-            <li class="reveal">
-              <span>03</span>
-              <div><h3>Review your proposal</h3><p>Understand the recommended scope and next steps.</p></div>
-            </li>
-            <li class="reveal">
-              <span>04</span>
-              <div><h3>Complete your project</h3><p>Move forward with a clearly defined plan.</p></div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
-        <div class="container">
-          <div class="review-shell reveal">
-            <div class="review-meta">
-              <p class="eyebrow eyebrow-accent">Client perspective</p>
-              <h2 id="reviews-title">The experience matters just as much as the result.</h2>
-              <div class="review-controls" aria-hidden="true">
-                <button type="button" disabled>←</button><button type="button" disabled>→</button>
-              </div>
-            </div>
-            <blockquote>
-              <span class="quote-mark">“</span>
-              <p>[INSERT AN APPROVED CUSTOMER TESTIMONIAL HERE. DO NOT PUBLISH A FABRICATED REVIEW.]</p>
-              <footer>
-                <strong>[CUSTOMER NAME]</strong>
-                <span>[LOCATION / PROJECT TYPE]</span>
-              </footer>
-            </blockquote>
+          <div class="svc__panel" role="tabpanel" id="svc-p2" aria-labelledby="svc-t2" hidden>
+            <h3>Leak repair &amp; diagnosis</h3>
+            <p>Water rarely enters where it shows up inside. We trace it properly — hose testing,
+               moisture meter, attic inspection — so you're paying to fix the cause, not to patch
+               a stain and hope.</p>
+            <ul><li>Same-week appointments, emergency tarping within 24 hours</li><li>Written diagnosis with photos of the actual entry point</li><li>Flat $189 diagnostic, credited against the repair</li><li>Two-year warranty on every repair</li></ul>
           </div>
-        </div>
-      </section>
-
-      <section class="section service-area" id="areas" aria-labelledby="areas-title">
-        <div class="map-lines" aria-hidden="true">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="container area-layout">
-          <div class="reveal">
-            <p class="eyebrow">Close to home</p>
-            <h2 id="areas-title">Serving<br />[SERVICE AREA].</h2>
-            <p>
-              Add the client-approved cities, counties, or regions here. Locations are intentionally
-              omitted until confirmed.
-            </p>
-            <a class="text-link" href="#estimate">Check your address <span>→</span></a>
+          <div class="svc__panel" role="tabpanel" id="svc-p3" aria-labelledby="svc-t3" hidden>
+            <h3>Standing-seam metal</h3>
+            <p>Concealed-fastener metal roofing that will very likely outlive your mortgage.
+               Roll-formed on site to the exact length of your roof, so there are no horizontal
+               seams for water to find.</p>
+            <ul><li>40–70 year realistic service life</li><li>Class 4 impact and Class A fire rated</li><li>Cuts summer attic temperatures noticeably</li><li>24 standard colours, matched to your trim</li></ul>
           </div>
-          <div class="area-marker reveal" aria-hidden="true">
-            <span class="pulse"></span>
-            <svg viewBox="0 0 80 80">
-              <path d="M40 70s22-21 22-39A22 22 0 1 0 18 31c0 18 22 39 22 39Z" />
-              <circle cx="40" cy="31" r="8" />
-            </svg>
-            <strong>YOUR HOME</strong>
+          <div class="svc__panel" role="tabpanel" id="svc-p4" aria-labelledby="svc-t4" hidden>
+            <h3>Gutters &amp; drainage</h3>
+            <p>A perfect roof still fails if the water has nowhere to go. Seamless aluminium formed
+               on your driveway, hidden hangers every 24 inches, and downspouts routed properly
+               away from your foundation.</p>
+            <ul><li>Seamless 5" and 6" K-style, 20 colours</li><li>Leaf guards that we'd actually put on our own homes</li><li>Fascia and soffit repair in the same visit</li><li>Annual clean-out plan available</li></ul>
           </div>
-        </div>
-      </section>
-
-      <section class="section estimate" id="estimate" aria-labelledby="estimate-title">
-        <div class="container estimate-layout">
-          <div class="estimate-copy reveal">
-            <p class="eyebrow eyebrow-light">Start a conversation</p>
-            <h2 id="estimate-title">Let’s get your<br />project started.</h2>
-            <p>
-              Share a few details about your property. A member of the team will follow up to discuss
-              your project and next steps.
-            </p>
-            <div class="estimate-contact">
-              <span>Prefer to talk?</span>
-              <a href="tel:0000000000">[PHONE NUMBER]</a>
-            </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p5" aria-labelledby="svc-t5" hidden>
+            <h3>Storm &amp; insurance work</h3>
+            <p>We document the damage the way adjusters need it documented, meet them on site,
+               and handle the back-and-forth. You shouldn't have to become an expert in your own
+               policy during a bad week.</p>
+            <ul><li>Free storm assessment with a full photo report</li><li>We meet your adjuster on the roof, in person</li><li>Emergency tarping to stop further damage</li><li>Direct insurance billing where your policy allows</li></ul>
           </div>
-          <form class="estimate-form reveal" data-estimate-form>
-            <div class="form-grid">
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" autocomplete="name" placeholder="Your full name" required />
-              </label>
-              <label>
-                <span>Phone</span>
-                <input type="tel" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required />
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
-              </label>
-              <label>
-                <span>Property address</span>
-                <input type="text" name="address" autocomplete="street-address" placeholder="Street address" required />
-              </label>
-              <label class="form-full">
-                <span>Service needed</span>
-                <select name="service" required>
-                  <option value="">Choose a service</option>
-                  <option>Roofing project</option>
-                  <option>Inspection or assessment</option>
-                  <option>Other / not sure</option>
-                </select>
-              </label>
-              <label class="form-full">
-                <span>Project details</span>
-                <textarea name="details" rows="4" placeholder="Tell us what’s happening and how we can help."></textarea>
-              </label>
-            </div>
-            <button class="button button-accent form-submit" type="submit">
-              Request My Free Estimate
-              <span aria-hidden="true">→</span>
-            </button>
-            <p class="form-note">By submitting, you agree to be contacted about your request.</p>
-            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
-          </form>
-        </div>
-      </section>
-
-      <section class="section faq" aria-labelledby="faq-title">
-        <div class="container faq-layout">
-          <div class="faq-intro reveal">
-            <p class="eyebrow">Questions, answered</p>
-            <h2 id="faq-title">Before we begin.</h2>
-            <p>Replace the placeholder responses with client-approved answers before publishing.</p>
-          </div>
-          <div class="accordion" data-accordion>
-            <article class="faq-item reveal">
-              <h3>
-                <button type="button" aria-expanded="true">
-                  Do you provide free estimates?<span aria-hidden="true"></span>
-                </button>
-              </h3>
-              <div class="faq-answer"><p>[CONFIRM THE CLIENT’S ESTIMATE POLICY.]</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <h3>
-                <button type="button" aria-expanded="false">
-                  What areas do you serve?<span aria-hidden="true"></span>
-                </button>
-              </h3>
-              <div class="faq-answer" hidden><p>[INSERT CLIENT-APPROVED SERVICE AREAS.]</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <h3>
-                <button type="button" aria-expanded="false">
-                  Are you licensed and insured?<span aria-hidden="true"></span>
-                </button>
-              </h3>
-              <div class="faq-answer" hidden><p>[INSERT VERIFIED LICENSE AND INSURANCE DETAILS.]</p></div>
-            </article>
-            <article class="faq-item reveal">
-              <h3>
-                <button type="button" aria-expanded="false">
-                  What warranties are available?<span aria-hidden="true"></span>
-                </button>
-              </h3>
-              <div class="faq-answer" hidden><p>[INSERT CLIENT-APPROVED WARRANTY DETAILS.]</p></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="final-cta" id="contact" aria-labelledby="final-title">
-        <img
-          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2200&q=88"
-          alt="Beautifully maintained home at sunset"
-          loading="lazy"
-        />
-        <div class="final-cta-scrim"></div>
-        <div class="container final-cta-content reveal">
-          <p class="eyebrow eyebrow-light">Your next step</p>
-          <h2 id="final-title">Ready to get started?</h2>
-          <p>Let’s talk about your property, your priorities, and the right path forward.</p>
-          <div>
-            <a class="button button-accent" href="#estimate">Get a Free Estimate</a>
-            <a class="button button-outline" href="tel:0000000000">Call [PHONE NUMBER]</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-main">
-          <div class="footer-brand">
-            <a class="brand brand-light" href="#top" aria-label="Northline Roofing Co. home">
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 40 40"><path d="M5 26.5 20 10l15 16.5M11.5 25.5V34h17v-8.5" /><path d="M15 29h10" /></svg>
-              </span>
-              <span class="brand-copy"><strong>NORTHLINE</strong><span>ROOFING CO.</span></span>
-            </a>
-            <p>
-              A proposed premium roofing brand built around clear communication and considered
-              project care.
-            </p>
-          </div>
-          <div class="footer-column">
-            <h3>Explore</h3>
-            <a href="#services">Services</a><a href="#about">About</a><a href="#process">Our Process</a
-            ><a href="#work">Our Work</a>
-          </div>
-          <div class="footer-column">
-            <h3>Service areas</h3>
-            <span>[CITY / REGION]</span><span>[CITY / REGION]</span><span>[CITY / REGION]</span
-            ><span>[CITY / REGION]</span>
-          </div>
-          <div class="footer-column footer-contact">
-            <h3>Contact</h3>
-            <a href="tel:0000000000">[PHONE NUMBER]</a>
-            <a href="mailto:hello@example.com">[EMAIL ADDRESS]</a>
-            <span>[BUSINESS ADDRESS]</span>
-            <span>[BUSINESS HOURS]</span>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© <span data-year></span> Northline Roofing Co.</p>
-          <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Social</a></div>
-          <p class="concept-note">Concept site — replace placeholders before launch.</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <a class="mobile-estimate-bar" href="#estimate">
-      Get a Free Estimate
-      <span aria-hidden="true">→</span>
-    </a>
-  </body>
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="sec ba">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>The difference</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Drag it. This is the same roof.</h2>
+      <p class="sec__lead" data-rise data-delay="2">A 1970s split-level in Langley. Three layers of failing
+        shingle stripped back to bare deck, eleven sheets of rotten sheathing replaced, finished in
+        weathered slate. Four days, start to finish.</p>
+    </header>
+
+    <div class="ba__box" data-ba data-rise>
+      <img class="ba__img" src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1800&q=80" alt="The finished roof after replacement" loading="lazy" />
+      <div class="ba__clip" data-ba-clip>
+        <img class="ba__img" src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1800&q=80" alt="The roof before replacement, stripped back to the deck" loading="lazy" />
+      </div>
+      <span class="ba__tag ba__tag--l">Before</span>
+      <span class="ba__tag ba__tag--r">After</span>
+      <button class="ba__handle" type="button" data-ba-handle role="slider"
+              aria-label="Compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 7 5 12l4.5 5M14.5 7l4.5 5-4.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="sec process" id="process">
+  <div class="wrap">
+    <header class="sec__head sec__head--split">
+      <div>
+        <p class="eyebrow" data-rise>How it goes</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Five steps.<br />No surprises in any of them.</h2>
+      </div>
+      <p class="sec__lead" data-rise data-delay="2">You'll always know what's happening next, who's coming,
+        and what it costs. Here's the whole thing, start to finish.</p>
+    </header>
+
+    <div class="proc">
+      <div class="proc__sticky">
+        <div class="proc__visual">
+          <div class="proc__imgs" data-proc-imgs>
+            <img class="is-on" src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?auto=format&fit=crop&w=1100&q=80" alt="A roofer inspecting a roof" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1100&q=80" alt="Roof detail and measurements" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1100&q=80" alt="Old roofing being stripped away" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?auto=format&fit=crop&w=1100&q=80" alt="Two roofers installing a new roof" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1100&q=80" alt="A completed roof" loading="lazy" />
+          </div>
+          <div class="proc__badge" data-proc-badge><b>01</b><span>Free inspection</span></div>
+        </div>
+      </div>
+
+      <ol class="proc__steps" data-proc-steps>
+        <li class="proc__step is-on" data-step="0">
+          <span class="proc__n">01</span>
+          <h3>The free inspection</h3>
+          <p>We come out, get on the roof, and photograph everything — including the parts you can't
+             see. You get a written report with those photos whether or not you ever hire us. Takes
+             about 45 minutes.</p>
+          <span class="proc__meta">45 minutes · No obligation</span>
+        </li>
+        <li class="proc__step" data-step="1">
+          <span class="proc__n">02</span>
+          <h3>A fixed price, in writing</h3>
+          <p>One number, broken down line by line, valid for 60 days. We'll walk you through what's
+             urgent, what can wait a season, and what doesn't need doing at all — including when the
+             honest answer is "your roof is fine."</p>
+          <span class="proc__meta">Within 48 hours · Valid 60 days</span>
+        </li>
+        <li class="proc__step" data-step="2">
+          <span class="proc__n">03</span>
+          <h3>We protect the house first</h3>
+          <p>Before a single shingle comes off: tarps over your landscaping, plywood against the
+             siding, and your driveway kept clear. Tear-off happens in sections so your home is never
+             left open overnight.</p>
+          <span class="proc__meta">Day one, before 8am</span>
+        </li>
+        <li class="proc__step" data-step="3">
+          <span class="proc__n">04</span>
+          <h3>The build</h3>
+          <p>The same four-person crew, every day, until it's done. Rotten decking gets replaced at
+             cost — photographed and shown to you before it's covered. Most homes take two days.</p>
+          <span class="proc__meta">Typically 2 days</span>
+        </li>
+        <li class="proc__step" data-step="4">
+          <span class="proc__n">05</span>
+          <h3>We leave it cleaner than we found it</h3>
+          <p>Magnetic sweep of the lawn, driveway and flower beds — twice. Then a final walkaround
+             with you, the photo record of the finished work, and your warranty paperwork in hand.</p>
+          <span class="proc__meta">Same day · 25-year warranty</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="stats__bg" data-parallax="0.12">
+    <img src="https://images.unsplash.com/photo-1512331327491-d03cb97d92b4?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy" />
+  </div>
+  <div class="wrap stats__grid">
+    <div class="stat" data-rise><b data-count="2400" data-suffix="+">0</b><span>Roofs completed since 2009</span></div>
+    <div class="stat" data-rise data-delay="1"><b data-count="25" data-suffix=" yr">0</b><span>Workmanship warranty</span></div>
+    <div class="stat" data-rise data-delay="2"><b data-count="4.9" data-decimals="1" data-suffix="/5">0</b><span>Across 612 Google reviews</span></div>
+    <div class="stat" data-rise data-delay="3"><b data-count="0" data-suffix="">0</b><span>Subcontractors, ever</span></div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="sec work" id="work">
+  <div class="wrap">
+    <header class="sec__head sec__head--split">
+      <div>
+        <p class="eyebrow" data-rise>Recent work</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Roofs from around<br />the valley.</h2>
+      </div>
+      <p class="sec__lead" data-rise data-delay="2">Every one of these is a real address we'd happily
+        give you the owner's number for. Ask us at the inspection.</p>
+    </header>
+
+    <div class="work__filters" data-rise>
+      <button class="chip is-on" data-filter="all">All</button>
+      <button class="chip" data-filter="shingle">Shingle</button>
+      <button class="chip" data-filter="metal">Metal</button>
+      <button class="chip" data-filter="repair">Repair</button>
+    </div>
+
+    <div class="work__grid" data-work>
+      <figure class="wk wk--tall" data-cat="shingle" data-rise>
+        <img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1000&q=80" alt="Architectural shingle roof on a family home in Langley" loading="lazy" />
+        <figcaption><b>Weathered slate architectural</b><span>Langley · 2 days · 31 squares</span></figcaption>
+      </figure>
+      <figure class="wk" data-cat="metal" data-rise data-delay="1">
+        <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1000&q=80" alt="Standing seam metal roof against a blue sky" loading="lazy" />
+        <figcaption><b>Standing-seam, charcoal</b><span>Abbotsford · 4 days · 28 squares</span></figcaption>
+      </figure>
+      <figure class="wk" data-cat="repair" data-rise data-delay="2">
+        <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1000&q=80" alt="Roof stripped back during a leak repair" loading="lazy" />
+        <figcaption><b>Valley leak, traced &amp; rebuilt</b><span>Surrey · 1 day · Under warranty</span></figcaption>
+      </figure>
+      <figure class="wk" data-cat="shingle" data-rise>
+        <img src="https://images.unsplash.com/photo-1590365876016-da05ac533e83?auto=format&fit=crop&w=1000&q=80" alt="Dormer roof with new shingles" loading="lazy" />
+        <figcaption><b>Dormer rebuild &amp; reshingle</b><span>Maple Ridge · 3 days</span></figcaption>
+      </figure>
+      <figure class="wk wk--wide" data-cat="shingle" data-rise data-delay="1">
+        <img src="https://images.unsplash.com/photo-1512331327491-d03cb97d92b4?auto=format&fit=crop&w=1400&q=80" alt="Cedar shingle detail" loading="lazy" />
+        <figcaption><b>Cedar shake restoration</b><span>Fort Langley · 6 days · Heritage home</span></figcaption>
+      </figure>
+      <figure class="wk" data-cat="repair" data-rise data-delay="2">
+        <img src="https://images.unsplash.com/photo-1557671009-600c3a1973ca?auto=format&fit=crop&w=1000&q=80" alt="Tile roof repair detail" loading="lazy" />
+        <figcaption><b>Storm damage, insurance</b><span>Chilliwack · 2 days · Fully covered</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTIMATE CALCULATOR ============ -->
+<section class="sec sec--dark calc" id="calc">
+  <div class="wrap calc__in">
+    <div class="calc__copy">
+      <p class="eyebrow eyebrow--light" data-rise>Ballpark it yourself</p>
+      <h2 class="sec__h2" data-rise data-delay="1">What does a roof<br />actually cost?</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Nobody likes "it depends." Move the sliders and you'll get the same range we'd give you on
+        the phone — built from what we actually charged on 2,400 roofs.
+      </p>
+      <p class="calc__note" data-rise data-delay="3">
+        This is a genuine ballpark, not a quote. The real number comes from measuring your roof —
+        which is free, and takes 45 minutes.
+      </p>
+    </div>
+
+    <form class="calc__card" data-calc novalidate>
+      <div class="fld">
+        <label for="c-size">Roof area <b data-out="size">2,000 sq ft</b></label>
+        <input id="c-size" type="range" min="800" max="4500" step="50" value="2000" data-c="size" />
+        <span class="fld__hint">Roughly your home's footprint, plus about 15% for pitch.</span>
+      </div>
+
+      <div class="fld">
+        <span class="fld__lbl">Material</span>
+        <div class="seg" data-c-group="material">
+          <button type="button" class="is-on" data-v="5.6">Architectural shingle</button>
+          <button type="button" data-v="8.2">Designer shingle</button>
+          <button type="button" data-v="13.5">Standing-seam metal</button>
+          <button type="button" data-v="12.4">Cedar shake</button>
+        </div>
+      </div>
+
+      <div class="calc__row">
+        <div class="fld">
+          <span class="fld__lbl">Storeys</span>
+          <div class="seg seg--sm" data-c-group="storeys">
+            <button type="button" class="is-on" data-v="1">One</button>
+            <button type="button" data-v="1.12">Two</button>
+            <button type="button" data-v="1.26">Three</button>
+          </div>
+        </div>
+        <div class="fld">
+          <span class="fld__lbl">Roof shape</span>
+          <div class="seg seg--sm" data-c-group="pitch">
+            <button type="button" class="is-on" data-v="1">Simple</button>
+            <button type="button" data-v="1.13">Some valleys</button>
+            <button type="button" data-v="1.24">Steep / complex</button>
+          </div>
+        </div>
+      </div>
+
+      <label class="chk">
+        <input type="checkbox" data-c="tearoff" checked />
+        <span class="chk__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.5 8.5 6.5 11.5 12.5 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Tear off and dispose of the existing roof</span>
+      </label>
+
+      <div class="calc__out">
+        <span class="calc__out-lbl">Typical Havenridge range</span>
+        <b class="calc__out-val" data-out="range">$13,400 – $16,300</b>
+        <span class="calc__out-sub" data-out="sub">Includes tear-off, disposal, underlayment, flashing and warranty.</span>
+      </div>
+
+      <a class="btn btn--accent btn--full magnetic" href="#estimate" data-magnetic>Get the real number — free</a>
+    </form>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>In their words</p>
+      <h2 class="sec__h2" data-rise data-delay="1">4.9 across 612 reviews.</h2>
+    </header>
+
+    <div class="rev" data-rev>
+      <div class="rev__track" data-rev-track>
+        <article class="rev__i is-on">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>They found the actual leak in twenty minutes after two other companies had
+            guessed wrong and charged me for it. What stuck with me was that they showed me the
+            photo of the flashing and explained exactly why it failed. I never felt sold to.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1615751596346-9df8006e5381?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Dana Whitfield</b><i>Leak diagnosis · Surrey</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>Full tear-off and replacement in two days, and the quote never moved — even
+            when they found rot under the old decking. They photographed it, called me at work,
+            and charged me their cost for the plywood. That's who they are.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1625241152315-4a698f74ceb7?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Marcus Bailey</b><i>Full replacement · Langley</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>My mum is 82 and lives alone, and I live four hours away. They sent me the
+            photos, called me after every day on site, and one of them fixed her gate latch on
+            the way out. I can't tell you what that was worth to me.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1777827839146-d634aee2c991?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Priya Raman</b><i>Re-roof &amp; gutters · Abbotsford</i></span>
+          </footer>
+        </article>
+      </div>
+
+      <div class="rev__ctl">
+        <button type="button" data-rev-prev aria-label="Previous review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M12 5 7 10l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="rev__dots" data-rev-dots>
+          <button type="button" class="is-on" aria-label="Review 1"></button>
+          <button type="button" aria-label="Review 2"></button>
+          <button type="button" aria-label="Review 3"></button>
+        </div>
+        <button type="button" data-rev-next aria-label="Next review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WARRANTY ============ -->
+<section class="sec warranty">
+  <div class="wrap warranty__in">
+    <div class="warranty__seal" data-rise aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="1.5" opacity=".28"/>
+        <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+        <path d="M100 42 62 56v34c0 20.6 15.2 36.4 38 40 22.8-3.6 38-19.4 38-40V56l-38-14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="m85 92 11 11 22-24" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="warranty__ring" x="100" y="176" text-anchor="middle">25 YEARS · IN WRITING · TRANSFERABLE</text>
+      </svg>
+    </div>
+    <div class="warranty__copy">
+      <p class="eyebrow" data-rise>The guarantee</p>
+      <h2 class="sec__h2" data-rise data-delay="1">If it leaks, we fix it.<br />That's the whole policy.</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Twenty-five years of workmanship cover on every roof we install — our labour, not just the
+        shingle manufacturer's product warranty. No deductible, no call-out fee, no argument about
+        whose fault it is.
+      </p>
+      <ul class="warranty__list" data-rise data-delay="3">
+        <li><b>Transferable once</b> — it follows the house if you sell, which appraisers notice.</li>
+        <li><b>No fine print about "acts of God"</b> — storm damage is what a roof is for.</li>
+        <li><b>48-hour response</b> on any warranty call, year-round.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AREAS ============ -->
+<section class="sec areas" id="areas">
+  <div class="wrap areas__in">
+    <div class="areas__copy">
+      <p class="eyebrow" data-rise>Where we work</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Close enough to<br />come back.</h2>
+      <p class="sec__lead" data-rise data-delay="2">We deliberately stay inside a 45-minute radius. A
+        warranty is only real if we can be at your door the same week — so we don't take work we
+        can't service properly for the next 25 years.</p>
+    </div>
+    <ul class="areas__list" data-rise data-delay="1">
+      <li><b>Langley</b><span>Head office · 10 min</span></li>
+      <li><b>Surrey</b><span>20 min</span></li>
+      <li><b>Abbotsford</b><span>25 min</span></li>
+      <li><b>Maple Ridge</b><span>30 min</span></li>
+      <li><b>Coquitlam</b><span>35 min</span></li>
+      <li><b>Chilliwack</b><span>40 min</span></li>
+      <li><b>Mission</b><span>40 min</span></li>
+      <li><b>White Rock</b><span>30 min</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap faq__in">
+    <header class="faq__head">
+      <p class="eyebrow" data-rise>Questions</p>
+      <h2 class="sec__h2" data-rise data-delay="1">The things people<br />actually ask us.</h2>
+      <p class="sec__lead" data-rise data-delay="2">Can't see yours? Call us — it's a real person,
+        7am to 7pm, and we don't mind questions from people who aren't ready to buy.</p>
+    </header>
+
+    <div class="faq__list" data-faq>
+      <details class="qa" open>
+        <summary><span>How long does a roof replacement actually take?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Two days for most homes under 3,000 square feet. Complex roofs with
+          multiple valleys, dormers or steep pitches run three to four. We'll tell you which yours is
+          at the inspection, and we don't start a job we can't finish — your home is never left open
+          overnight.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>What happens if you find rot under the old roof?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>We stop, photograph it, and call you before anything is covered back
+          up. Replacement sheathing is charged at our cost — we don't mark up a problem you didn't
+          know you had. On a typical home it's one or two sheets; the quote tells you what each one
+          costs before we start.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Do I need to be home while you work?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>No. Plenty of our customers are at work the whole time. You'll get
+          photos at the end of each day, and the foreman's direct mobile number so you can reach a
+          person rather than an office. We only need access to power and, ideally, a driveway.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Will my garden and driveway survive it?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>This is the thing people worry about most, and fairly. Tarps go over
+          beds and shrubs, plywood leans against the siding, and the dumpster sits on boards. We run
+          a magnetic sweep of the lawn and driveway twice — once at the end of tear-off and again
+          before we leave. If we miss a nail, we come back and find it.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Is it worth claiming on insurance?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Sometimes, and sometimes honestly not — a claim for less than your
+          deductible isn't worth the premium increase. We'll photograph the damage properly, tell you
+          what we think the claim is worth, and meet your adjuster on the roof. If it's not worth
+          claiming, we'll say so.</p></div>
+      </details>
+      <details class="qa">
+        <summary><span>Can you just repair it instead of replacing it?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p>Often, yes — and we'll tell you when that's the better call. A roof
+          with eight good years left doesn't need replacing because someone knocked on your door and
+          said so. Roughly a third of our inspections end with us telling someone their roof is fine.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESTIMATE / CONTACT ============ -->
+<section class="sec sec--dark est" id="estimate">
+  <div class="wrap est__in">
+    <div class="est__copy">
+      <p class="eyebrow eyebrow--light" data-rise>Book it</p>
+      <h2 class="sec__h2" data-rise data-delay="1">Let's get up there<br />and have a look.</h2>
+      <p class="sec__lead" data-rise data-delay="2">
+        Free, 45 minutes, and you get the photo report either way. If your roof is fine, we'll
+        tell you that and leave you alone.
+      </p>
+
+      <ul class="est__pts" data-rise data-delay="3">
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No sales visit, no financing pitch</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Written report with photos, yours to keep</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed quote within 48 hours if you want one</li>
+      </ul>
+
+      <div class="est__call" data-rise data-delay="4">
+        <span>Rather just talk?</span>
+        <a href="tel:+16045550142">(604) 555-0142</a>
+        <i>7am – 7pm, seven days</i>
+      </div>
+    </div>
+
+    <form class="est__form" data-form novalidate>
+      <div class="est__row">
+        <div class="inp">
+          <input id="f-name" type="text" name="name" placeholder=" " required autocomplete="name" />
+          <label for="f-name">Your name</label>
+          <em data-err></em>
+        </div>
+        <div class="inp">
+          <input id="f-phone" type="tel" name="phone" placeholder=" " required autocomplete="tel" />
+          <label for="f-phone">Phone</label>
+          <em data-err></em>
+        </div>
+      </div>
+
+      <div class="inp">
+        <input id="f-email" type="email" name="email" placeholder=" " required autocomplete="email" />
+        <label for="f-email">Email</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp">
+        <input id="f-addr" type="text" name="address" placeholder=" " required autocomplete="street-address" />
+        <label for="f-addr">Property address</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp inp--sel">
+        <select id="f-need" name="need" required>
+          <option value="" selected disabled>What do you need?</option>
+          <option>I think I have a leak</option>
+          <option>My roof is old and I want it assessed</option>
+          <option>I want a quote for a full replacement</option>
+          <option>Storm or hail damage</option>
+          <option>Gutters or drainage</option>
+          <option>Something else</option>
+        </select>
+        <label for="f-need">What do you need?</label>
+        <em data-err></em>
+      </div>
+
+      <div class="inp">
+        <textarea id="f-msg" name="message" rows="3" placeholder=" "></textarea>
+        <label for="f-msg">Anything we should know? <i>(optional)</i></label>
+      </div>
+
+      <button class="btn btn--accent btn--full btn--lg magnetic" type="submit" data-magnetic>
+        <span data-submit-txt>Book my free inspection</span>
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="est__fine">We'll call within 2 hours during business hours. We never share your details,
+        and we won't put you on a mailing list.</p>
+
+      <div class="est__done" data-done hidden>
+        <div class="est__done-ico" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.4"/><path d="m15 24.5 6.4 6.4L33 18" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <b>Got it — you're booked in.</b>
+        <p>A real person will call you within two hours. In the meantime, if it's urgent, ring
+          <a href="tel:+16045550142">(604) 555-0142</a>.</p>
+        <span class="est__demo">Demo only — this form isn't connected to anything yet.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <a class="logo logo--lg" href="#top" aria-label="Havenridge Roofing Co. — home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M5 21 20 8l15 13" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 19v13h20V19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16.5 32v-7h7v7" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo__txt"><b>Havenridge</b><i>Roofing Co.</i></span>
+        </a>
+        <p class="ftr__tag">Sleep soundly under it.</p>
+        <p class="ftr__blurb">Family-run roofing across the Fraser Valley since 2009. Same owners,
+          same phone number, same crew.</p>
+      </div>
+
+      <nav class="ftr__nav" aria-label="Footer">
+        <div>
+          <h4>Services</h4>
+          <a href="#services">Roof replacement</a>
+          <a href="#services">Leak repair</a>
+          <a href="#services">Metal roofing</a>
+          <a href="#services">Gutters</a>
+          <a href="#services">Storm &amp; insurance</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#promise">Why us</a>
+          <a href="#work">Our work</a>
+          <a href="#process">Process</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <a href="tel:+16045550142">(604) 555-0142</a>
+          <a href="mailto:hello@havenridgeroofing.ca">hello@havenridgeroofing.ca</a>
+          <span>112 – 20434 Fraser Hwy<br />Langley, BC V3A 4G2</span>
+          <span>Mon – Sun · 7am – 7pm</span>
+        </div>
+      </nav>
+    </div>
+
+    <div class="ftr__bar">
+      <p>© 2026 Havenridge Roofing Co. · Licensed &amp; insured · BC Lic. #000000</p>
+      <p class="ftr__demo">Design concept — placeholder brand, copy and photography.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" data-lb hidden>
+  <button class="lb__x" type="button" data-lb-close aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <figure class="lb__fig"><img data-lb-img src="" alt="" /><figcaption data-lb-cap></figcaption></figure>
+</div>
+
+</body>
 </html>
