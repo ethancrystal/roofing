@@ -1,4 +1,4 @@
-# Havenridge Roofing Co. — frontend concept
+# NexGen Exteriors — frontend concept
 
 A six-page, zero-dependency website concept for a residential roofing company, built to be
 shown to a client. No build step, no framework, no npm install — open `index.html` and it runs.
@@ -158,12 +158,43 @@ look unprofessional in a client demo.
 
 ---
 
+## The logo
+
+`logo.svg` and `favicon.svg` are **not the client's original file.** The client supplied their
+logo as an image pasted into chat; this build environment has no way to retrieve the actual
+file bytes from that, only to view it. Rather than block on that, the mark was rebuilt as a
+fresh SVG matching what's visible in the supplied image — the interlocking navy chevron, the
+two grey building bars, the small window accent, the NEXGEN / EXTERIORS wordmark and its
+colours.
+
+It's a close match, not a pixel-identical one — things like the exact original typeface and
+the precise geometry of the icon are a best-effort reconstruction, not a trace. **Swap in the
+client's real logo file before this ships anywhere the client will see it.** Two files to
+replace, same names, same aspect ratio expectations:
+
+- `logo.svg` — the full lockup (icon + wordmark), used in every header and footer. Referenced
+  at a fixed height via CSS (`.logo__img{height:34px}` in the header, `46px` in the footer);
+  any image with roughly the same ~3.4:1 aspect ratio drops in cleanly. A raster file (PNG)
+  works too — just update the two `src="logo.svg"` references per page.
+- `favicon.svg` — a simplified, bolder icon-only crop for the browser tab, since fine detail
+  disappears under 32px. Crop or redraw one from the client's real mark; it doesn't need the
+  wordmark.
+
+The logo sits on a light rounded badge (`.logo__badge` in `styles.css`) in every placement —
+header (both scroll states) and footer — rather than adapting its own colour like the old
+inline house-icon mark did. A real logo has fixed brand ink colours that shouldn't turn white
+on a dark background, so giving it a consistent light backdrop everywhere was the more correct
+choice regardless of which file it's wearing.
+
+---
+
 ## Before this goes live
 
 The brand, copy, numbers and imagery are **realistic placeholders**, written so the client sees
 a finished site rather than a wireframe. All of it needs replacing:
 
-- [ ] Company name, logo and brand assets — currently *Havenridge Roofing Co.*
+- [x] Company name and logo — now the client's real brand, **NexGen Exteriors** (see the note
+      below on the logo file specifically)
 - [ ] Phone `(604) 555-0142`, email, address, hours, licence number
 - [ ] Real service list, service area and drive times
 - [ ] **Verify every claim before publishing** — the 25-year workmanship warranty, "$5M liability",
@@ -190,6 +221,9 @@ contact.html    Contact cards, message form, service areas
 
 styles.css      Design tokens, layout, responsive, reduced-motion, print
 main.js         Every interaction; each module no-ops if its markup is absent
+
+logo.svg        Header/footer lockup — see "The logo" above before shipping
+favicon.svg     Browser-tab icon — see "The logo" above before shipping
 ```
 
 The header and footer are repeated in each page rather than injected by JavaScript, so the site

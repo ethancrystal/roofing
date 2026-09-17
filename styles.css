@@ -207,16 +207,22 @@ ul,ol{padding:0; list-style:none}
   padding-inline:var(--gut); display:flex; align-items:center; gap:28px;
 }
 
-.logo{display:flex; align-items:center; gap:12px; color:#fff; transition:color .45s var(--e-soft)}
-.hdr.is-stuck .logo{color:var(--brand)}
-.logo__mark svg{width:38px; height:38px}
-.logo__mark{transition:transform .55s var(--e-settle)}
-.logo:hover .logo__mark{transform:translateY(-3px) rotate(-3deg)}
-.logo__glow{transition:opacity .4s var(--e-soft)}
-.logo:hover .logo__glow{opacity:.5}
-.logo__txt{display:flex; flex-direction:column; line-height:1.05}
-.logo__txt b{font-family:var(--display); font-size:1.17rem; font-weight:600; letter-spacing:-.01em}
-.logo__txt i{font-style:normal; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; opacity:.72}
+/* NexGen Exteriors wordmark: the logo is a raster/vector asset with fixed
+   navy+gray ink, not currentColor-driven text, so it can't recolor itself
+   between the transparent (hero) and stuck (cream) header states the way the
+   old inline mark + HTML text did. A light badge behind it instead keeps it
+   legible in both states without ever needing to change its own colors. */
+.logo{display:flex; align-items:center}
+.logo__badge{
+  display:inline-flex; align-items:center;
+  background:rgba(255,255,255,.94); border-radius:var(--r-sm);
+  padding:7px 14px; box-shadow:var(--sh-1);
+  transition:transform .55s var(--e-settle), box-shadow .45s var(--e-soft);
+}
+.logo:hover .logo__badge{transform:translateY(-2px); box-shadow:var(--sh-2)}
+.logo__img{display:block; height:34px; width:auto}
+.logo--lg .logo__badge{padding:12px 20px}
+.logo--lg .logo__img{height:46px}
 
 .nav{display:flex; gap:4px; margin-left:auto}
 .nav a{
@@ -795,8 +801,6 @@ input[type=range]::-moz-range-thumb{
 /* ---------- footer ---------- */
 .ftr{background:var(--brand-700); color:var(--on-dark); padding:clamp(58px,7vw,96px) 0 28px}
 .ftr__top{display:grid; grid-template-columns:1fr 1.35fr; gap:clamp(34px,5vw,72px); padding-bottom:52px}
-.ftr__brand .logo{color:var(--on-dark)}
-.logo--lg .logo__txt b{font-size:1.4rem}
 .ftr__tag{font-family:var(--display); font-size:1.24rem; color:var(--gold); margin:20px 0 12px; letter-spacing:-.012em}
 .ftr__blurb{font-size:.92rem; color:rgba(242,237,228,.6); max-width:38ch; line-height:1.68}
 .ftr__nav{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,40px)}
@@ -859,7 +863,8 @@ input[type=range]::-moz-range-thumb{
 @media (max-width:560px){
   .hdr__act .btn{display:none}
   .hdr__in{gap:14px}
-  .logo__txt b{font-size:1.06rem}
+  .logo__badge{padding:6px 10px}
+  .logo__img{height:27px}
 }
 
 @media (max-width:1024px){
