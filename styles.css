@@ -2210,3 +2210,229 @@ h2 em {
     transform: none;
   }
 }
+
+/* Hero songbird — flies in, perches on the roofline, then sings */
+.hero-bird {
+  height: 58px;
+  pointer-events: none;
+  position: absolute;
+  right: clamp(36px, 13vw, 200px);
+  top: 156px;
+  width: 64px;
+  z-index: 3;
+}
+
+.hero-bird-perch {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(182, 138, 76, 0.9) 22%,
+    rgba(182, 138, 76, 0.9) 78%,
+    transparent
+  );
+  bottom: 0;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 78px;
+  animation: birdPerchIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 2s both;
+}
+
+.hero-bird-flight {
+  animation: birdFlight 2.4s cubic-bezier(0.34, 0.55, 0.18, 1) both;
+  inset: 0;
+  position: absolute;
+  transform-origin: 50% 100%;
+}
+
+.hero-bird-svg {
+  height: auto;
+  overflow: visible;
+  width: 100%;
+}
+
+.hero-bird-torso,
+.hero-bird-tail,
+.hero-bird-wing path,
+.hero-bird-skull {
+  fill: #cfa25c;
+}
+
+.hero-bird-torso {
+  fill: #b68a4c;
+}
+
+.hero-bird-tail {
+  fill: #9a7239;
+}
+
+.hero-bird-wing path {
+  fill: #a97f42;
+}
+
+.hero-bird-beak {
+  fill: #d8a94f;
+}
+
+.hero-bird-eye {
+  fill: #10110f;
+}
+
+.hero-bird-legs path {
+  fill: none;
+  stroke: #7c5b2c;
+  stroke-linecap: round;
+  stroke-width: 1.4;
+}
+
+.hero-bird-wing {
+  transform: rotate(-6deg);
+  transform-origin: 47% 52%;
+  animation:
+    birdFlap 0.26s ease-in-out 9,
+    birdFold 0.45s ease-out 2.3s both;
+}
+
+.hero-bird-head {
+  transform-origin: 46% 52%;
+  animation: birdSing 3s ease-in-out 3s infinite;
+}
+
+.hero-bird-song {
+  left: -6px;
+  position: absolute;
+  top: 2px;
+}
+
+.hero-bird-song span {
+  color: var(--accent);
+  font-size: 11px;
+  left: 0;
+  line-height: 1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  animation: birdNote 3s ease-out infinite;
+}
+
+.hero-bird-song span:nth-child(1) {
+  animation-delay: 3.1s;
+}
+
+.hero-bird-song span:nth-child(2) {
+  animation-delay: 4s;
+  font-size: 13px;
+}
+
+.hero-bird-song span:nth-child(3) {
+  animation-delay: 4.9s;
+}
+
+@keyframes birdFlight {
+  0% {
+    opacity: 0;
+    transform: translate(168px, -146px) rotate(11deg) scale(0.82);
+  }
+  12% {
+    opacity: 1;
+  }
+  58% {
+    transform: translate(48px, -46px) rotate(6deg) scale(0.94);
+  }
+  86% {
+    transform: translate(0, -2px) rotate(0deg) scale(1);
+  }
+  93% {
+    transform: translate(0, 3px) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes birdFlap {
+  0% {
+    transform: rotate(-40deg);
+  }
+  50% {
+    transform: rotate(24deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
+
+@keyframes birdFold {
+  from {
+    transform: rotate(-40deg);
+  }
+  to {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes birdPerchIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+@keyframes birdSing {
+  0%,
+  40%,
+  100% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(-10deg);
+  }
+  14% {
+    transform: rotate(-4deg);
+  }
+  22% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes birdNote {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) rotate(-6deg) scale(0.8);
+  }
+  16% {
+    opacity: 0.55;
+  }
+  68% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-17px, -34px) rotate(10deg) scale(1.05);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-bird {
+    right: 26px;
+    top: 122px;
+    transform: scale(0.85);
+    transform-origin: top right;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-bird {
+    display: none;
+  }
+}
