@@ -1,5 +1,5 @@
 /* =========================================================================
-   HAVENRIDGE ROOFING CO. — interaction layer
+   NEXGEN EXTERIORS — interaction layer
    Vanilla JS, no dependencies. Every module fails soft: if its markup
    isn't on the page, it simply doesn't run.
    ========================================================================= */

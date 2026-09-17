@@ -1,4 +1,4 @@
-# Havenridge Roofing Co. — frontend concept
+# NexGen Exteriors — frontend concept
 
 A single-page, zero-dependency website concept for a residential roofing company, built to be
 shown to a client. No build step, no framework, no npm install — open `index.html` and it runs.
@@ -121,7 +121,7 @@ look unprofessional in a client demo.
 The brand, copy, numbers and imagery are **realistic placeholders**, written so the client sees
 a finished site rather than a wireframe. All of it needs replacing:
 
-- [ ] Company name, logo and brand assets — currently *Havenridge Roofing Co.*
+- [x] Company name and logo — now *NexGen Exteriors* (`assets/nexgen-logo-navy.png`, `assets/nexgen-logo-white.png`, favicon)
 - [ ] Phone `(604) 555-0142`, email, address, hours, licence number
 - [ ] Real service list, service area and drive times
 - [ ] **Verify every claim before publishing** — the 25-year workmanship warranty, "$5M liability",
