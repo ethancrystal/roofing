@@ -202,7 +202,7 @@ ul,ol{padding:0; list-style:none}
 
 .logo{display:flex; align-items:center; gap:12px}
 .logo__lockup{
-  position:relative; display:block; height:34px; aspect-ratio:705/237;
+  position:relative; display:block; height:34px; aspect-ratio:710/255;
   transition:transform .55s var(--e-settle);
 }
 .logo:hover .logo__lockup{transform:translateY(-3px)}
