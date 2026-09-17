@@ -305,8 +305,12 @@
 
     $$('.work__filters .chip').forEach(chip => {
       chip.addEventListener('click', () => {
-        $$('.work__filters .chip').forEach(c => c.classList.remove('is-on'));
+        $$('.work__filters .chip').forEach(c => {
+          c.classList.remove('is-on');
+          c.setAttribute('aria-pressed', 'false');
+        });
         chip.classList.add('is-on');
+        chip.setAttribute('aria-pressed', 'true');
         const f = chip.dataset.filter;
         cards.forEach(card => {
           const hit = f === 'all' || card.dataset.cat === f;
@@ -322,7 +326,9 @@
     const lbImg = $('[data-lb-img]');
     const lbCap = $('[data-lb-cap]');
     if (lb) {
+      let opener = null;
       const open = (card) => {
+        opener = card;
         const im = $('img', card);
         lbImg.src = im.src.replace(/w=\d+/, 'w=1800');
         lbImg.alt = im.alt;
@@ -331,7 +337,14 @@
         document.body.classList.add('is-locked');
         $('[data-lb-close]', lb).focus();
       };
-      const close = () => { lb.hidden = true; document.body.classList.remove('is-locked'); };
+      const close = () => {
+        lb.hidden = true;
+        document.body.classList.remove('is-locked');
+        // send focus back where it came from, unless that card got filtered away
+        const back = opener;
+        opener = null;
+        if (back?.isConnected && !back.classList.contains('is-gone')) back.focus();
+      };
 
       cards.forEach(card => {
         card.addEventListener('click', () => open(card));
@@ -436,7 +449,18 @@
       }
 
       if (wrap) wrap.classList.toggle('is-bad', !!msg);
-      if (err) err.textContent = msg;
+      // the form is novalidate, so the invalid state and its reason have to be
+      // exposed by hand or a screen reader never hears either
+      field.setAttribute('aria-invalid', String(Boolean(msg)));
+      if (err) {
+        err.textContent = msg;
+        if (msg) {
+          if (!err.id) err.id = (field.id || field.name || 'field') + '-err';
+          field.setAttribute('aria-describedby', err.id);
+        } else {
+          field.removeAttribute('aria-describedby');
+        }
+      }
       return !msg;
     };
 

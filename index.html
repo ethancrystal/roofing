@@ -21,6 +21,10 @@
 <body>
 
 <!-- ============ PRELOADER ============ -->
+<!-- Two independent fallbacks so a decorative preloader can never trap the
+     page: this kills it outright with JS off, and styles.css fades it out on
+     a timer if main.js never loads or throws before it can dismiss it. -->
+<noscript><style>.preloader{display:none !important}</style></noscript>
 <div class="preloader" data-preloader aria-hidden="true">
   <div class="preloader__mark">
     <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
@@ -392,7 +396,7 @@
     </header>
 
     <div class="svc">
-      <div class="svc__list" role="tablist" aria-label="Services">
+      <div class="svc__list" role="tablist" aria-label="Services" aria-orientation="vertical">
         <button class="svc__tab is-on" role="tab" aria-selected="true" aria-controls="svc-p1" id="svc-t1" data-svc="0">
           <span class="svc__tab-n">01</span>
           <span class="svc__tab-t">Full roof replacement</span>
@@ -593,10 +597,10 @@
     </header>
 
     <div class="work__filters" data-rise>
-      <button class="chip is-on" data-filter="all">All</button>
-      <button class="chip" data-filter="shingle">Shingle</button>
-      <button class="chip" data-filter="metal">Metal</button>
-      <button class="chip" data-filter="repair">Repair</button>
+      <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="shingle" aria-pressed="false">Shingle</button>
+      <button class="chip" data-filter="metal" aria-pressed="false">Metal</button>
+      <button class="chip" data-filter="repair" aria-pressed="false">Repair</button>
     </div>
 
     <div class="work__grid" data-work>
