@@ -1,4 +1,4 @@
-# NexGen Exteriors — frontend concept
+# NextGEN Exteriors — frontend concept
 
 A six-page, zero-dependency website concept for a residential roofing company, built to be
 shown to a client. No build step, no framework, no npm install — open `index.html` and it runs.
@@ -193,8 +193,7 @@ choice regardless of which file it's wearing.
 The brand, copy, numbers and imagery are **realistic placeholders**, written so the client sees
 a finished site rather than a wireframe. All of it needs replacing:
 
-- [x] Company name and logo — now the client's real brand, **NexGen Exteriors** (see the note
-      below on the logo file specifically)
+- [x] Company name and logo — now *NextGEN Exteriors* (`assets/nexgen-logo-navy.png`, `assets/nexgen-logo-white.png`, favicon)
 - [ ] Phone `(604) 555-0142`, email, address, hours, licence number
 - [ ] Real service list, service area and drive times
 - [ ] **Verify every claim before publishing** — the 25-year workmanship warranty, "$5M liability",

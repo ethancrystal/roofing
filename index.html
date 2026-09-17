@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NexGen Exteriors — Sleep soundly under it.</title>
-<meta name="description" content="NexGen Exteriors installs and repairs roofs across the Fraser Valley. Licensed, insured, fixed price in writing, and a 25-year workmanship warranty." />
+<title>NextGEN Exteriors — Sleep soundly under it.</title>
+<meta name="description" content="NextGEN Exteriors installs and repairs roofs across the Fraser Valley. Licensed, insured, fixed price in writing, and a 25-year workmanship warranty. Free inspection, no pressure." />
 <meta name="theme-color" content="#1E4D45" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="NexGen Exteriors — Sleep soundly under it." />
-<meta property="og:description" content="NexGen Exteriors installs and repairs roofs across the Fraser Valley. Licensed, insured, fixed price in writing, and a 25-year workmanship warranty." />
+<meta property="og:title" content="NextGEN Exteriors — Sleep soundly under it." />
+<meta property="og:description" content="A roof you never have to think about again. Licensed, insured, fixed price in writing, 25-year workmanship warranty." />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
 <script src="main.js" defer></script>
 </head>
 <body>
@@ -25,13 +27,8 @@
 <noscript><style>.preloader{display:none !important}</style></noscript>
 <div class="preloader" data-preloader aria-hidden="true">
   <div class="preloader__mark">
-    <svg viewBox="0 0 120 96" fill="none" aria-hidden="true">
-      <path class="pl-roof" d="M18 82 60 20l42 62" stroke="#F6F1E9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-      <path class="pl-walls" d="M70 30v50" stroke="#8891A0" stroke-width="9" stroke-linecap="round"/>
-      <path class="pl-door" d="M84 40v40" stroke="#8891A0" stroke-width="8" stroke-linecap="round"/>
-    </svg>
+    <img class="preloader__logo" src="assets/nexgen-logo-color.png" alt="" />
   </div>
-  <p class="preloader__word">NexGen Exteriors</p>
 </div>
 
 <a class="skip-link" href="#main">Skip to content</a>
@@ -42,8 +39,11 @@
 <!-- ============ HEADER ============ -->
 <header class="hdr" data-hdr>
   <div class="hdr__in">
-    <a class="logo" href="index.html" aria-label="NexGen Exteriors — home">
-      <span class="logo__badge"><img class="logo__img" src="logo.svg" width="218" height="64" alt="" /></span>
+    <a class="logo" href="#top" aria-label="NextGEN Exteriors — home">
+      <span class="logo__lockup" aria-hidden="true">
+        <img class="logo__img logo__img--for-dark" src="assets/nexgen-logo-color.png" alt="" />
+        <img class="logo__img logo__img--for-light" src="assets/nexgen-logo-navy.png" alt="" />
+      </span>
     </a>
 
     <nav class="nav" aria-label="Primary">
@@ -402,15 +402,83 @@
         One crew, one invoice, one warranty — instead of chasing three trades who each blame the other.</p>
     </header>
 
-    <ul class="steaser__grid">
-      <li data-rise><a href="services.html#replacement"><span class="steaser__n">01</span><b>Full roof replacement</b><span>Tear-off to bare deck, finished in about two days.</span></a></li>
-      <li data-rise data-delay="1"><a href="services.html#leaks"><span class="steaser__n">02</span><b>Leak repair &amp; diagnosis</b><span>We trace the cause, not the stain on your ceiling.</span></a></li>
-      <li data-rise data-delay="2"><a href="services.html#metal"><span class="steaser__n">03</span><b>Standing-seam metal</b><span>Roll-formed on site. Likely to outlive your mortgage.</span></a></li>
-      <li data-rise><a href="services.html#gutters"><span class="steaser__n">04</span><b>Gutters &amp; drainage</b><span>A perfect roof still fails if water has nowhere to go.</span></a></li>
-      <li data-rise data-delay="1"><a href="services.html#storm"><span class="steaser__n">05</span><b>Storm &amp; insurance</b><span>We meet your adjuster on the roof, in person.</span></a></li>
-      <li class="steaser__all" data-rise data-delay="2"><a href="services.html"><b>See all services</b>
-        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-    </ul>
+    <div class="svc">
+      <div class="svc__list" role="tablist" aria-label="Services" aria-orientation="vertical">
+        <button class="svc__tab is-on" role="tab" aria-selected="true" aria-controls="svc-p1" id="svc-t1" data-svc="0">
+          <span class="svc__tab-n">01</span>
+          <span class="svc__tab-t">Full roof replacement</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p2" id="svc-t2" tabindex="-1" data-svc="1">
+          <span class="svc__tab-n">02</span>
+          <span class="svc__tab-t">Leak repair &amp; diagnosis</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p3" id="svc-t3" tabindex="-1" data-svc="2">
+          <span class="svc__tab-n">03</span>
+          <span class="svc__tab-t">Standing-seam metal</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p4" id="svc-t4" tabindex="-1" data-svc="3">
+          <span class="svc__tab-n">04</span>
+          <span class="svc__tab-t">Gutters &amp; drainage</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="svc__tab" role="tab" aria-selected="false" aria-controls="svc-p5" id="svc-t5" tabindex="-1" data-svc="4">
+          <span class="svc__tab-n">05</span>
+          <span class="svc__tab-t">Storm &amp; insurance work</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="svc__stage">
+        <div class="svc__imgs" data-svc-imgs>
+          <img class="is-on" src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1200&q=80" alt="A finished shingle roof on a row of homes" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1200&q=80" alt="A roofer stripping old shingles to find a leak" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1200&q=80" alt="A clean metal roof against a blue sky" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1200&q=80" alt="Roof edge detail with clean lines and shadow" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1200&q=80" alt="A roofer assessing storm damage on a roof" loading="lazy" />
+        </div>
+
+        <div class="svc__panels">
+          <div class="svc__panel is-on" role="tabpanel" id="svc-p1" aria-labelledby="svc-t1">
+            <h3>Full roof replacement</h3>
+            <p>Complete tear-off down to the deck, rotten sheathing replaced at cost, new ice-and-water
+               membrane, synthetic underlayment and your choice of architectural or designer shingle.
+               Most homes are finished in two days.</p>
+            <ul><li>Deck inspected and photographed before anything goes back on</li><li>50-year manufacturer product warranty</li><li>25-year NextGEN workmanship warranty</li><li>Magnet sweep of your entire property, twice</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p2" aria-labelledby="svc-t2" hidden>
+            <h3>Leak repair &amp; diagnosis</h3>
+            <p>Water rarely enters where it shows up inside. We trace it properly — hose testing,
+               moisture meter, attic inspection — so you're paying to fix the cause, not to patch
+               a stain and hope.</p>
+            <ul><li>Same-week appointments, emergency tarping within 24 hours</li><li>Written diagnosis with photos of the actual entry point</li><li>Flat $189 diagnostic, credited against the repair</li><li>Two-year warranty on every repair</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p3" aria-labelledby="svc-t3" hidden>
+            <h3>Standing-seam metal</h3>
+            <p>Concealed-fastener metal roofing that will very likely outlive your mortgage.
+               Roll-formed on site to the exact length of your roof, so there are no horizontal
+               seams for water to find.</p>
+            <ul><li>40–70 year realistic service life</li><li>Class 4 impact and Class A fire rated</li><li>Cuts summer attic temperatures noticeably</li><li>24 standard colours, matched to your trim</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p4" aria-labelledby="svc-t4" hidden>
+            <h3>Gutters &amp; drainage</h3>
+            <p>A perfect roof still fails if the water has nowhere to go. Seamless aluminium formed
+               on your driveway, hidden hangers every 24 inches, and downspouts routed properly
+               away from your foundation.</p>
+            <ul><li>Seamless 5" and 6" K-style, 20 colours</li><li>Leaf guards that we'd actually put on our own homes</li><li>Fascia and soffit repair in the same visit</li><li>Annual clean-out plan available</li></ul>
+          </div>
+          <div class="svc__panel" role="tabpanel" id="svc-p5" aria-labelledby="svc-t5" hidden>
+            <h3>Storm &amp; insurance work</h3>
+            <p>We document the damage the way adjusters need it documented, meet them on site,
+               and handle the back-and-forth. You shouldn't have to become an expert in your own
+               policy during a bad week.</p>
+            <ul><li>Free storm assessment with a full photo report</li><li>We meet your adjuster on the roof, in person</li><li>Emergency tarping to stop further damage</li><li>Direct insurance billing where your policy allows</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <!-- ============ BEFORE / AFTER ============ -->
@@ -473,9 +541,115 @@
       <p data-rise data-delay="1">Forty-five minutes, a written report with photos, and no one will
         chase you afterwards. If your roof is fine, we'll tell you that.</p>
     </div>
-    <div class="ctaband__act" data-rise data-delay="2">
-      <a class="btn btn--accent btn--lg magnetic" href="bookings.html" data-magnetic>Book a free inspection</a>
-      <a class="tel tel--band" href="tel:+16045550142"><span><i>Or call</i><b>(604) 555-0142</b></span></a>
+
+    <form class="calc__card" data-calc novalidate>
+      <div class="fld">
+        <label for="c-size">Roof area <b data-out="size">2,000 sq ft</b></label>
+        <input id="c-size" type="range" min="800" max="4500" step="50" value="2000" data-c="size" />
+        <span class="fld__hint">Roughly your home's footprint, plus about 15% for pitch.</span>
+      </div>
+
+      <div class="fld">
+        <span class="fld__lbl">Material</span>
+        <div class="seg" data-c-group="material">
+          <button type="button" class="is-on" data-v="5.6">Architectural shingle</button>
+          <button type="button" data-v="8.2">Designer shingle</button>
+          <button type="button" data-v="13.5">Standing-seam metal</button>
+          <button type="button" data-v="12.4">Cedar shake</button>
+        </div>
+      </div>
+
+      <div class="calc__row">
+        <div class="fld">
+          <span class="fld__lbl">Storeys</span>
+          <div class="seg seg--sm" data-c-group="storeys">
+            <button type="button" class="is-on" data-v="1">One</button>
+            <button type="button" data-v="1.12">Two</button>
+            <button type="button" data-v="1.26">Three</button>
+          </div>
+        </div>
+        <div class="fld">
+          <span class="fld__lbl">Roof shape</span>
+          <div class="seg seg--sm" data-c-group="pitch">
+            <button type="button" class="is-on" data-v="1">Simple</button>
+            <button type="button" data-v="1.13">Some valleys</button>
+            <button type="button" data-v="1.24">Steep / complex</button>
+          </div>
+        </div>
+      </div>
+
+      <label class="chk">
+        <input type="checkbox" data-c="tearoff" checked />
+        <span class="chk__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.5 8.5 6.5 11.5 12.5 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Tear off and dispose of the existing roof</span>
+      </label>
+
+      <div class="calc__out">
+        <span class="calc__out-lbl">Typical NextGEN range</span>
+        <b class="calc__out-val" data-out="range">$13,400 – $16,300</b>
+        <span class="calc__out-sub" data-out="sub">Includes tear-off, disposal, underlayment, flashing and warranty.</span>
+      </div>
+
+      <a class="btn btn--accent btn--full magnetic" href="#estimate" data-magnetic>Get the real number — free</a>
+    </form>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sec reviews" id="reviews">
+  <div class="wrap">
+    <header class="sec__head sec__head--center">
+      <p class="eyebrow" data-rise>In their words</p>
+      <h2 class="sec__h2" data-rise data-delay="1">4.9 across 612 reviews.</h2>
+    </header>
+
+    <div class="rev" data-rev>
+      <div class="rev__track" data-rev-track>
+        <article class="rev__i is-on">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>They found the actual leak in twenty minutes after two other companies had
+            guessed wrong and charged me for it. What stuck with me was that they showed me the
+            photo of the flashing and explained exactly why it failed. I never felt sold to.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1615751596346-9df8006e5381?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Dana Whitfield</b><i>Leak diagnosis · Surrey</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>Full tear-off and replacement in two days, and the quote never moved — even
+            when they found rot under the old decking. They photographed it, called me at work,
+            and charged me their cost for the plywood. That's who they are.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1625241152315-4a698f74ceb7?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Marcus Bailey</b><i>Full replacement · Langley</i></span>
+          </footer>
+        </article>
+        <article class="rev__i">
+          <div class="rev__stars" aria-label="5 out of 5">★★★★★</div>
+          <blockquote>My mum is 82 and lives alone, and I live four hours away. They sent me the
+            photos, called me after every day on site, and one of them fixed her gate latch on
+            the way out. I can't tell you what that was worth to me.</blockquote>
+          <footer>
+            <img src="https://images.unsplash.com/photo-1777827839146-d634aee2c991?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+            <span><b>Priya Raman</b><i>Re-roof &amp; gutters · Abbotsford</i></span>
+          </footer>
+        </article>
+      </div>
+
+      <div class="rev__ctl">
+        <button type="button" data-rev-prev aria-label="Previous review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M12 5 7 10l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="rev__dots" data-rev-dots>
+          <button type="button" class="is-on" aria-label="Review 1"></button>
+          <button type="button" aria-label="Review 2"></button>
+          <button type="button" aria-label="Review 3"></button>
+        </div>
+        <button type="button" data-rev-next aria-label="Next review">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -487,8 +661,10 @@
   <div class="wrap">
     <div class="ftr__top">
       <div class="ftr__brand">
-        <a class="logo logo--lg" href="index.html" aria-label="NexGen Exteriors — home">
-          <span class="logo__badge"><img class="logo__img" src="logo.svg" width="218" height="64" alt="" /></span>
+        <a class="logo logo--lg" href="#top" aria-label="NextGEN Exteriors — home">
+          <span class="logo__lockup" aria-hidden="true">
+            <img class="logo__img" src="assets/nexgen-logo-color.png" alt="" />
+          </span>
         </a>
         <p class="ftr__tag">Sleep soundly under it.</p>
         <p class="ftr__blurb">Family-run roofing across the Fraser Valley since 2009. Same owners,
@@ -515,7 +691,7 @@
         <div>
           <h4>Get in touch</h4>
           <a href="tel:+16045550142">(604) 555-0142</a>
-          <a href="mailto:hello@nexgenexteriors.ca">hello@nexgenexteriors.ca</a>
+          <a href="mailto:hello@nextgenexteriors.com">hello@nextgenexteriors.com</a>
           <span>112 – 20434 Fraser Hwy<br />Langley, BC V3A 4G2</span>
           <span>Mon – Sun · 7am – 7pm</span>
         </div>
@@ -523,7 +699,7 @@
     </div>
 
     <div class="ftr__bar">
-      <p>© 2026 NexGen Exteriors · Licensed &amp; insured · BC Lic. #000000</p>
+      <p>© 2026 NextGEN Exteriors · Licensed &amp; insured · BC Lic. #000000</p>
       <p class="ftr__demo">Design concept — placeholder brand, copy and photography.</p>
     </div>
   </div>
