@@ -2301,29 +2301,30 @@ h2 em {
 }
 
 .hero-bird-song {
-  left: -6px;
+  left: -8px;
   position: absolute;
-  top: 2px;
+  top: -2px;
 }
 
 .hero-bird-song span {
-  color: var(--accent);
-  font-size: 11px;
+  color: #efc879;
+  font-size: 16px;
   left: 0;
   line-height: 1;
   opacity: 0;
   position: absolute;
+  text-shadow: 0 1px 4px rgba(10, 12, 10, 0.7);
   top: 0;
-  animation: birdNote 3s ease-out infinite;
+  animation: birdNote 3.4s ease-out infinite;
 }
 
 .hero-bird-song span:nth-child(1) {
-  animation-delay: 3.1s;
+  animation-delay: 2.9s;
 }
 
 .hero-bird-song span:nth-child(2) {
-  animation-delay: 4s;
-  font-size: 13px;
+  animation-delay: 3.9s;
+  font-size: 20px;
 }
 
 .hero-bird-song span:nth-child(3) {
@@ -2408,17 +2409,17 @@ h2 em {
 @keyframes birdNote {
   0% {
     opacity: 0;
-    transform: translate(0, 0) rotate(-6deg) scale(0.8);
+    transform: translate(0, 0) rotate(-8deg) scale(0.7);
   }
-  16% {
-    opacity: 0.55;
+  18% {
+    opacity: 0.92;
   }
-  68% {
-    opacity: 0.3;
+  60% {
+    opacity: 0.7;
   }
   100% {
     opacity: 0;
-    transform: translate(-17px, -34px) rotate(10deg) scale(1.05);
+    transform: translate(-24px, -44px) rotate(12deg) scale(1.1);
   }
 }
 
