@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -85,12 +85,16 @@
         />
         <div class="hero-scrim"></div>
         <div class="hero-rule" aria-hidden="true"></div>
+        <div class="hero-monogram" aria-hidden="true">N</div>
         <div class="hero-content container">
-          <p class="eyebrow eyebrow-light">Professional roofing · [Service Area]</p>
-          <h1 id="hero-title">Roofing, done<br />with <em>purpose.</em></h1>
+          <div class="hero-kicker">
+            <p class="eyebrow eyebrow-light">Professional roofing · [Service Area]</p>
+            <span>A considered standard · Every project</span>
+          </div>
+          <h1 id="hero-title">Shelter,<br /><em>elevated.</em></h1>
           <p class="hero-lede">
-            Reliable workmanship, considered materials, and professional service for homeowners
-            and businesses throughout [SERVICE AREA].
+            A considered roofing experience for discerning property owners—defined by exacting
+            workmanship, material integrity, and exceptional care.
           </p>
           <div class="hero-actions">
             <a class="button button-accent" href="#estimate">
@@ -103,6 +107,20 @@
               Explore Our Services
               <span aria-hidden="true">↘</span>
             </a>
+          </div>
+          <div class="hero-seal" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs>
+                <path
+                  id="seal-path"
+                  d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"
+                />
+              </defs>
+              <text>
+                <textPath href="#seal-path">NORTHLINE • CRAFT • CARE • CLARITY • </textPath>
+              </text>
+              <path class="seal-mark" d="M42 65 60 45l18 20M49 64v11h22V64" />
+            </svg>
           </div>
           <ul class="hero-trust" aria-label="Company trust indicators">
             <li><span>01</span> [LICENSE STATUS]</li>
@@ -118,8 +136,16 @@
       </section>
 
       <section class="trust-bar" aria-label="Company credentials">
+        <div class="trust-marquee" aria-hidden="true">
+          <div>
+            <span>Material integrity</span><i>◆</i><span>Considered craftsmanship</span><i>◆</i
+            ><span>Quiet confidence</span><i>◆</i><span>Exceptional care</span><i>◆</i
+            ><span>Material integrity</span><i>◆</i><span>Considered craftsmanship</span><i>◆</i
+            ><span>Quiet confidence</span><i>◆</i><span>Exceptional care</span><i>◆</i>
+          </div>
+        </div>
         <div class="trust-bar-inner container">
-          <p>Built on the details that matter.</p>
+          <p>The difference is in what others overlook.</p>
           <div class="trust-items">
             <span><i></i>[LICENSE &amp; INSURANCE DETAILS]</span>
             <span><i></i>[WARRANTY DETAILS]</span>
@@ -133,7 +159,7 @@
           <div class="section-heading reveal">
             <div>
               <p class="eyebrow">Our services</p>
-              <h2 id="services-title">Complete roofing<br />services, thoughtfully delivered.</h2>
+              <h2 id="services-title">One standard.<br /><em>Every detail.</em></h2>
             </div>
             <p>
               Every property deserves a solution shaped around its condition, architecture, and
