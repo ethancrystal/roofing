@@ -1,6 +1,6 @@
 # NextGEN Exteriors — frontend concept
 
-A single-page, zero-dependency website concept for a residential roofing company, built to be
+A six-page, zero-dependency website concept for a residential roofing company, built to be
 shown to a client. No build step, no framework, no npm install — open `index.html` and it runs.
 
 **The brief was one line: _"makes you feel safe."_** Every decision below traces back to it.
@@ -52,43 +52,85 @@ one-line change in `styles.css`:
 
 ## The hero animation
 
-A roof draws itself, a bird flies in along an arc, lands softly on the ridge, and sings.
-Hand-authored inline SVG + SMIL — no JavaScript, no library, no GIF.
+A small illustrated cottage hangs above the last word of the headline, over the photograph. A
+bird arcs down out of the sky, lands on its chimney, and sings. Hand-authored inline SVG + SMIL
+for both — no library.
 
-It's built in layers rather than as one tween:
+### Aiming it at your headline
 
-- **Primary** — the bird's arc in, decelerating onto the ridge.
-- **Secondary** — wings flapping through the flight then folding; the body squashing on
-  touchdown; the roof strokes drawing on ahead of it.
-- **Ambient** — a slow breathing cycle, an occasional tail flick, warm light pulsing behind
-  the house.
+The whole scene hangs from one point, held as a percentage of the hero box in `styles.css`:
 
-The flight plays once on load; only the quiet idle and the song loop, so it never nags. Every
-spatial move is on a spline curve — nothing is linearly eased — and each rotation has its pivot
-set before it turns.
+```css
+.hero__art{
+  --scene-x:58;   --scene-y:32;   /* the top of the chimney — where the bird lands */
+}
+```
 
-Under `prefers-reduced-motion`, `main.js` jumps the SVG clock to 6.2s and pauses it, so those
-users see the bird already perched rather than nothing at all.
+**These values are a tuned best guess, not a final measurement.** The designer marked an exact
+spot on a screenshot that didn't reach this build, so instead they were checked against a live
+render of this exact page in this environment: at that render, the word "again." sits at roughly
+x 50–64% / y 38–51% of the hero box, and `--scene-x:58 / --scene-y:32` lands the house's roofline
+across "have" (the end of the first line) and its walls and window across "again." (the second
+line's last word), with the bird landing clear of both lines in the gap above. That was one
+narrow render, not the real photo at real desktop widths — nudge the two numbers once you see it
+live, the same way the old roofline's calibration numbers would have needed a check.
 
----
+The house and the bird are both pinned to that single point, each in its own untransformed box,
+so neither distorts if the other's sizing changes.
+
+### How the motion is built
+
+- **Primary** — the bird's arc down, decelerating onto the chimney.
+- **Secondary** — wings flapping through the flight, a braking wingbeat, then folding; the body
+  squashing on touchdown; a quick head dip on impact.
+- **Ambient** — a slow breathing cycle, an occasional tail flick, a head look-around, a three-note
+  song with a small glow, all looping seamlessly.
+
+The flight plays once on load; only the quiet idle, look-around and song loops repeat, so it
+never nags. Every spatial move is on a spline curve — nothing is linearly eased — and each
+rotation has its pivot set before it turns. The braking wingbeat hands off into the fold at a
+matching angle so there's no visual snap at the boundary.
+
+The bird itself is a small illustration, not a flat icon: a layered wing (a base shape plus an
+overlapping covert feather and a tip fleck), a soft top-to-bottom gradient on the body, and
+color-blocked head, breast and tail in the site's own palette — evergreen cap, terracotta breast
+and tail, gold beak, cream-to-shadow body.
+
+The house sits behind the headline copy — it reads as sitting on the photo, not on top of the
+words — while the bird sits above it, so it's never hidden by the headline wherever the chimney
+lands. Both hang off `.hero__art` and `.hero__scene`, which deliberately carry no `z-index` of
+their own: giving either one would seal it into its own stacking context, and the bird would be
+trapped inside it, unable to render above the headline no matter what `z-index` it was given.
+
+An earlier version of this hero was a traced roofline that ran the photographed roof's own pitch
+out to both frame edges, with the bird landing on the real ridge — no drawn house, since one
+boxed on the side read as a second building floating in the sky. This version deliberately
+reintroduces a small drawn house, but as an overlaid vignette rather than a traced continuation
+of the photo's own architecture, so it doesn't fight the photograph the same way.
+
+Under `prefers-reduced-motion`, `main.js` jumps the SVG clock to 4.5s and pauses it — the moment
+every one-shot landing animation (the squash, the wingbeat folding to rest, the head's impact
+dip) has resolved to its frozen value, and also the exact moment the first ambient loop begins —
+so those users see the bird already landed and settled, in a neutral pose, rather than nothing
+at all or a loop caught mid-cycle.
 
 ## What's interactive
 
 | | Where |
 |---|---|
-| Roof + bird SMIL animation | Hero |
-| Line-by-line masked headline reveal | Hero |
-| Parallax on hero and stats imagery | Hero, stats band |
+| House + bird SMIL animation | Home hero |
+| Line-by-line masked headline reveal | Home hero |
+| Parallax on hero and stats imagery | Home |
 | Custom cursor + magnetic buttons | Desktop, fine pointers only |
-| Scroll progress bar, sticky auto-hiding header, scrollspy | Global |
-| Service tabs with crossfading imagery | Services — full arrow-key support |
-| **Before/after drag comparison** | Mid-page — mouse, touch, hover-scrub and keyboard |
-| Sticky scroll process timeline | Process — image and badge track the active step |
-| Animated counters | Stats band — ease-out, never linear |
-| Filterable project grid + lightbox | Our work |
-| **Live estimate calculator** | Pricing — sliders and segmented controls |
-| Testimonial carousel | Reviews — autoplay, pauses on hover and focus |
-| FAQ accordion | FAQ |
+| Scroll progress bar, sticky auto-hiding header, active nav state | Global |
+| Service tabs with crossfading imagery | Services — full arrow-key support, vertical tablist |
+| **Before/after drag comparison** | Home + Gallery — mouse, touch, hover-scrub, keyboard |
+| Sticky scroll process timeline | Services — image and badge track the active step |
+| Animated counters | Home stats band — ease-out, never linear |
+| Filterable project grid + lightbox | Gallery |
+| **Live estimate calculator** | Bookings — sliders and segmented controls |
+| Testimonial carousel | About — autoplay, pauses on hover and focus |
+| FAQ accordion | About |
 | Inline-validating booking form | Book — real messages, success state |
 
 ### Accessibility
@@ -116,6 +158,36 @@ look unprofessional in a client demo.
 
 ---
 
+## The logo
+
+`logo.svg` and `favicon.svg` are **not the client's original file.** The client supplied their
+logo as an image pasted into chat; this build environment has no way to retrieve the actual
+file bytes from that, only to view it. Rather than block on that, the mark was rebuilt as a
+fresh SVG matching what's visible in the supplied image — the interlocking navy chevron, the
+two grey building bars, the small window accent, the NEXGEN / EXTERIORS wordmark and its
+colours.
+
+It's a close match, not a pixel-identical one — things like the exact original typeface and
+the precise geometry of the icon are a best-effort reconstruction, not a trace. **Swap in the
+client's real logo file before this ships anywhere the client will see it.** Two files to
+replace, same names, same aspect ratio expectations:
+
+- `logo.svg` — the full lockup (icon + wordmark), used in every header and footer. Referenced
+  at a fixed height via CSS (`.logo__img{height:34px}` in the header, `46px` in the footer);
+  any image with roughly the same ~3.4:1 aspect ratio drops in cleanly. A raster file (PNG)
+  works too — just update the two `src="logo.svg"` references per page.
+- `favicon.svg` — a simplified, bolder icon-only crop for the browser tab, since fine detail
+  disappears under 32px. Crop or redraw one from the client's real mark; it doesn't need the
+  wordmark.
+
+The logo sits on a light rounded badge (`.logo__badge` in `styles.css`) in every placement —
+header (both scroll states) and footer — rather than adapting its own colour like the old
+inline house-icon mark did. A real logo has fixed brand ink colours that shouldn't turn white
+on a dark background, so giving it a consistent light backdrop everywhere was the more correct
+choice regardless of which file it's wearing.
+
+---
+
 ## Before this goes live
 
 The brand, copy, numbers and imagery are **realistic placeholders**, written so the client sees
@@ -138,7 +210,25 @@ a finished site rather than a wireframe. All of it needs replacing:
 ## Files
 
 ```
-index.html   semantic markup, inline SVG, the hero animation
-styles.css   design tokens, layout, responsive, reduced-motion, print
-main.js      every interaction; each module no-ops if its markup is absent
+index.html      Home — hero + bird, guarantees, promises, services teaser,
+                before/after, stats, a review, CTA
+services.html   The five services in detail, plus the process timeline
+gallery.html    Filterable project grid, lightbox, before/after slider
+about.html      Story, team, warranty, reviews carousel, service areas, FAQ
+bookings.html   What to expect, the estimate calculator, booking form
+contact.html    Contact cards, message form, service areas
+
+styles.css      Design tokens, layout, responsive, reduced-motion, print
+main.js         Every interaction; each module no-ops if its markup is absent
+
+logo.svg        Header/footer lockup — see "The logo" above before shipping
+favicon.svg     Browser-tab icon — see "The logo" above before shipping
 ```
+
+The header and footer are repeated in each page rather than injected by JavaScript, so the site
+still works with JS disabled and reads correctly to crawlers. If you change the nav, change it
+in all six files.
+
+Verified in headless Chromium across all six pages at 1440 / 768 / 390px: no console errors, no
+unintended horizontal overflow, the mobile menu is reachable and opens, and every internal link
+resolves.

@@ -25,8 +25,14 @@
   /* ---------- the hero bird: settle it immediately when motion is off --- */
   const birdSvg = $('[data-birdsvg]');
   if (birdSvg && CALM && typeof birdSvg.pauseAnimations === 'function') {
-    // jump past the flight so it's already perched, then hold
-    try { birdSvg.setCurrentTime(6.2); birdSvg.pauseAnimations(); } catch (e) {}
+    // Jump past the flight so it's already perched on the chimney, then hold.
+    // 4.5s is the last moment every one-shot landing animation (the squash,
+    // the braking wingbeat folding into rest, the head's impact-dip) has
+    // frozen at its resting value, and it's also the exact moment the first
+    // ambient loop (the breathing cycle) begins — so this lands right on the
+    // boundary between "still landing" and "idle", with nothing yet nudged
+    // out of its neutral pose by a loop that's already mid-cycle.
+    try { birdSvg.setCurrentTime(4.5); birdSvg.pauseAnimations(); } catch (e) {}
   }
 
   /* ---------- header: stick, auto-hide, scroll progress ----------------- */
@@ -84,7 +90,9 @@
   }
 
   /* ---------- scrollspy ------------------------------------------------- */
-  const navLinks = $$('.nav a');
+  // Only same-page anchors take part; on a multi-page nav the hrefs are page
+  // URLs, which are valid CSS selectors and would silently match nothing.
+  const navLinks = $$('.nav a').filter(a => (a.getAttribute('href') || '').startsWith('#'));
   if (navLinks.length && 'IntersectionObserver' in window) {
     const targets = navLinks
       .map(a => ({ a, sec: $(a.getAttribute('href')) }))

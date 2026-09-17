@@ -6,7 +6,6 @@
 <title>NextGEN Exteriors — Sleep soundly under it.</title>
 <meta name="description" content="NextGEN Exteriors installs and repairs roofs across the Fraser Valley. Licensed, insured, fixed price in writing, and a 25-year workmanship warranty. Free inspection, no pressure." />
 <meta name="theme-color" content="#1E4D45" />
-
 <meta property="og:type" content="website" />
 <meta property="og:title" content="NextGEN Exteriors — Sleep soundly under it." />
 <meta property="og:description" content="A roof you never have to think about again. Licensed, insured, fixed price in writing, 25-year workmanship warranty." />
@@ -36,6 +35,7 @@
 <div class="cursor" data-cursor aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
 <div class="scrollbar" data-progress aria-hidden="true"><i></i></div>
 
+
 <!-- ============ HEADER ============ -->
 <header class="hdr" data-hdr>
   <div class="hdr__in">
@@ -47,12 +47,12 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <a href="#promise">Why us</a>
-      <a href="#services">Services</a>
-      <a href="#work">Our work</a>
-      <a href="#process">Process</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#faq">FAQ</a>
+      <a href="index.html" class="is-on" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Our work</a>
+      <a href="about.html">About</a>
+      <a href="bookings.html">Bookings</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="hdr__act">
@@ -60,25 +60,24 @@
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 3h3l1.6 4-2 1.2a10 10 0 0 0 5.2 5.2L13 11.4 17 13v3a1 1 0 0 1-1.1 1A14 14 0 0 1 3 4.1 1 1 0 0 1 4 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         <span><i>Talk to a human</i><b>(604) 555-0142</b></span>
       </a>
-      <a class="btn btn--accent btn--sm magnetic" href="#estimate" data-magnetic>Free inspection</a>
+      <a class="btn btn--accent btn--sm magnetic" href="bookings.html" data-magnetic>Free inspection</a>
       <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu" data-burger><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <nav class="mnav" id="mnav" data-mnav aria-label="Mobile">
-  <a href="#promise">Why us</a>
-  <a href="#services">Services</a>
-  <a href="#work">Our work</a>
-  <a href="#process">Process</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#faq">FAQ</a>
+  <a href="index.html" class="is-on" aria-current="page">Home</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Our work</a>
+  <a href="about.html">About</a>
+  <a href="bookings.html">Bookings</a>
+  <a href="contact.html">Contact</a>
   <a class="mnav__tel" href="tel:+16045550142">(604) 555-0142</a>
-  <a class="btn btn--accent" href="#estimate">Book a free inspection</a>
+  <a class="btn btn--accent" href="bookings.html">Book a free inspection</a>
 </nav>
 
 <main id="main">
-
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero__media" data-parallax="0.18">
@@ -90,160 +89,183 @@
   </div>
   <div class="hero__scrim"></div>
 
-  <!-- ===== HERO ART: roof draws itself, a bird flies in, lands softly, and sings ===== -->
-  <div class="hero__art" data-heroart aria-hidden="true">
-    <svg viewBox="0 0 560 320" fill="none" data-birdsvg>
-      <defs>
-        <radialGradient id="hgGlow" cx="50%" cy="55%" r="55%">
-          <stop offset="0%" stop-color="#E0A33F" stop-opacity=".30"/>
-          <stop offset="100%" stop-color="#E0A33F" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
+  <!-- ===== HERO ART =====
+       A small illustrated cottage sits above the last word of the headline
+       ("again."), and a bird flies in, lands on its chimney, and sings.
+       Hand-authored inline SVG + SMIL, in the same line-and-block-colour
+       language as the header logo mark and the preloader glyph.
 
-      <!-- ambient layer: warm light behind the house -->
-      <ellipse cx="270" cy="190" rx="215" ry="130" fill="url(#hgGlow)">
-        <animate attributeName="ry" values="130;138;130" dur="7s" repeatCount="indefinite"
-                 calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
-      </ellipse>
+       The whole scene hangs from one point — the top of the chimney, where
+       the bird lands — held as a percentage of the hero box in CSS
+       (--scene-x / --scene-y on .hero__art), so it can be re-aimed without
+       touching this markup.
 
-      <!-- the shelter, drawing itself on -->
-      <g stroke="#F6F1E9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".92">
-        <path d="M70 226 L270 104 L470 226" stroke-dasharray="470" stroke-dashoffset="470">
-          <animate attributeName="stroke-dashoffset" values="470;0" dur="1.25s" begin="0.25s"
-                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.35 0 0.15 1"/>
-        </path>
-        <path d="M56 226 H484" stroke-dasharray="430" stroke-dashoffset="430">
-          <animate attributeName="stroke-dashoffset" values="430;0" dur="0.8s" begin="1.25s"
-                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
-        </path>
-        <path d="M92 226 V304 M448 226 V304" stroke-dasharray="160" stroke-dashoffset="160" opacity=".55">
-          <animate attributeName="stroke-dashoffset" values="160;0" dur="0.9s" begin="1.65s"
-                   fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
-        </path>
-      </g>
+       PLACEMENT IS STILL A BEST GUESS. The designer marked an exact spot on
+       a screenshot that did not reach this build. An earlier attempt sat the
+       house directly on top of "again." — measured live, its cream wall and
+       glowing window turned out to have almost no contrast against the
+       cream headline text, so the word nearly disappeared into it. This
+       version instead sits the (now smaller) house just past the end of
+       "again.", in the clear gap before the tree line, so the bird lands
+       right by the last word without any part of the house overlapping the
+       letters. --scene-x:76 / --scene-y:34, house box shrunk to 102×88px.
+       Checked live at one viewport width, not every breakpoint — nudge
+       --scene-x / --scene-y (and the house's width/height/left/top, kept in
+       lockstep so the chimney anchor point doesn't drift) once you see it.
+  -->
+  <div class="hero__art" aria-hidden="true">
+    <div class="hero__scene">
 
-      <!-- chimney, in the accent -->
-      <path d="M358 158 V118 H392 V178" stroke="#C2603A" stroke-width="3" stroke-linecap="round"
-            stroke-linejoin="round" stroke-dasharray="136" stroke-dashoffset="136">
-        <animate attributeName="stroke-dashoffset" values="136;0" dur="0.7s" begin="1.5s"
-                 fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.4 0 0.2 1"/>
-      </path>
+      <svg class="hero__house" viewBox="0 0 150 130" fill="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="houseGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#E0A33F" stop-opacity=".85"/>
+            <stop offset="100%" stop-color="#E0A33F" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
 
-      <!-- ===== the bird ===== -->
-      <g id="birdFly" opacity="0">
-        <animate attributeName="opacity" values="0;1" dur="0.25s" begin="1.05s" fill="freeze"/>
-        <!-- primary move: the arc in, decelerating onto the ridge -->
-        <animateMotion dur="2.6s" begin="1.1s" fill="freeze" calcMode="spline"
-          path="M 640,-30 C 560,30 530,-10 476,48 C 422,106 358,150 306,132 C 288,126 276,116 270,104"
-          keyPoints="0;0.45;0.82;1" keyTimes="0;0.4;0.76;1"
-          keySplines="0.3 0 0.5 1;0.4 0 0.4 1;0.25 0 0 1"/>
+        <ellipse cx="75" cy="121" rx="56" ry="8" fill="#16211F" opacity=".16"/>
 
-        <!-- secondary: banking through the turn, flaring level for touchdown -->
-        <g id="birdBank">
-          <animateTransform attributeName="transform" type="rotate" begin="1.1s" dur="2.6s"
-            values="20;12;-8;-15;0" keyTimes="0;0.35;0.7;0.88;1" fill="freeze" calcMode="spline"
-            keySplines="0.4 0 0.3 1;0.4 0 0.3 1;0.3 0 0.3 1;0.2 0 0 1"/>
+        <rect x="26" y="66" width="98" height="52" rx="3" fill="#F6F1E9" stroke="#16211F" stroke-width="1.4" stroke-opacity=".18"/>
 
-          <!-- landing squash, pivoting on the feet -->
-          <g id="birdSquash">
-            <animateTransform attributeName="transform" type="scale" begin="3.7s" dur="0.55s"
-              values="1 1;1.07 0.89;0.98 1.05;1 1" keyTimes="0;0.22;0.6;1" fill="freeze"
-              calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.3 1;0.4 0 0.2 1"/>
+        <circle cx="75" cy="93" r="27" fill="url(#houseGlow)"/>
+        <rect x="63" y="81" width="24" height="24" rx="2.5" fill="#E0A33F"/>
+        <path d="M63,93 H87 M75,81 V105" stroke="#16211F" stroke-width="1.6" stroke-opacity=".4"/>
+        <rect x="63" y="81" width="24" height="24" rx="2.5" fill="none" stroke="#16211F" stroke-width="1.4" stroke-opacity=".3"/>
 
-            <!-- ambient: breathing, once settled -->
-            <g id="birdBreath">
-              <animateTransform attributeName="transform" type="translate" begin="4.3s" dur="3.4s"
-                values="0 0;0 -1.4;0 0" keyTimes="0;0.5;1" repeatCount="indefinite"
-                calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+        <path d="M75,14 L136,66 L14,66 Z" fill="#1E4D45"/>
+        <path d="M75,14 L136,66" stroke="#F6F1E9" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+        <path d="M75,14 L14,66" stroke="#F6F1E9" stroke-width="2" stroke-linecap="round" opacity=".55"/>
 
-              <!-- legs appear as it touches down -->
-              <g stroke="#E0A33F" stroke-width="1.8" stroke-linecap="round" opacity="0">
-                <animate attributeName="opacity" values="0;1" dur="0.25s" begin="3.6s" fill="freeze"/>
-                <path d="M-4,0 V-8"/><path d="M3,0 V-8"/>
+        <rect x="100" y="20" width="18" height="26" fill="#C2603A"/>
+        <rect x="97" y="14" width="24" height="6.5" rx="1.5" fill="#16211F"/>
+      </svg>
+
+      <span class="hero__glowdot" aria-hidden="true"></span>
+      <svg class="hero__bird" viewBox="0 0 900 520" fill="none" aria-hidden="true" data-birdsvg>
+        <defs>
+          <linearGradient id="birdBodyGrad" x1="-1" y1="-29.5" x2="-1" y2="-8.5" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#F6F1E9"/>
+            <stop offset="100%" stop-color="#F6E3D8"/>
+          </linearGradient>
+        </defs>
+        <g id="birdFly" opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.25s" begin="1.15s" fill="freeze"/>
+          <animateMotion dur="2.7s" begin="1.2s" fill="freeze" calcMode="spline"
+            path="M 880,-150 C 760,-30 690,50 636,170 C 588,276 596,392 652,466 C 674,496 700,504 700,470"
+            keyPoints="0;0.45;0.82;1" keyTimes="0;0.4;0.76;1"
+            keySplines="0.3 0 0.5 1;0.4 0 0.4 1;0.25 0 0 1"/>
+
+          <g id="birdBank">
+            <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="2.7s"
+              values="24;14;-10;-16;0" keyTimes="0;0.35;0.7;0.88;1" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.3 1;0.4 0 0.3 1;0.3 0 0.3 1;0.2 0 0 1"/>
+
+            <g transform="scale(1.35)">
+              <g id="birdSquash">
+                <animateTransform attributeName="transform" type="scale" begin="3.9s" dur="0.55s"
+                  values="1 1;1.07 0.89;0.98 1.05;1 1" keyTimes="0;0.22;0.6;1" fill="freeze"
+                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.3 1;0.4 0 0.2 1"/>
+
+                <g id="birdBreath">
+                  <animateTransform attributeName="transform" type="translate" begin="4.5s" dur="3.4s"
+                    values="0 0;0 -1.4;0 0" keyTimes="0;0.5;1" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+
+                  <g stroke="#E0A33F" stroke-width="1.8" stroke-linecap="round" opacity="0">
+                    <animate attributeName="opacity" values="0;1" dur="0.25s" begin="3.8s" fill="freeze"/>
+                    <path d="M-4,0 V-8"/><path d="M3,0 V-8"/>
+                  </g>
+
+                  <path d="M-12,-16 L-31,-8 L-28,-18 L-13,-21 Z" fill="#C2603A">
+                    <animateTransform attributeName="transform" type="rotate" begin="5.4s" dur="6s"
+                      values="0 -12 -17;0 -12 -17;7 -12 -17;-2 -12 -17;0 -12 -17;0 -12 -17"
+                      keyTimes="0;0.55;0.62;0.68;0.74;1" repeatCount="indefinite"
+                      calcMode="spline" keySplines="0.4 0 0.2 1;0.3 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                  </path>
+
+                  <ellipse cx="-1" cy="-19" rx="13.5" ry="10.5" fill="url(#birdBodyGrad)" transform="rotate(-10 -1 -19)"/>
+                  <ellipse cx="3" cy="-13" rx="6.5" ry="5.5" fill="#C2603A" opacity=".92"/>
+
+                  <g id="birdHead">
+                    <animateTransform attributeName="transform" type="rotate" begin="3.95s" dur="0.4s"
+                      values="0 4 -24;-11 4 -24;3 4 -24;0 4 -24" keyTimes="0;0.4;0.75;1" fill="freeze"
+                      calcMode="spline" keySplines="0.3 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <animateTransform attributeName="transform" type="rotate" begin="4.8s" dur="7s"
+                      values="0 4 -24;0 4 -24;-9 4 -24;0 4 -24;0 4 -24;-7 4 -24;0 4 -24;0 4 -24"
+                      keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
+                      calcMode="spline"
+                      keySplines="0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <circle cx="11" cy="-30" r="7.6" fill="#F6F1E9"/>
+                    <ellipse cx="7" cy="-33.5" rx="5.6" ry="4.8" fill="#1E4D45"/>
+                    <circle cx="13.6" cy="-31.6" r="1.75" fill="#16211F"/>
+                    <path d="M18,-30.5 L27.5,-28.4 L18,-26.3 Z" fill="#E0A33F">
+                      <animateTransform attributeName="transform" type="rotate" begin="4.8s" dur="7s"
+                        values="0 18 -28.4;0 18 -28.4;-15 18 -28.4;0 18 -28.4;0 18 -28.4;-13 18 -28.4;0 18 -28.4;0 18 -28.4"
+                        keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
+                        calcMode="spline"
+                        keySplines="0.3 0 0 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    </path>
+                  </g>
+
+                  <g id="birdWing">
+                    <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="0.26s"
+                      values="-54;30;-54" keyTimes="0;0.5;1" repeatCount="9"
+                      calcMode="spline" keySplines="0.35 0 0.2 1;0.35 0 0.2 1"/>
+                    <animateTransform attributeName="transform" type="rotate" begin="3.55s" dur="0.35s"
+                      values="-54;48;30" keyTimes="0;0.55;1" fill="freeze"
+                      calcMode="spline" keySplines="0.3 0 0.2 1;0.3 0 0.2 1"/>
+                    <animateTransform attributeName="transform" type="rotate" begin="3.9s" dur="0.6s"
+                      values="30;-8;3;0" keyTimes="0;0.4;0.75;1" fill="freeze"
+                      calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <ellipse cx="-3" cy="-19" rx="10.5" ry="6.4" fill="#1E4D45" transform="rotate(-18 -3 -19)"/>
+                    <ellipse cx="-1.5" cy="-17.5" rx="7.2" ry="4.3" fill="#C2603A" opacity=".95" transform="rotate(-14 -1.5 -17.5)"/>
+                    <ellipse cx="-8" cy="-21" rx="3.6" ry="2" fill="#F6F1E9" opacity=".55" transform="rotate(-26 -8 -21)"/>
+                  </g>
+                </g>
               </g>
 
-              <path d="M-12,-16 L-31,-8 L-28,-18 L-13,-21 Z" fill="#C2603A">
-                <animateTransform attributeName="transform" type="rotate" begin="5.2s" dur="6s"
-                  values="0 -12 -17;0 -12 -17;7 -12 -17;-2 -12 -17;0 -12 -17;0 -12 -17"
-                  keyTimes="0;0.55;0.62;0.68;0.74;1" repeatCount="indefinite"
-                  calcMode="spline" keySplines="0.4 0 0.2 1;0.3 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-              </path>
-
-              <ellipse cx="-1" cy="-19" rx="13.5" ry="10.5" fill="#F6F1E9" transform="rotate(-10 -1 -19)"/>
-
-              <!-- head group: bobs on each note -->
-              <g id="birdHead">
-                <animateTransform attributeName="transform" type="rotate" begin="4.6s" dur="7s"
-                  values="0 4 -24;0 4 -24;-9 4 -24;0 4 -24;0 4 -24;-7 4 -24;0 4 -24;0 4 -24"
-                  keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
-                  calcMode="spline"
-                  keySplines="0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                <circle cx="11" cy="-30" r="7.6" fill="#F6F1E9"/>
-                <circle cx="13.6" cy="-31.6" r="1.75" fill="#16211F"/>
-                <path d="M18,-30.5 L27.5,-28.4 L18,-26.3 Z" fill="#E0A33F">
-                  <animateTransform attributeName="transform" type="rotate" begin="4.6s" dur="7s"
-                    values="0 18 -28.4;0 18 -28.4;-15 18 -28.4;0 18 -28.4;0 18 -28.4;-13 18 -28.4;0 18 -28.4;0 18 -28.4"
-                    keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
-                    calcMode="spline"
-                    keySplines="0.3 0 0 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                </path>
+              <g stroke="#F6F1E9" fill="#F6F1E9" stroke-linecap="round">
+                <g opacity="0">
+                  <animate attributeName="opacity" values="0;.95;.75;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                           dur="7s" begin="4.85s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="translate"
+                    values="30 -40;33 -50;38 -66;43 -82;43 -82" keyTimes="0;0.03;0.10;0.19;1"
+                    dur="7s" begin="4.85s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
+                  <circle cx="0" cy="0" r="2.5"/>
+                  <path d="M2.2,-0.6 V-9.6" stroke-width="1.4" fill="none"/>
+                  <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.4" fill="none"/>
+                </g>
+                <g opacity="0">
+                  <animate attributeName="opacity" values="0;.9;.7;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                           dur="7s" begin="5.7s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="translate"
+                    values="28 -44;32 -56;39 -72;45 -88;45 -88" keyTimes="0;0.03;0.10;0.19;1"
+                    dur="7s" begin="5.7s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
+                  <g transform="scale(.8)">
+                    <circle cx="0" cy="0" r="2.5"/>
+                    <path d="M2.2,-0.6 V-9.6" stroke-width="1.6" fill="none"/>
+                    <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.6" fill="none"/>
+                  </g>
+                </g>
+                <g fill="none" stroke-width="1.6" opacity="0">
+                  <animate attributeName="opacity" values="0;.7;0;0" keyTimes="0;0.03;0.11;1"
+                           dur="7s" begin="4.82s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="scale" values="0.7;1.35;1.35"
+                    keyTimes="0;0.11;1" dur="7s" begin="4.82s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0.2 1;0 0 1 1"/>
+                  <path d="M31,-33 a9 9 0 0 1 0 10"/>
+                  <path d="M36,-36 a15 15 0 0 1 0 16" opacity=".6"/>
+                </g>
               </g>
-
-              <!-- wing: fast flap in flight, then folds -->
-              <g id="birdWing">
-                <animateTransform attributeName="transform" type="rotate" begin="1.1s" dur="0.26s"
-                  values="-54;30;-54" keyTimes="0;0.5;1" repeatCount="10"
-                  calcMode="spline" keySplines="0.35 0 0.2 1;0.35 0 0.2 1"/>
-                <animateTransform attributeName="transform" type="rotate" begin="3.7s" dur="0.6s"
-                  values="30;-8;3;0" keyTimes="0;0.4;0.75;1" fill="freeze"
-                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                <ellipse cx="-3" cy="-19" rx="9" ry="5.6" fill="#C2603A" transform="rotate(-18 -3 -19)"/>
-              </g>
-            </g>
-          </g>
-
-          <!-- the song: notes drifting up, and two soft ripples off the beak -->
-          <g stroke="#F6F1E9" fill="#F6F1E9" stroke-linecap="round">
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;.95;.75;0;0" keyTimes="0;0.03;0.10;0.19;1"
-                       dur="7s" begin="4.65s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="translate"
-                values="30 -40;33 -50;38 -66;43 -82;43 -82" keyTimes="0;0.03;0.10;0.19;1"
-                dur="7s" begin="4.65s" repeatCount="indefinite"
-                calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
-              <circle cx="0" cy="0" r="2.5"/>
-              <path d="M2.2,-0.6 V-9.6" stroke-width="1.4" fill="none"/>
-              <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.4" fill="none"/>
-            </g>
-            <g opacity="0">
-              <animate attributeName="opacity" values="0;.9;.7;0;0" keyTimes="0;0.03;0.10;0.19;1"
-                       dur="7s" begin="5.5s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="translate"
-                values="28 -44;32 -56;39 -72;45 -88;45 -88" keyTimes="0;0.03;0.10;0.19;1"
-                dur="7s" begin="5.5s" repeatCount="indefinite"
-                calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
-              <g transform="scale(.8)">
-                <circle cx="0" cy="0" r="2.5"/>
-                <path d="M2.2,-0.6 V-9.6" stroke-width="1.6" fill="none"/>
-                <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.6" fill="none"/>
-              </g>
-            </g>
-            <!-- song ripples -->
-            <g fill="none" stroke-width="1.6" opacity="0">
-              <animate attributeName="opacity" values="0;.7;0;0" keyTimes="0;0.03;0.11;1"
-                       dur="7s" begin="4.62s" repeatCount="indefinite"/>
-              <animateTransform attributeName="transform" type="scale" values="0.7;1.35;1.35"
-                keyTimes="0;0.11;1" dur="7s" begin="4.62s" repeatCount="indefinite"
-                calcMode="spline" keySplines="0.2 0 0.2 1;0 0 1 1"/>
-              <path d="M31,-33 a9 9 0 0 1 0 10"/>
-              <path d="M36,-36 a15 15 0 0 1 0 16" opacity=".6"/>
             </g>
           </g>
         </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
   </div>
-
 
   <div class="wrap hero__in">
     <p class="eyebrow eyebrow--light" data-rise>Fraser Valley · Since 2009</p>
@@ -260,11 +282,11 @@
     </p>
 
     <div class="hero__cta" data-rise data-delay="2">
-      <a class="btn btn--accent btn--lg magnetic" href="#estimate" data-magnetic>
+      <a class="btn btn--accent btn--lg magnetic" href="bookings.html" data-magnetic>
         Book a free inspection
         <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a class="btn btn--ghost btn--lg" href="#work">See our work</a>
+      <a class="btn btn--ghost btn--lg" href="gallery.html">See our work</a>
     </div>
 
     <ul class="hero__trust" data-rise data-delay="3">
@@ -289,9 +311,7 @@
     <span class="hero__scroll-line" aria-hidden="true"></span>
     Scroll
   </a>
-</section>
-
-<!-- ============ ASSURANCE BAR ============ -->
+</section><!-- ============ ASSURANCE BAR ============ -->
 <section class="assure" aria-label="Our guarantees">
   <div class="wrap assure__grid">
     <div class="assure__i" data-rise>
@@ -311,9 +331,7 @@
       <b>Answered in 2 hours</b><span>A real person, 7am–7pm, every day of the week.</span>
     </div>
   </div>
-</section>
-
-<!-- ============ PROMISE ============ -->
+</section><!-- ============ PROMISE ============ -->
 <section class="sec promise" id="promise">
   <div class="wrap">
     <header class="sec__head">
@@ -372,19 +390,16 @@
     </div>
   </div>
 </section>
-
-<!-- ============ SERVICES ============ -->
-<section class="sec sec--dark services" id="services">
+<!-- ============ SERVICES TEASER ============ -->
+<section class="sec steaser" id="promise-next">
   <div class="wrap">
     <header class="sec__head sec__head--split">
       <div>
-        <p class="eyebrow eyebrow--light" data-rise>What we do</p>
-        <h2 class="sec__h2" data-rise data-delay="1">Everything above your ceiling.</h2>
+        <p class="eyebrow" data-rise>What we do</p>
+        <h2 class="sec__h2" data-rise data-delay="1">Everything above<br />your ceiling.</h2>
       </div>
-      <p class="sec__lead" data-rise data-delay="2">
-        Roofing, and the things that fail alongside it. One crew, one invoice, one warranty —
-        instead of chasing three trades who each blame the other.
-      </p>
+      <p class="sec__lead" data-rise data-delay="2">Roofing, and the things that fail alongside it.
+        One crew, one invoice, one warranty — instead of chasing three trades who each blame the other.</p>
     </header>
 
     <div class="svc">
@@ -466,7 +481,6 @@
     </div>
   </div>
 </section>
-
 <!-- ============ BEFORE / AFTER ============ -->
 <section class="sec ba">
   <div class="wrap">
@@ -491,79 +505,7 @@
       </button>
     </div>
   </div>
-</section>
-
-<!-- ============ PROCESS ============ -->
-<section class="sec process" id="process">
-  <div class="wrap">
-    <header class="sec__head sec__head--split">
-      <div>
-        <p class="eyebrow" data-rise>How it goes</p>
-        <h2 class="sec__h2" data-rise data-delay="1">Five steps.<br />No surprises in any of them.</h2>
-      </div>
-      <p class="sec__lead" data-rise data-delay="2">You'll always know what's happening next, who's coming,
-        and what it costs. Here's the whole thing, start to finish.</p>
-    </header>
-
-    <div class="proc">
-      <div class="proc__sticky">
-        <div class="proc__visual">
-          <div class="proc__imgs" data-proc-imgs>
-            <img class="is-on" src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?auto=format&fit=crop&w=1100&q=80" alt="A roofer inspecting a roof" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1587061633437-187ac80e8e7a?auto=format&fit=crop&w=1100&q=80" alt="Roof detail and measurements" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1100&q=80" alt="Old roofing being stripped away" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1635424709961-f3a150459ad4?auto=format&fit=crop&w=1100&q=80" alt="Two roofers installing a new roof" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1100&q=80" alt="A completed roof" loading="lazy" />
-          </div>
-          <div class="proc__badge" data-proc-badge><b>01</b><span>Free inspection</span></div>
-        </div>
-      </div>
-
-      <ol class="proc__steps" data-proc-steps>
-        <li class="proc__step is-on" data-step="0">
-          <span class="proc__n">01</span>
-          <h3>The free inspection</h3>
-          <p>We come out, get on the roof, and photograph everything — including the parts you can't
-             see. You get a written report with those photos whether or not you ever hire us. Takes
-             about 45 minutes.</p>
-          <span class="proc__meta">45 minutes · No obligation</span>
-        </li>
-        <li class="proc__step" data-step="1">
-          <span class="proc__n">02</span>
-          <h3>A fixed price, in writing</h3>
-          <p>One number, broken down line by line, valid for 60 days. We'll walk you through what's
-             urgent, what can wait a season, and what doesn't need doing at all — including when the
-             honest answer is "your roof is fine."</p>
-          <span class="proc__meta">Within 48 hours · Valid 60 days</span>
-        </li>
-        <li class="proc__step" data-step="2">
-          <span class="proc__n">03</span>
-          <h3>We protect the house first</h3>
-          <p>Before a single shingle comes off: tarps over your landscaping, plywood against the
-             siding, and your driveway kept clear. Tear-off happens in sections so your home is never
-             left open overnight.</p>
-          <span class="proc__meta">Day one, before 8am</span>
-        </li>
-        <li class="proc__step" data-step="3">
-          <span class="proc__n">04</span>
-          <h3>The build</h3>
-          <p>The same four-person crew, every day, until it's done. Rotten decking gets replaced at
-             cost — photographed and shown to you before it's covered. Most homes take two days.</p>
-          <span class="proc__meta">Typically 2 days</span>
-        </li>
-        <li class="proc__step" data-step="4">
-          <span class="proc__n">05</span>
-          <h3>We leave it cleaner than we found it</h3>
-          <p>Magnetic sweep of the lawn, driveway and flower beds — twice. Then a final walkaround
-             with you, the photo record of the finished work, and your warranty paperwork in hand.</p>
-          <span class="proc__meta">Same day · 25-year warranty</span>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- ============ STATS ============ -->
+</section><!-- ============ STATS ============ -->
 <section class="stats">
   <div class="stats__bg" data-parallax="0.12">
     <img src="https://images.unsplash.com/photo-1512331327491-d03cb97d92b4?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy" />
@@ -575,69 +517,29 @@
     <div class="stat" data-rise data-delay="3"><b data-count="0" data-suffix="">0</b><span>Subcontractors, ever</span></div>
   </div>
 </section>
-
-<!-- ============ WORK ============ -->
-<section class="sec work" id="work">
-  <div class="wrap">
-    <header class="sec__head sec__head--split">
-      <div>
-        <p class="eyebrow" data-rise>Recent work</p>
-        <h2 class="sec__h2" data-rise data-delay="1">Roofs from around<br />the valley.</h2>
-      </div>
-      <p class="sec__lead" data-rise data-delay="2">Every one of these is a real address we'd happily
-        give you the owner's number for. Ask us at the inspection.</p>
-    </header>
-
-    <div class="work__filters" data-rise>
-      <button class="chip is-on" data-filter="all" aria-pressed="true">All</button>
-      <button class="chip" data-filter="shingle" aria-pressed="false">Shingle</button>
-      <button class="chip" data-filter="metal" aria-pressed="false">Metal</button>
-      <button class="chip" data-filter="repair" aria-pressed="false">Repair</button>
-    </div>
-
-    <div class="work__grid" data-work>
-      <figure class="wk wk--tall" data-cat="shingle" data-rise>
-        <img src="https://images.unsplash.com/photo-1710139323182-69622cad5c3b?auto=format&fit=crop&w=1000&q=80" alt="Architectural shingle roof on a family home in Langley" loading="lazy" />
-        <figcaption><b>Weathered slate architectural</b><span>Langley · 2 days · 31 squares</span></figcaption>
-      </figure>
-      <figure class="wk" data-cat="metal" data-rise data-delay="1">
-        <img src="https://images.unsplash.com/photo-1563993356056-b23a9cd265ad?auto=format&fit=crop&w=1000&q=80" alt="Standing seam metal roof against a blue sky" loading="lazy" />
-        <figcaption><b>Standing-seam, charcoal</b><span>Abbotsford · 4 days · 28 squares</span></figcaption>
-      </figure>
-      <figure class="wk" data-cat="repair" data-rise data-delay="2">
-        <img src="https://images.unsplash.com/photo-1633759593085-1eaeb724fc88?auto=format&fit=crop&w=1000&q=80" alt="Roof stripped back during a leak repair" loading="lazy" />
-        <figcaption><b>Valley leak, traced &amp; rebuilt</b><span>Surrey · 1 day · Under warranty</span></figcaption>
-      </figure>
-      <figure class="wk" data-cat="shingle" data-rise>
-        <img src="https://images.unsplash.com/photo-1590365876016-da05ac533e83?auto=format&fit=crop&w=1000&q=80" alt="Dormer roof with new shingles" loading="lazy" />
-        <figcaption><b>Dormer rebuild &amp; reshingle</b><span>Maple Ridge · 3 days</span></figcaption>
-      </figure>
-      <figure class="wk wk--wide" data-cat="shingle" data-rise data-delay="1">
-        <img src="https://images.unsplash.com/photo-1512331327491-d03cb97d92b4?auto=format&fit=crop&w=1400&q=80" alt="Cedar shingle detail" loading="lazy" />
-        <figcaption><b>Cedar shake restoration</b><span>Fort Langley · 6 days · Heritage home</span></figcaption>
-      </figure>
-      <figure class="wk" data-cat="repair" data-rise data-delay="2">
-        <img src="https://images.unsplash.com/photo-1557671009-600c3a1973ca?auto=format&fit=crop&w=1000&q=80" alt="Tile roof repair detail" loading="lazy" />
-        <figcaption><b>Storm damage, insurance</b><span>Chilliwack · 2 days · Fully covered</span></figcaption>
-      </figure>
-    </div>
+<!-- ============ PULL QUOTE ============ -->
+<section class="sec pullq">
+  <div class="wrap pullq__in">
+    <div class="pullq__stars" aria-label="5 out of 5" data-rise>★★★★★</div>
+    <blockquote data-rise data-delay="1">They found the actual leak in twenty minutes after two other
+      companies had guessed wrong and charged me for it. What stuck with me was that they showed me
+      the photo of the flashing and explained exactly why it failed. I never felt sold to.</blockquote>
+    <footer data-rise data-delay="2">
+      <img src="https://images.unsplash.com/photo-1615751596346-9df8006e5381?auto=format&fit=crop&w=160&q=80" alt="" loading="lazy" />
+      <span><b>Dana Whitfield</b><i>Leak diagnosis · Surrey</i></span>
+    </footer>
+    <a class="pullq__more" href="about.html#reviews" data-rise data-delay="3">Read all 612 reviews
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
-<!-- ============ ESTIMATE CALCULATOR ============ -->
-<section class="sec sec--dark calc" id="calc">
-  <div class="wrap calc__in">
-    <div class="calc__copy">
-      <p class="eyebrow eyebrow--light" data-rise>Ballpark it yourself</p>
-      <h2 class="sec__h2" data-rise data-delay="1">What does a roof<br />actually cost?</h2>
-      <p class="sec__lead" data-rise data-delay="2">
-        Nobody likes "it depends." Move the sliders and you'll get the same range we'd give you on
-        the phone — built from what we actually charged on 2,400 roofs.
-      </p>
-      <p class="calc__note" data-rise data-delay="3">
-        This is a genuine ballpark, not a quote. The real number comes from measuring your roof —
-        which is free, and takes 45 minutes.
-      </p>
+<!-- ============ CTA BAND ============ -->
+<section class="ctaband">
+  <div class="wrap ctaband__in">
+    <div>
+      <h2 data-rise>Still deciding? Get the free inspection anyway.</h2>
+      <p data-rise data-delay="1">Forty-five minutes, a written report with photos, and no one will
+        chase you afterwards. If your roof is fine, we'll tell you that.</p>
     </div>
 
     <form class="calc__card" data-calc novalidate>
@@ -752,202 +654,6 @@
   </div>
 </section>
 
-<!-- ============ WARRANTY ============ -->
-<section class="sec warranty">
-  <div class="wrap warranty__in">
-    <div class="warranty__seal" data-rise aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none">
-        <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="1.5" opacity=".28"/>
-        <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
-        <path d="M100 42 62 56v34c0 20.6 15.2 36.4 38 40 22.8-3.6 38-19.4 38-40V56l-38-14Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
-        <path d="m85 92 11 11 22-24" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <text class="warranty__ring" x="100" y="176" text-anchor="middle">25 YEARS · IN WRITING · TRANSFERABLE</text>
-      </svg>
-    </div>
-    <div class="warranty__copy">
-      <p class="eyebrow" data-rise>The guarantee</p>
-      <h2 class="sec__h2" data-rise data-delay="1">If it leaks, we fix it.<br />That's the whole policy.</h2>
-      <p class="sec__lead" data-rise data-delay="2">
-        Twenty-five years of workmanship cover on every roof we install — our labour, not just the
-        shingle manufacturer's product warranty. No deductible, no call-out fee, no argument about
-        whose fault it is.
-      </p>
-      <ul class="warranty__list" data-rise data-delay="3">
-        <li><b>Transferable once</b> — it follows the house if you sell, which appraisers notice.</li>
-        <li><b>No fine print about "acts of God"</b> — storm damage is what a roof is for.</li>
-        <li><b>48-hour response</b> on any warranty call, year-round.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ AREAS ============ -->
-<section class="sec areas" id="areas">
-  <div class="wrap areas__in">
-    <div class="areas__copy">
-      <p class="eyebrow" data-rise>Where we work</p>
-      <h2 class="sec__h2" data-rise data-delay="1">Close enough to<br />come back.</h2>
-      <p class="sec__lead" data-rise data-delay="2">We deliberately stay inside a 45-minute radius. A
-        warranty is only real if we can be at your door the same week — so we don't take work we
-        can't service properly for the next 25 years.</p>
-    </div>
-    <ul class="areas__list" data-rise data-delay="1">
-      <li><b>Langley</b><span>Head office · 10 min</span></li>
-      <li><b>Surrey</b><span>20 min</span></li>
-      <li><b>Abbotsford</b><span>25 min</span></li>
-      <li><b>Maple Ridge</b><span>30 min</span></li>
-      <li><b>Coquitlam</b><span>35 min</span></li>
-      <li><b>Chilliwack</b><span>40 min</span></li>
-      <li><b>Mission</b><span>40 min</span></li>
-      <li><b>White Rock</b><span>30 min</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="sec faq" id="faq">
-  <div class="wrap faq__in">
-    <header class="faq__head">
-      <p class="eyebrow" data-rise>Questions</p>
-      <h2 class="sec__h2" data-rise data-delay="1">The things people<br />actually ask us.</h2>
-      <p class="sec__lead" data-rise data-delay="2">Can't see yours? Call us — it's a real person,
-        7am to 7pm, and we don't mind questions from people who aren't ready to buy.</p>
-    </header>
-
-    <div class="faq__list" data-faq>
-      <details class="qa" open>
-        <summary><span>How long does a roof replacement actually take?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>Two days for most homes under 3,000 square feet. Complex roofs with
-          multiple valleys, dormers or steep pitches run three to four. We'll tell you which yours is
-          at the inspection, and we don't start a job we can't finish — your home is never left open
-          overnight.</p></div>
-      </details>
-      <details class="qa">
-        <summary><span>What happens if you find rot under the old roof?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>We stop, photograph it, and call you before anything is covered back
-          up. Replacement sheathing is charged at our cost — we don't mark up a problem you didn't
-          know you had. On a typical home it's one or two sheets; the quote tells you what each one
-          costs before we start.</p></div>
-      </details>
-      <details class="qa">
-        <summary><span>Do I need to be home while you work?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>No. Plenty of our customers are at work the whole time. You'll get
-          photos at the end of each day, and the foreman's direct mobile number so you can reach a
-          person rather than an office. We only need access to power and, ideally, a driveway.</p></div>
-      </details>
-      <details class="qa">
-        <summary><span>Will my garden and driveway survive it?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>This is the thing people worry about most, and fairly. Tarps go over
-          beds and shrubs, plywood leans against the siding, and the dumpster sits on boards. We run
-          a magnetic sweep of the lawn and driveway twice — once at the end of tear-off and again
-          before we leave. If we miss a nail, we come back and find it.</p></div>
-      </details>
-      <details class="qa">
-        <summary><span>Is it worth claiming on insurance?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>Sometimes, and sometimes honestly not — a claim for less than your
-          deductible isn't worth the premium increase. We'll photograph the damage properly, tell you
-          what we think the claim is worth, and meet your adjuster on the roof. If it's not worth
-          claiming, we'll say so.</p></div>
-      </details>
-      <details class="qa">
-        <summary><span>Can you just repair it instead of replacing it?</span><i aria-hidden="true"></i></summary>
-        <div class="qa__body"><p>Often, yes — and we'll tell you when that's the better call. A roof
-          with eight good years left doesn't need replacing because someone knocked on your door and
-          said so. Roughly a third of our inspections end with us telling someone their roof is fine.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ESTIMATE / CONTACT ============ -->
-<section class="sec sec--dark est" id="estimate">
-  <div class="wrap est__in">
-    <div class="est__copy">
-      <p class="eyebrow eyebrow--light" data-rise>Book it</p>
-      <h2 class="sec__h2" data-rise data-delay="1">Let's get up there<br />and have a look.</h2>
-      <p class="sec__lead" data-rise data-delay="2">
-        Free, 45 minutes, and you get the photo report either way. If your roof is fine, we'll
-        tell you that and leave you alone.
-      </p>
-
-      <ul class="est__pts" data-rise data-delay="3">
-        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No sales visit, no financing pitch</li>
-        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Written report with photos, yours to keep</li>
-        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed quote within 48 hours if you want one</li>
-      </ul>
-
-      <div class="est__call" data-rise data-delay="4">
-        <span>Rather just talk?</span>
-        <a href="tel:+16045550142">(604) 555-0142</a>
-        <i>7am – 7pm, seven days</i>
-      </div>
-    </div>
-
-    <form class="est__form" data-form novalidate>
-      <div class="est__row">
-        <div class="inp">
-          <input id="f-name" type="text" name="name" placeholder=" " required autocomplete="name" />
-          <label for="f-name">Your name</label>
-          <em data-err></em>
-        </div>
-        <div class="inp">
-          <input id="f-phone" type="tel" name="phone" placeholder=" " required autocomplete="tel" />
-          <label for="f-phone">Phone</label>
-          <em data-err></em>
-        </div>
-      </div>
-
-      <div class="inp">
-        <input id="f-email" type="email" name="email" placeholder=" " required autocomplete="email" />
-        <label for="f-email">Email</label>
-        <em data-err></em>
-      </div>
-
-      <div class="inp">
-        <input id="f-addr" type="text" name="address" placeholder=" " required autocomplete="street-address" />
-        <label for="f-addr">Property address</label>
-        <em data-err></em>
-      </div>
-
-      <div class="inp inp--sel">
-        <select id="f-need" name="need" required>
-          <option value="" selected disabled>What do you need?</option>
-          <option>I think I have a leak</option>
-          <option>My roof is old and I want it assessed</option>
-          <option>I want a quote for a full replacement</option>
-          <option>Storm or hail damage</option>
-          <option>Gutters or drainage</option>
-          <option>Something else</option>
-        </select>
-        <label for="f-need">What do you need?</label>
-        <em data-err></em>
-      </div>
-
-      <div class="inp">
-        <textarea id="f-msg" name="message" rows="3" placeholder=" "></textarea>
-        <label for="f-msg">Anything we should know? <i>(optional)</i></label>
-      </div>
-
-      <button class="btn btn--accent btn--full btn--lg magnetic" type="submit" data-magnetic>
-        <span data-submit-txt>Book my free inspection</span>
-        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <p class="est__fine">We'll call within 2 hours during business hours. We never share your details,
-        and we won't put you on a mailing list.</p>
-
-      <div class="est__done" data-done hidden>
-        <div class="est__done-ico" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.4"/><path d="m15 24.5 6.4 6.4L33 18" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <b>Got it — you're booked in.</b>
-        <p>A real person will call you within two hours. In the meantime, if it's urgent, ring
-          <a href="tel:+16045550142">(604) 555-0142</a>.</p>
-        <span class="est__demo">Demo only — this form isn't connected to anything yet.</span>
-      </div>
-    </form>
-  </div>
-</section>
-
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -968,19 +674,19 @@
       <nav class="ftr__nav" aria-label="Footer">
         <div>
           <h4>Services</h4>
-          <a href="#services">Roof replacement</a>
-          <a href="#services">Leak repair</a>
-          <a href="#services">Metal roofing</a>
-          <a href="#services">Gutters</a>
-          <a href="#services">Storm &amp; insurance</a>
+          <a href="services.html">Roof replacement</a>
+          <a href="services.html">Leak repair</a>
+          <a href="services.html">Metal roofing</a>
+          <a href="services.html">Gutters</a>
+          <a href="services.html">Storm &amp; insurance</a>
         </div>
         <div>
           <h4>Company</h4>
-          <a href="#promise">Why us</a>
-          <a href="#work">Our work</a>
-          <a href="#process">Process</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
+          <a href="about.html">Why us</a>
+          <a href="gallery.html">Our work</a>
+          <a href="services.html#process">Process</a>
+          <a href="about.html#reviews">Reviews</a>
+          <a href="about.html#faq">FAQ</a>
         </div>
         <div>
           <h4>Get in touch</h4>
@@ -998,14 +704,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ============ LIGHTBOX ============ -->
-<div class="lb" data-lb hidden>
-  <button class="lb__x" type="button" data-lb-close aria-label="Close">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-  </button>
-  <figure class="lb__fig"><img data-lb-img src="" alt="" /><figcaption data-lb-cap></figcaption></figure>
-</div>
 
 </body>
 </html>
