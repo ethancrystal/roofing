@@ -29,6 +29,101 @@
     try { birdSvg.setCurrentTime(6.2); birdSvg.pauseAnimations(); } catch (e) {}
   }
 
+  /* ---------- hero roofline ---------------------------------------------
+     Draws the line from the six --roof-* percentages on .hero__art, so the
+     geometry lives in CSS and can be re-aimed at any photograph. Add ?roof to
+     the URL to drag the three points onto the roof and read the values back. */
+  const art = $('[data-heroart]');
+  if (art) {
+    const line   = $('[data-roof-line]', art);
+    const fascia = $('[data-roof-fascia]', art);
+    const P = ['lx','ly','ax','ay','rx','ry'];
+    const read = () => {
+      const cs = getComputedStyle(art);
+      const v = {};
+      P.forEach(k => { v[k] = parseFloat(cs.getPropertyValue('--roof-' + k)) || 0; });
+      return v;
+    };
+    const draw = (v) => {
+      // viewBox is 0 0 100 100 with preserveAspectRatio=none, so these are percentages
+      line.setAttribute('d',   `M ${v.lx} ${v.ly} L ${v.ax} ${v.ay} L ${v.rx} ${v.ry}`);
+      fascia.setAttribute('d', `M ${v.lx} ${v.ly + 2.6} L ${v.ax} ${v.ay + 2.6} L ${v.rx} ${v.ry + 2.6}`);
+    };
+    let vals = read();
+    draw(vals);
+
+    // The stroke is non-scaling, so its dash pattern is in screen pixels while
+    // getTotalLength() reports viewBox units (~100). Using that makes the dash
+    // repeat across the line instead of drawing it once, so measure in pixels.
+    const pixelLength = (v) => {
+      const r = art.getBoundingClientRect();
+      const pt = (x, y) => [x / 100 * r.width, y / 100 * r.height];
+      const [ax, ay] = pt(v.lx, v.ly), [bx, by] = pt(v.ax, v.ay), [cx, cy] = pt(v.rx, v.ry);
+      return Math.hypot(bx - ax, by - ay) + Math.hypot(cx - bx, cy - by);
+    };
+    const clearDash = (el) => { el.style.strokeDasharray = 'none'; el.style.strokeDashoffset = '0'; };
+
+    if (CALM) {
+      [line, fascia].forEach(clearDash);
+    } else {
+      const len = pixelLength(vals);
+      [line, fascia].forEach((el, i) => {
+        el.style.strokeDasharray = len;
+        el.style.strokeDashoffset = len;
+        const a = el.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }],
+          { duration: 1500, delay: 300 + i * 320, easing: 'cubic-bezier(.32,0,.12,1)', fill: 'forwards' });
+        // once drawn, drop the dash entirely so resizing or recalibrating
+        // can never leave a stale pattern behind
+        a.finished.then(() => { a.cancel(); clearDash(el); }).catch(() => {});
+      });
+    }
+
+    if (new URLSearchParams(location.search).has('roof')) {
+      const cal = document.createElement('div');
+      cal.className = 'roofcal';
+      const out = document.createElement('div');
+      out.className = 'roofcal__out';
+      const pts = [['lx','ly','L'], ['ax','ay','A'], ['rx','ry','R']];
+      const dots = pts.map(([kx, ky, label]) => {
+        const d = document.createElement('b');
+        d.textContent = label;
+        cal.appendChild(d);
+        return { d, kx, ky };
+      });
+      const sync = () => {
+        dots.forEach(({ d, kx, ky }) => { d.style.left = vals[kx] + '%'; d.style.top = vals[ky] + '%'; });
+        out.textContent =
+          '.hero__art{\n' +
+          `  --roof-lx:${vals.lx.toFixed(1)};   --roof-ly:${vals.ly.toFixed(1)};\n` +
+          `  --roof-ax:${vals.ax.toFixed(1)};   --roof-ay:${vals.ay.toFixed(1)};\n` +
+          `  --roof-rx:${vals.rx.toFixed(1)};  --roof-ry:${vals.ry.toFixed(1)};\n` +
+          '}\n\ndrag L / A / R onto the roof · A goes on the peak';
+        P.forEach(k => art.style.setProperty('--roof-' + k, vals[k]));
+        draw(vals);
+        [line, fascia].forEach(clearDash);   // never calibrate against a half-drawn line
+      };
+      dots.forEach(({ d, kx, ky }) => {
+        d.addEventListener('pointerdown', e => {
+          e.preventDefault();
+          d.setPointerCapture(e.pointerId);
+          const move = ev => {
+            const r = art.getBoundingClientRect();
+            vals[kx] = ((ev.clientX - r.left) / r.width) * 100;
+            vals[ky] = ((ev.clientY - r.top) / r.height) * 100;
+            sync();
+          };
+          const up = () => { d.removeEventListener('pointermove', move); d.removeEventListener('pointerup', up); };
+          d.addEventListener('pointermove', move);
+          d.addEventListener('pointerup', up);
+        });
+      });
+      art.appendChild(cal);
+      document.body.appendChild(out);
+      art.style.pointerEvents = 'none';
+      sync();
+    }
+  }
+
   /* ---------- header: stick, auto-hide, scroll progress ----------------- */
   const hdr  = $('[data-hdr]');
   const bar  = $('[data-progress] i');

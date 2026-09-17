@@ -52,11 +52,32 @@ one-line change in `styles.css`:
 
 ## The hero animation
 
-A single roofline spans the full width of the hero and draws itself in from both eaves; a bird
-arcs down out of the sky, lands on the ridge, and sings. Hand-authored inline SVG + SMIL — no
-JavaScript, no library, no GIF.
+The roofline traces the roof of the photographed house and carries on out to both edges of the
+frame, the way an architect extends a pitch. A bird then arcs down out of the sky and lands on
+the real house's ridge, and sings. Hand-authored inline SVG + SMIL for the bird — no library.
 
-It's built in layers rather than as one tween:
+### Aiming it at your photo
+
+The line is defined by three points, held as percentages of the hero box in `styles.css`:
+
+```css
+.hero__art{
+  --roof-lx:-4;   --roof-ly:74;   /* left end, running off the frame  */
+  --roof-ax:44;   --roof-ay:55;   /* the apex — put this on the peak  */
+  --roof-rx:104;  --roof-ry:70;   /* right end, running off the frame */
+}
+```
+
+**The committed values are a starting point, not a measurement** — this repo was built in an
+environment that could not load the photograph, so they have not been checked against it.
+
+To aim them, open `index.html?roof`, drag the three handles (**L**, **A**, **R**) onto the roof
+— **A** goes on the peak — and paste the values it prints back into `styles.css`. It takes about
+fifteen seconds, and it's the same fifteen seconds whenever the hero photo changes.
+
+The bird is anchored to the apex, so it follows wherever you put it.
+
+### How the motion is built
 
 - **Primary** — the bird's arc down, decelerating onto the ridge.
 - **Secondary** — wings flapping through the flight then folding; the body squashing on
@@ -67,17 +88,15 @@ The flight plays once on load; only the quiet idle and the song loop, so it neve
 spatial move is on a spline curve — nothing is linearly eased — and each rotation has its pivot
 set before it turns.
 
-It deliberately bleeds off both edges and sits *above* the headline, so the copy reads as
-sheltered under it. An earlier version drew a complete little house (walls, chimney) boxed on
-the right-hand side; over a photograph of an actual house that read as a second building
-floating in the sky, and the clipped edge looked accidental. The walls and chimney are gone for
-the same reason — one line belongs to the composition, a whole house competes with it.
+The line sits behind the copy, on the photo where it belongs; the bird sits above it, so it is
+never hidden by the headline wherever the apex lands.
 
-The ridge is measured against the copy at seven widths in the test pass, so it can never cross
-the headline or eyebrow, and the bird can never tuck behind the header.
+An earlier version drew a complete little house — walls, chimney — boxed on the right-hand side.
+Over a photograph of an actual house that read as a second building floating in the sky, and the
+clipped edge looked accidental rather than deliberate.
 
-Under `prefers-reduced-motion`, `main.js` jumps the SVG clock to 6.2s and pauses it, so those
-users see the bird already perched rather than nothing at all.
+Under `prefers-reduced-motion` the ridge is drawn immediately and `main.js` jumps the SVG clock
+to 6.2s and pauses it, so those users see the bird already perched rather than nothing at all.
 
 ## What's interactive
 

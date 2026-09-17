@@ -99,151 +99,132 @@
   </div>
   <div class="hero__scrim"></div>
 
-  <!-- ===== HERO ART: a single roofline spans the whole hero and draws itself
-       in; a bird arcs down out of the sky and settles on the ridge, then sings.
-       No walls or chimney — a second house would only fight the photograph. ===== -->
+  <!-- ===== HERO ART =====
+       The roofline traces the roof of the photographed house and carries on out
+       to both edges of the frame, like an architect extending the pitch. The bird
+       then lands on the real house's ridge.
+
+       Its three points live in CSS (--roof-* on .hero__art) as percentages of the
+       hero box, so they can be re-aimed at any photo without touching this markup.
+       Open the page with ?roof to drag them onto the roof and read the values back.
+  -->
   <div class="hero__art" data-heroart aria-hidden="true">
-    <svg viewBox="0 0 1600 200" fill="none" preserveAspectRatio="xMidYMid meet" data-birdsvg>
-      <defs>
-        <radialGradient id="hgRidge" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#E0A33F" stop-opacity=".26"/>
-          <stop offset="100%" stop-color="#E0A33F" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
+    <svg class="hero__roofline" viewBox="0 0 100 100" preserveAspectRatio="none" fill="none">
+      <path data-roof-line stroke="#F6F1E9" stroke-width="2.4" stroke-linecap="round"
+            stroke-linejoin="round" opacity=".9" vector-effect="non-scaling-stroke"/>
+      <path data-roof-fascia stroke="#F6F1E9" stroke-width="1.2" stroke-linecap="round"
+            stroke-linejoin="round" opacity=".32" vector-effect="non-scaling-stroke"/>
+    </svg>
 
-      <!-- ambient: warm light pooling at the ridge -->
-      <ellipse cx="800" cy="92" rx="340" ry="96" fill="url(#hgRidge)">
-        <animate attributeName="rx" values="340;372;340" dur="8s" repeatCount="indefinite"
-                 calcMode="spline" keyTimes="0;0.5;1" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
-      </ellipse>
+    <div class="hero__perch" data-roof-perch>
+      <span class="hero__glowdot" aria-hidden="true"></span>
+      <svg class="hero__bird" viewBox="0 0 900 520" fill="none" data-birdsvg>
+        <g id="birdFly" opacity="0">
+          <animate attributeName="opacity" values="0;1" dur="0.25s" begin="1.15s" fill="freeze"/>
+          <animateMotion dur="2.7s" begin="1.2s" fill="freeze" calcMode="spline"
+            path="M 880,-150 C 760,-30 690,50 636,170 C 588,276 596,392 652,466 C 674,496 700,504 700,470"
+            keyPoints="0;0.45;0.82;1" keyTimes="0;0.4;0.76;1"
+            keySplines="0.3 0 0.5 1;0.4 0 0.4 1;0.25 0 0 1"/>
 
-      <!-- the ridge, drawing itself from both eaves up to the peak -->
-      <path d="M-60 175 L800 85 L1660 175" stroke="#F6F1E9" stroke-width="2.6"
-            stroke-linecap="round" stroke-linejoin="round" opacity=".88"
-            stroke-dasharray="1732" stroke-dashoffset="1732">
-        <animate attributeName="stroke-dashoffset" values="1732;0" dur="1.5s" begin="0.3s"
-                 fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.32 0 0.12 1"/>
-      </path>
+          <g id="birdBank">
+            <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="2.7s"
+              values="24;14;-10;-16;0" keyTimes="0;0.35;0.7;0.88;1" fill="freeze" calcMode="spline"
+              keySplines="0.4 0 0.3 1;0.4 0 0.3 1;0.3 0 0.3 1;0.2 0 0 1"/>
 
-      <!-- fascia hint: gives the line thickness without becoming a building -->
-      <path d="M-60 187 L800 97 L1660 187" stroke="#F6F1E9" stroke-width="1.3"
-            stroke-linecap="round" stroke-linejoin="round" opacity=".3"
-            stroke-dasharray="1732" stroke-dashoffset="1732">
-        <animate attributeName="stroke-dashoffset" values="1732;0" dur="1.5s" begin="0.62s"
-                 fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.32 0 0.12 1"/>
-      </path>
+            <g transform="scale(1.35)">
+              <g id="birdSquash">
+                <animateTransform attributeName="transform" type="scale" begin="3.9s" dur="0.55s"
+                  values="1 1;1.07 0.89;0.98 1.05;1 1" keyTimes="0;0.22;0.6;1" fill="freeze"
+                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.3 1;0.4 0 0.2 1"/>
 
-      <!-- ===== the bird ===== -->
-      <g id="birdFly" opacity="0">
-        <animate attributeName="opacity" values="0;1" dur="0.25s" begin="1.15s" fill="freeze"/>
-        <!-- primary: the arc down out of the sky, decelerating onto the ridge -->
-        <animateMotion dur="2.6s" begin="1.2s" fill="freeze" calcMode="spline"
-          path="M 1880,-150 C 1660,-56 1540,-96 1380,-6 C 1220,88 1010,140 890,120 C 852,114 818,101 800,85"
-          keyPoints="0;0.45;0.82;1" keyTimes="0;0.4;0.76;1"
-          keySplines="0.3 0 0.5 1;0.4 0 0.4 1;0.25 0 0 1"/>
+                <g id="birdBreath">
+                  <animateTransform attributeName="transform" type="translate" begin="4.5s" dur="3.4s"
+                    values="0 0;0 -1.4;0 0" keyTimes="0;0.5;1" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
 
-        <!-- secondary: banking through the turn, flaring level to touch down -->
-        <g id="birdBank">
-          <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="2.6s"
-            values="20;12;-8;-15;0" keyTimes="0;0.35;0.7;0.88;1" fill="freeze" calcMode="spline"
-            keySplines="0.4 0 0.3 1;0.4 0 0.3 1;0.3 0 0.3 1;0.2 0 0 1"/>
+                  <g stroke="#E0A33F" stroke-width="1.8" stroke-linecap="round" opacity="0">
+                    <animate attributeName="opacity" values="0;1" dur="0.25s" begin="3.8s" fill="freeze"/>
+                    <path d="M-4,0 V-8"/><path d="M3,0 V-8"/>
+                  </g>
 
-          <g transform="scale(1.15)">
-            <!-- landing squash, pivoting on the feet -->
-            <g id="birdSquash">
-              <animateTransform attributeName="transform" type="scale" begin="3.8s" dur="0.55s"
-                values="1 1;1.07 0.89;0.98 1.05;1 1" keyTimes="0;0.22;0.6;1" fill="freeze"
-                calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.3 1;0.4 0 0.2 1"/>
+                  <path d="M-12,-16 L-31,-8 L-28,-18 L-13,-21 Z" fill="#C2603A">
+                    <animateTransform attributeName="transform" type="rotate" begin="5.4s" dur="6s"
+                      values="0 -12 -17;0 -12 -17;7 -12 -17;-2 -12 -17;0 -12 -17;0 -12 -17"
+                      keyTimes="0;0.55;0.62;0.68;0.74;1" repeatCount="indefinite"
+                      calcMode="spline" keySplines="0.4 0 0.2 1;0.3 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                  </path>
 
-              <!-- ambient: breathing, once settled -->
-              <g id="birdBreath">
-                <animateTransform attributeName="transform" type="translate" begin="4.4s" dur="3.4s"
-                  values="0 0;0 -1.4;0 0" keyTimes="0;0.5;1" repeatCount="indefinite"
-                  calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+                  <ellipse cx="-1" cy="-19" rx="13.5" ry="10.5" fill="#F6F1E9" transform="rotate(-10 -1 -19)"/>
 
-                <g stroke="#E0A33F" stroke-width="1.8" stroke-linecap="round" opacity="0">
-                  <animate attributeName="opacity" values="0;1" dur="0.25s" begin="3.7s" fill="freeze"/>
-                  <path d="M-4,0 V-8"/><path d="M3,0 V-8"/>
-                </g>
-
-                <path d="M-12,-16 L-31,-8 L-28,-18 L-13,-21 Z" fill="#C2603A">
-                  <animateTransform attributeName="transform" type="rotate" begin="5.3s" dur="6s"
-                    values="0 -12 -17;0 -12 -17;7 -12 -17;-2 -12 -17;0 -12 -17;0 -12 -17"
-                    keyTimes="0;0.55;0.62;0.68;0.74;1" repeatCount="indefinite"
-                    calcMode="spline" keySplines="0.4 0 0.2 1;0.3 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                </path>
-
-                <ellipse cx="-1" cy="-19" rx="13.5" ry="10.5" fill="#F6F1E9" transform="rotate(-10 -1 -19)"/>
-
-                <g id="birdHead">
-                  <animateTransform attributeName="transform" type="rotate" begin="4.7s" dur="7s"
-                    values="0 4 -24;0 4 -24;-9 4 -24;0 4 -24;0 4 -24;-7 4 -24;0 4 -24;0 4 -24"
-                    keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
-                    calcMode="spline"
-                    keySplines="0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                  <circle cx="11" cy="-30" r="7.6" fill="#F6F1E9"/>
-                  <circle cx="13.6" cy="-31.6" r="1.75" fill="#16211F"/>
-                  <path d="M18,-30.5 L27.5,-28.4 L18,-26.3 Z" fill="#E0A33F">
-                    <animateTransform attributeName="transform" type="rotate" begin="4.7s" dur="7s"
-                      values="0 18 -28.4;0 18 -28.4;-15 18 -28.4;0 18 -28.4;0 18 -28.4;-13 18 -28.4;0 18 -28.4;0 18 -28.4"
+                  <g id="birdHead">
+                    <animateTransform attributeName="transform" type="rotate" begin="4.8s" dur="7s"
+                      values="0 4 -24;0 4 -24;-9 4 -24;0 4 -24;0 4 -24;-7 4 -24;0 4 -24;0 4 -24"
                       keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
                       calcMode="spline"
-                      keySplines="0.3 0 0 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                  </path>
-                </g>
+                      keySplines="0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <circle cx="11" cy="-30" r="7.6" fill="#F6F1E9"/>
+                    <circle cx="13.6" cy="-31.6" r="1.75" fill="#16211F"/>
+                    <path d="M18,-30.5 L27.5,-28.4 L18,-26.3 Z" fill="#E0A33F">
+                      <animateTransform attributeName="transform" type="rotate" begin="4.8s" dur="7s"
+                        values="0 18 -28.4;0 18 -28.4;-15 18 -28.4;0 18 -28.4;0 18 -28.4;-13 18 -28.4;0 18 -28.4;0 18 -28.4"
+                        keyTimes="0;0.01;0.035;0.07;0.10;0.125;0.16;1" repeatCount="indefinite"
+                        calcMode="spline"
+                        keySplines="0.3 0 0 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1;0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    </path>
+                  </g>
 
-                <g id="birdWing">
-                  <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="0.26s"
-                    values="-54;30;-54" keyTimes="0;0.5;1" repeatCount="10"
-                    calcMode="spline" keySplines="0.35 0 0.2 1;0.35 0 0.2 1"/>
-                  <animateTransform attributeName="transform" type="rotate" begin="3.8s" dur="0.6s"
-                    values="30;-8;3;0" keyTimes="0;0.4;0.75;1" fill="freeze"
-                    calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
-                  <ellipse cx="-3" cy="-19" rx="9" ry="5.6" fill="#C2603A" transform="rotate(-18 -3 -19)"/>
+                  <g id="birdWing">
+                    <animateTransform attributeName="transform" type="rotate" begin="1.2s" dur="0.26s"
+                      values="-54;30;-54" keyTimes="0;0.5;1" repeatCount="11"
+                      calcMode="spline" keySplines="0.35 0 0.2 1;0.35 0 0.2 1"/>
+                    <animateTransform attributeName="transform" type="rotate" begin="3.9s" dur="0.6s"
+                      values="30;-8;3;0" keyTimes="0;0.4;0.75;1" fill="freeze"
+                      calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.2 1"/>
+                    <ellipse cx="-3" cy="-19" rx="9" ry="5.6" fill="#C2603A" transform="rotate(-18 -3 -19)"/>
+                  </g>
                 </g>
               </g>
-            </g>
 
-            <!-- the song -->
-            <g stroke="#F6F1E9" fill="#F6F1E9" stroke-linecap="round">
-              <g opacity="0">
-                <animate attributeName="opacity" values="0;.95;.75;0;0" keyTimes="0;0.03;0.10;0.19;1"
-                         dur="7s" begin="4.75s" repeatCount="indefinite"/>
-                <animateTransform attributeName="transform" type="translate"
-                  values="30 -40;33 -50;38 -66;43 -82;43 -82" keyTimes="0;0.03;0.10;0.19;1"
-                  dur="7s" begin="4.75s" repeatCount="indefinite"
-                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
-                <circle cx="0" cy="0" r="2.5"/>
-                <path d="M2.2,-0.6 V-9.6" stroke-width="1.4" fill="none"/>
-                <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.4" fill="none"/>
-              </g>
-              <g opacity="0">
-                <animate attributeName="opacity" values="0;.9;.7;0;0" keyTimes="0;0.03;0.10;0.19;1"
-                         dur="7s" begin="5.6s" repeatCount="indefinite"/>
-                <animateTransform attributeName="transform" type="translate"
-                  values="28 -44;32 -56;39 -72;45 -88;45 -88" keyTimes="0;0.03;0.10;0.19;1"
-                  dur="7s" begin="5.6s" repeatCount="indefinite"
-                  calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
-                <g transform="scale(.8)">
+              <g stroke="#F6F1E9" fill="#F6F1E9" stroke-linecap="round">
+                <g opacity="0">
+                  <animate attributeName="opacity" values="0;.95;.75;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                           dur="7s" begin="4.85s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="translate"
+                    values="30 -40;33 -50;38 -66;43 -82;43 -82" keyTimes="0;0.03;0.10;0.19;1"
+                    dur="7s" begin="4.85s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
                   <circle cx="0" cy="0" r="2.5"/>
-                  <path d="M2.2,-0.6 V-9.6" stroke-width="1.6" fill="none"/>
-                  <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.6" fill="none"/>
+                  <path d="M2.2,-0.6 V-9.6" stroke-width="1.4" fill="none"/>
+                  <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.4" fill="none"/>
                 </g>
-              </g>
-              <g fill="none" stroke-width="1.6" opacity="0">
-                <animate attributeName="opacity" values="0;.7;0;0" keyTimes="0;0.03;0.11;1"
-                         dur="7s" begin="4.72s" repeatCount="indefinite"/>
-                <animateTransform attributeName="transform" type="scale" values="0.7;1.35;1.35"
-                  keyTimes="0;0.11;1" dur="7s" begin="4.72s" repeatCount="indefinite"
-                  calcMode="spline" keySplines="0.2 0 0.2 1;0 0 1 1"/>
-                <path d="M31,-33 a9 9 0 0 1 0 10"/>
-                <path d="M36,-36 a15 15 0 0 1 0 16" opacity=".6"/>
+                <g opacity="0">
+                  <animate attributeName="opacity" values="0;.9;.7;0;0" keyTimes="0;0.03;0.10;0.19;1"
+                           dur="7s" begin="5.7s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="translate"
+                    values="28 -44;32 -56;39 -72;45 -88;45 -88" keyTimes="0;0.03;0.10;0.19;1"
+                    dur="7s" begin="5.7s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0 1;0.4 0 0.2 1;0.4 0 0.4 1;0 0 1 1"/>
+                  <g transform="scale(.8)">
+                    <circle cx="0" cy="0" r="2.5"/>
+                    <path d="M2.2,-0.6 V-9.6" stroke-width="1.6" fill="none"/>
+                    <path d="M2.2,-9.6 c3.1,1 4.2,2.8 3.3,5" stroke-width="1.6" fill="none"/>
+                  </g>
+                </g>
+                <g fill="none" stroke-width="1.6" opacity="0">
+                  <animate attributeName="opacity" values="0;.7;0;0" keyTimes="0;0.03;0.11;1"
+                           dur="7s" begin="4.82s" repeatCount="indefinite"/>
+                  <animateTransform attributeName="transform" type="scale" values="0.7;1.35;1.35"
+                    keyTimes="0;0.11;1" dur="7s" begin="4.82s" repeatCount="indefinite"
+                    calcMode="spline" keySplines="0.2 0 0.2 1;0 0 1 1"/>
+                  <path d="M31,-33 a9 9 0 0 1 0 10"/>
+                  <path d="M36,-36 a15 15 0 0 1 0 16" opacity=".6"/>
+                </g>
               </g>
             </g>
           </g>
         </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
   </div>
 
   <div class="wrap hero__in">
