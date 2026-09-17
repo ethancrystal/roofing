@@ -111,14 +111,17 @@
        touching this markup.
 
        PLACEMENT IS STILL A BEST GUESS. The designer marked an exact spot on
-       a screenshot that did not reach this build, so instead this was tuned
-       against a live render of this exact page in this environment: the
-       word "again." sits at roughly x 50-64% / y 38-51% of the hero box, and
-       --scene-x:58 / --scene-y:32 lands the roofline on "have" and the
-       walls + window on "again.", with the bird landing clear of both lines
-       in the gap above. That was checked against one narrow render, not the
-       real photo at real desktop widths — nudge --scene-x / --scene-y in
-       styles.css once you see it live.
+       a screenshot that did not reach this build. An earlier attempt sat the
+       house directly on top of "again." — measured live, its cream wall and
+       glowing window turned out to have almost no contrast against the
+       cream headline text, so the word nearly disappeared into it. This
+       version instead sits the (now smaller) house just past the end of
+       "again.", in the clear gap before the tree line, so the bird lands
+       right by the last word without any part of the house overlapping the
+       letters. --scene-x:76 / --scene-y:34, house box shrunk to 102×88px.
+       Checked live at one viewport width, not every breakpoint — nudge
+       --scene-x / --scene-y (and the house's width/height/left/top, kept in
+       lockstep so the chimney anchor point doesn't drift) once you see it.
   -->
   <div class="hero__art" aria-hidden="true">
     <div class="hero__scene">
