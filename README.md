@@ -52,57 +52,73 @@ one-line change in `styles.css`:
 
 ## The hero animation
 
-The roofline traces the roof of the photographed house and carries on out to both edges of the
-frame, the way an architect extends a pitch. A bird then arcs down out of the sky and lands on
-the real house's ridge, and sings. Hand-authored inline SVG + SMIL for the bird — no library.
+A small illustrated cottage hangs above the last word of the headline, over the photograph. A
+bird arcs down out of the sky, lands on its chimney, and sings. Hand-authored inline SVG + SMIL
+for both — no library.
 
-### Aiming it at your photo
+### Aiming it at your headline
 
-The line is defined by three points, held as percentages of the hero box in `styles.css`:
+The whole scene hangs from one point, held as a percentage of the hero box in `styles.css`:
 
 ```css
 .hero__art{
-  --roof-lx:-4;   --roof-ly:74;   /* left end, running off the frame  */
-  --roof-ax:44;   --roof-ay:55;   /* the apex — put this on the peak  */
-  --roof-rx:104;  --roof-ry:70;   /* right end, running off the frame */
+  --scene-x:58;   --scene-y:32;   /* the top of the chimney — where the bird lands */
 }
 ```
 
-**The committed values are a starting point, not a measurement** — this repo was built in an
-environment that could not load the photograph, so they have not been checked against it.
+**These values are a tuned best guess, not a final measurement.** The designer marked an exact
+spot on a screenshot that didn't reach this build, so instead they were checked against a live
+render of this exact page in this environment: at that render, the word "again." sits at roughly
+x 50–64% / y 38–51% of the hero box, and `--scene-x:58 / --scene-y:32` lands the house's roofline
+across "have" (the end of the first line) and its walls and window across "again." (the second
+line's last word), with the bird landing clear of both lines in the gap above. That was one
+narrow render, not the real photo at real desktop widths — nudge the two numbers once you see it
+live, the same way the old roofline's calibration numbers would have needed a check.
 
-To aim them, open `index.html?roof`, drag the three handles (**L**, **A**, **R**) onto the roof
-— **A** goes on the peak — and paste the values it prints back into `styles.css`. It takes about
-fifteen seconds, and it's the same fifteen seconds whenever the hero photo changes.
-
-The bird is anchored to the apex, so it follows wherever you put it.
+The house and the bird are both pinned to that single point, each in its own untransformed box,
+so neither distorts if the other's sizing changes.
 
 ### How the motion is built
 
-- **Primary** — the bird's arc down, decelerating onto the ridge.
-- **Secondary** — wings flapping through the flight then folding; the body squashing on
-  touchdown; the ridge and its fascia line drawing on ahead of it.
-- **Ambient** — a slow breathing cycle, an occasional tail flick, warm light pooling at the peak.
+- **Primary** — the bird's arc down, decelerating onto the chimney.
+- **Secondary** — wings flapping through the flight, a braking wingbeat, then folding; the body
+  squashing on touchdown; a quick head dip on impact.
+- **Ambient** — a slow breathing cycle, an occasional tail flick, a head look-around, a three-note
+  song with a small glow, all looping seamlessly.
 
-The flight plays once on load; only the quiet idle and the song loop, so it never nags. Every
-spatial move is on a spline curve — nothing is linearly eased — and each rotation has its pivot
-set before it turns.
+The flight plays once on load; only the quiet idle, look-around and song loops repeat, so it
+never nags. Every spatial move is on a spline curve — nothing is linearly eased — and each
+rotation has its pivot set before it turns. The braking wingbeat hands off into the fold at a
+matching angle so there's no visual snap at the boundary.
 
-The line sits behind the copy, on the photo where it belongs; the bird sits above it, so it is
-never hidden by the headline wherever the apex lands.
+The bird itself is a small illustration, not a flat icon: a layered wing (a base shape plus an
+overlapping covert feather and a tip fleck), a soft top-to-bottom gradient on the body, and
+color-blocked head, breast and tail in the site's own palette — evergreen cap, terracotta breast
+and tail, gold beak, cream-to-shadow body.
 
-An earlier version drew a complete little house — walls, chimney — boxed on the right-hand side.
-Over a photograph of an actual house that read as a second building floating in the sky, and the
-clipped edge looked accidental rather than deliberate.
+The house sits behind the headline copy — it reads as sitting on the photo, not on top of the
+words — while the bird sits above it, so it's never hidden by the headline wherever the chimney
+lands. Both hang off `.hero__art` and `.hero__scene`, which deliberately carry no `z-index` of
+their own: giving either one would seal it into its own stacking context, and the bird would be
+trapped inside it, unable to render above the headline no matter what `z-index` it was given.
 
-Under `prefers-reduced-motion` the ridge is drawn immediately and `main.js` jumps the SVG clock
-to 6.2s and pauses it, so those users see the bird already perched rather than nothing at all.
+An earlier version of this hero was a traced roofline that ran the photographed roof's own pitch
+out to both frame edges, with the bird landing on the real ridge — no drawn house, since one
+boxed on the side read as a second building floating in the sky. This version deliberately
+reintroduces a small drawn house, but as an overlaid vignette rather than a traced continuation
+of the photo's own architecture, so it doesn't fight the photograph the same way.
+
+Under `prefers-reduced-motion`, `main.js` jumps the SVG clock to 4.5s and pauses it — the moment
+every one-shot landing animation (the squash, the wingbeat folding to rest, the head's impact
+dip) has resolved to its frozen value, and also the exact moment the first ambient loop begins —
+so those users see the bird already landed and settled, in a neutral pose, rather than nothing
+at all or a loop caught mid-cycle.
 
 ## What's interactive
 
 | | Where |
 |---|---|
-| Roof + bird SMIL animation | Home hero |
+| House + bird SMIL animation | Home hero |
 | Line-by-line masked headline reveal | Home hero |
 | Parallax on hero and stats imagery | Home |
 | Custom cursor + magnetic buttons | Desktop, fine pointers only |

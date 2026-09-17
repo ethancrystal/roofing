@@ -299,55 +299,54 @@ ul,ol{padding:0; list-style:none}
 .hero__trust li{display:flex; align-items:center; gap:9px}
 .hero__trust svg{width:15px; height:15px; color:var(--gold); flex:none}
 
-/* hero art — the roofline traces the photographed roof and runs out to both
-   frame edges; the bird lands on the real house's ridge.
+/* hero art — a small illustrated cottage hangs above the last word of the
+   headline, and the bird lands on its chimney.
 
-   THESE SIX NUMBERS AIM IT. They are percentages of the hero box: the left end,
-   the apex (put this on the real roof's peak) and the right end. Open the page
-   with ?roof to drag them into place and read the values back out. */
+   THESE TWO NUMBERS AIM IT. They are percentages of the hero box, marking the
+   single point the whole scene hangs from: the top of the chimney, where the
+   bird's feet land. Nudge them to re-aim the scene at the headline without
+   touching the markup. Tuned by measuring the live page in one environment,
+   not the designer's marked screenshot — see the comment above .hero__art
+   in index.html before assuming these are final. */
 .hero__art{
-  --roof-lx:-4;   --roof-ly:74;
-  --roof-ax:44;   --roof-ay:55;
-  --roof-rx:104;  --roof-ry:70;
+  --scene-x:58;   --scene-y:32;
 
-  /* deliberately no z-index: this must NOT form a stacking context, or the bird
-     cannot sit above the copy while the line stays behind it on the photo */
+  /* deliberately no z-index: this must NOT form a stacking context, or the
+     bird cannot sit above the copy while the house stays behind it */
   position:absolute; inset:0; pointer-events:none;
 }
-.hero__roofline{position:absolute; inset:0; z-index:1; width:100%; height:100%; overflow:visible}
 
-/* the bird sits in its own untransformed box so the non-uniform scale on the
-   roofline can never distort it; its feet are pinned to the apex */
-.hero__perch{
-  position:absolute; z-index:4;
-  left:calc(var(--roof-ax) * 1%); top:calc(var(--roof-ay) * 1%);
+/* everything hangs off one zero-size anchor point, so the house and the bird
+   can each be pinned to it in their own untransformed, undistorted box.
+   deliberately no z-index here either — same stacking-context trap as
+   .hero__art above: give this one a z-index and the bird gets sealed inside
+   it, unable to escape above the headline no matter what z-index it carries */
+.hero__scene{
+  position:absolute;
+  left:calc(var(--scene-x) * 1%); top:calc(var(--scene-y) * 1%);
   width:0; height:0;
+}
+.hero__house{
+  position:absolute; width:150px; height:130px; left:-109px; top:-14px; overflow:visible;
+  /* the base reset sets svg{max-width:100%}; .hero__scene is a zero-size
+     anchor, so without this the house's width resolves to 0 and it vanishes */
+  max-width:none;
+  /* behind the headline copy — it reads as sitting on the photo, not on top
+     of the words. .hero__scene carries no stacking context of its own, so
+     this small explicit z-index is compared straight against .hero__in's */
+  z-index:1;
 }
 .hero__bird{
   position:absolute; width:900px; height:520px; left:-700px; top:-470px; overflow:visible;
-  /* the base reset sets svg{max-width:100%}; .hero__perch is a zero-size anchor,
-     so without this the bird's width resolves to 0 and it vanishes */
   max-width:none;
+  /* above the headline copy and the booking card, for the same reason: no
+     stacking context sits between here and .hero, so 4 simply outranks
+     .hero__in's 2 and .hero__card's 3 */
+  z-index:4;
 }
 .hero__glowdot{
   position:absolute; left:-190px; top:-120px; width:380px; height:240px; border-radius:50%;
   background:radial-gradient(closest-side,rgba(224,163,63,.28),transparent 72%);
-}
-
-/* calibration mode (?roof) — drag the three points onto the roof */
-.roofcal{position:absolute; inset:0; z-index:9; pointer-events:none}
-.roofcal b{
-  position:absolute; width:26px; height:26px; margin:-13px 0 0 -13px; border-radius:50%;
-  background:var(--accent); box-shadow:0 0 0 3px #fff, 0 4px 14px rgba(0,0,0,.5);
-  cursor:grab; pointer-events:auto; display:grid; place-content:center;
-  font:700 10px/1 var(--sans); color:#fff;
-}
-.roofcal b:active{cursor:grabbing}
-.roofcal__out{
-  position:fixed; left:16px; bottom:16px; z-index:7; pointer-events:auto;
-  background:rgba(12,19,17,.94); color:#F6F1E9; padding:14px 16px; border-radius:12px;
-  font:500 12px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre;
-  box-shadow:0 10px 40px rgba(0,0,0,.5);
 }
 .hero__card{
   position:absolute; z-index:3; right:var(--gut); bottom:76px; width:310px;
@@ -894,6 +893,7 @@ input[type=range]::-moz-range-thumb{
   .hero{display:block; min-height:auto; padding:142px 0 56px}
   .hero__in{max-width:none}
   .hero__bird{transform:scale(.55); transform-origin:700px 470px}
+  .hero__house{transform:scale(.55); transform-origin:109px 14px}
   .hero__card{position:relative; right:auto; bottom:auto; width:auto; margin:32px var(--gut) 0}
   .hero__scroll{display:none}
   .hero__cta{flex-direction:column; align-items:stretch}
