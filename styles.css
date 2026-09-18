@@ -845,7 +845,27 @@ input[type=range]::-moz-range-thumb{
 @media (max-width:1180px){
   .nav{display:none}
   .burger{display:block}
-  .hdr__act{margin-left:auto}
+  /* .nav+.hdr__act{margin-left:0} above is two classes vs. this rule's one,
+     so without matching that specificity here, it still wins even though
+     .nav is display:none — the adjacent-sibling selector matches on DOM
+     order, not visibility, and the phone/CTA/burger group collapses to
+     the left instead of staying pinned right */
+  .hdr__act,.nav+.hdr__act{margin-left:auto}
+
+  /* the floating card + full-size bird/house scene is tuned for the wide
+     desktop hero, where there's room beside .hero__in for it not to collide
+     with the CTA/trust row. Below the nav's own burger breakpoint there
+     isn't, especially on short laptop windows, so the hero switches to the
+     same stacked layout as phones right here rather than leaving a gap
+     between this breakpoint and a lower one where it could still overlap */
+  .hero{display:block; min-height:auto; padding:142px 0 56px}
+  .hero__in{max-width:none}
+  .hero__bird{transform:scale(.55); transform-origin:700px 470px}
+  .hero__house{transform:scale(.55); transform-origin:74px 10px}
+  .hero__card{position:relative; right:auto; bottom:auto; width:auto; margin:32px var(--gut) 0}
+  .hero__scroll{display:none}
+  .hero__cta{flex-direction:column; align-items:stretch}
+  .hero__cta .btn{width:100%}
 }
 
 /* The header sits on one row: logo + phone + CTA + burger. Below ~900px the
@@ -863,18 +883,6 @@ input[type=range]::-moz-range-thumb{
 }
 
 @media (max-width:1024px){
-  /* the floating card + full-size bird/house scene is tuned for the wide
-     desktop hero; on tablets there isn't enough width left beside .hero__in
-     for the card not to collide with the CTA row, so tablets get the same
-     stacked treatment as phones instead of a half-fixed in-between layout */
-  .hero{display:block; min-height:auto; padding:142px 0 56px}
-  .hero__in{max-width:none}
-  .hero__bird{transform:scale(.55); transform-origin:700px 470px}
-  .hero__house{transform:scale(.55); transform-origin:74px 10px}
-  .hero__card{position:relative; right:auto; bottom:auto; width:auto; margin:32px var(--gut) 0}
-  .hero__scroll{display:none}
-  .hero__cta{flex-direction:column; align-items:stretch}
-  .hero__cta .btn{width:100%}
   .assure__grid{grid-template-columns:1fr 1fr; gap:26px}
   .promise__grid{grid-template-columns:1fr; gap:16px}
   .svc{grid-template-columns:1fr; gap:34px}
