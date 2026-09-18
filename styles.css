@@ -194,6 +194,13 @@ ul,ol{padding:0; list-style:none}
 }
 .hdr.is-stuck{padding:11px 0}
 .hdr.is-stuck::before{opacity:1}
+/* .mnav (z-index:105) slides in with a transform right underneath .hdr
+   (z-index:110). A live backdrop-filter blur sampling that animating layer
+   is what produces a garbled/dithered compositor artifact on mobile GPUs
+   during the transition — so drop the blur to a flat, matching fill for as
+   long as the menu is open (body.is-locked is already toggled by main.js
+   in lockstep with the menu, no JS change needed). */
+body.is-locked .hdr::before{backdrop-filter:none; -webkit-backdrop-filter:none; opacity:1; background:var(--canvas)}
 .hdr.is-hidden{transform:translateY(-104%); transition:transform .5s var(--e-out), padding .5s var(--e-out)}
 .hdr__in{
   position:relative; width:100%; max-width:var(--wrap); margin-inline:auto;
@@ -211,8 +218,8 @@ ul,ol{padding:0; list-style:none}
   transition:opacity .45s var(--e-soft);
 }
 .logo__img--for-light{opacity:0}
-.hdr.is-stuck .logo__img--for-dark{opacity:0}
-.hdr.is-stuck .logo__img--for-light{opacity:1}
+.hdr.is-stuck .logo__img--for-dark,body.is-locked .hdr .logo__img--for-dark{opacity:0}
+.hdr.is-stuck .logo__img--for-light,body.is-locked .hdr .logo__img--for-light{opacity:1}
 
 .nav{display:flex; gap:4px; margin-left:auto}
 .nav a{
@@ -232,7 +239,7 @@ ul,ol{padding:0; list-style:none}
 .hdr__act{display:flex; align-items:center; gap:14px; margin-left:auto}
 .nav+.hdr__act{margin-left:0}
 .tel{display:flex; align-items:center; gap:10px; color:#fff; transition:color .45s var(--e-soft)}
-.hdr.is-stuck .tel{color:var(--brand)}
+.hdr.is-stuck .tel,body.is-locked .hdr .tel{color:var(--brand)}
 .tel svg{width:19px; height:19px; opacity:.8}
 .tel span{display:flex; flex-direction:column; line-height:1.15}
 .tel i{font-style:normal; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; opacity:.62}
@@ -240,12 +247,12 @@ ul,ol{padding:0; list-style:none}
 .tel:hover svg{opacity:1}
 
 .burger{display:none; width:44px; height:44px; border-radius:50%; position:relative; box-shadow:inset 0 0 0 1.4px rgba(255,255,255,.3)}
-.hdr.is-stuck .burger{box-shadow:inset 0 0 0 1.4px var(--line)}
+.hdr.is-stuck .burger,body.is-locked .hdr .burger{box-shadow:inset 0 0 0 1.4px var(--line)}
 .burger span{
   position:absolute; left:13px; width:18px; height:1.8px; background:#fff; border-radius:2px;
   transition:transform .45s var(--e-out), opacity .3s var(--e-soft), background .45s var(--e-soft);
 }
-.hdr.is-stuck .burger span{background:var(--brand)}
+.hdr.is-stuck .burger span,body.is-locked .hdr .burger span{background:var(--brand)}
 .burger span:nth-child(1){top:19px}
 .burger span:nth-child(2){top:25px}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(3px) rotate(45deg)}
